@@ -85,7 +85,7 @@ void stopClork::touchDown(int id, int number, float x, float y){
     
     if (id == 0) {
         ofRectangle rect;
-        rect.set(740, 411, 864, 609);
+        rect.set(740, 411, 780, 609);
         if (rect.inside(x, y)) {
             prePos.set(x, y);
             bTimeChange = true;

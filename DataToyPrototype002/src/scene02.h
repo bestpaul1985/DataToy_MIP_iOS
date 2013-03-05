@@ -28,6 +28,7 @@ public:
     
     int                     * myLevel;
     int                     year;
+    int                     preYear;
     int                     myCase;
     int                     cout;
     bool                    bAddOutwardCircle;

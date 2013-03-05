@@ -55,6 +55,7 @@ void scene02::setup(int &level){
     mouseOver = false;
     bPressed = false;
     year = 2005;
+    preYear = 2005;
     ButtonSize = 70;
     
     //stopClork
@@ -158,10 +159,47 @@ void scene02::update(){
             break;
             
         case 2:{
+            if (year !=preYear) {
+                for (int i=0; i<myCities.myBall->IMM_Balls_BA.size(); i++) {
+                    myCities.myBall->IMM_Balls_BA[i].destroy();
+                }
+                for (int i=0; i<myCities.myBall->IMM_Balls_HS.size(); i++) {
+                    myCities.myBall->IMM_Balls_HS[i].destroy();
+                }
+                for (int i=0; i<myCities.myBall->IMM_Balls_NO.size(); i++) {
+                    myCities.myBall->IMM_Balls_NO[i].destroy();
+                    
+                }
+                
+                
+                for (int i=0; i<myCities.myBall->Native_Balls_BA.size(); i++) {
+                    myCities.myBall->Native_Balls_BA[i].destroy();
+                    
+                    
+                }
+                for (int i=0; i<myCities.myBall->Native_Balls_HS.size(); i++) {
+                    myCities.myBall->Native_Balls_HS[i].destroy();
+                    
+                }
+                for (int i=0; i<myCities.myBall->Native_Balls_NO.size(); i++) {
+                    myCities.myBall->Native_Balls_NO[i].destroy();
+                    
+                }
+                
+                myCities.myBall->IMM_Balls_BA.resize(0);
+                myCities.myBall->IMM_Balls_HS.resize(0);
+                myCities.myBall->IMM_Balls_NO.resize(0);
+                myCities.myBall->Native_Balls_HS.resize(0);
+                myCities.myBall->Native_Balls_NO.resize(0);
+                myCities.myBall->Native_Balls_BA.resize(0);
+            }
+            
             myCities.update();
             float a = 255;
             myClork.update(a);
             myBall.update();
+            
+            preYear = year;
         }
             break;
     }
