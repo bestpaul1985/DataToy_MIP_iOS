@@ -50,7 +50,7 @@ void scene02::setup(int &level){
     myLevel = &level;
     myCase = 0;
     startTime = ofGetElapsedTimeMillis();
-    cout = 0;
+    count = 0;
     name = "ok";
     mouseOver = false;
     bPressed = false;
@@ -150,6 +150,10 @@ void scene02::update(){
                 myCities.myBall->Native_Balls_NO.resize(0);
                 myCities.myBall->Native_Balls_BA.resize(0);
                 myCities.bDestry = false;
+                
+                myClork.bClorkPressed = false;
+                year = 2005;
+                myClork.angle= 0;
             }
 
             float a = 30;
@@ -192,7 +196,8 @@ void scene02::update(){
                 myCities.myBall->Native_Balls_HS.resize(0);
                 myCities.myBall->Native_Balls_NO.resize(0);
                 myCities.myBall->Native_Balls_BA.resize(0);
-                            }
+                
+            }
             
             myCities.update();
             float a = 255;
@@ -238,13 +243,13 @@ void scene02::draw(){
             
             if (ofGetElapsedTimeMillis()-startTime > 120) {
                 startTime = ofGetElapsedTimeMillis();
-                cout ++;
-                if (cout>3) {
-                    cout = 0;
+                count ++;
+                if (count>3) {
+                    count = 0;
                 }
             }
             
-            halo[cout].draw(210, 495,halo[3-cout].getWidth()-40, halo[3-cout].getHeight()-40);
+            halo[count].draw(210, 495,halo[3-count].getWidth()-40, halo[3-count].getHeight()-40);
             cityIcon.draw(250, 430+(5*sin(ofGetElapsedTimef()*10)));
             chooseCity.draw(250,530);
             ofPopStyle();
@@ -284,7 +289,7 @@ void scene02::draw(){
             ofPushStyle();
             myColor.set(255, 255, 255,50);
             ofSetColor(myColor);
-            halo[4].draw(210, 495,halo[3-cout].getWidth()-40, halo[3-cout].getHeight()-40);
+            halo[4].draw(210, 495,halo[3-count].getWidth()-40, halo[3-count].getHeight()-40);
             cityIcon.draw(250, 430);
             //        chooseCity.draw(250,530);
             ofPopStyle();

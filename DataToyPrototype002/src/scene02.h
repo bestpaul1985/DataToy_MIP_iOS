@@ -30,7 +30,7 @@ public:
     int                     year;
     int                     preYear;
     int                     myCase;
-    int                     cout;
+    int                     count;
     bool                    bAddOutwardCircle;
     bool                    timeUp;
     bool                    mouseOver;

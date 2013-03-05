@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DataToyPrototype002.xcodeproj">
+      location = "self:DataToyBeta01.xcodeproj">
    </FileRef>
 </Workspace>
