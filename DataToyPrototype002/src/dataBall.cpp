@@ -142,7 +142,6 @@ void dataBall::update(){
         }
         
     }
-    cout<<IMM_Balls_NO.size()<<endl;
     pre_All_Jobs = All_Jobs;
 }
 

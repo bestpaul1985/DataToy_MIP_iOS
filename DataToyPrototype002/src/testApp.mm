@@ -57,6 +57,7 @@ void testApp::update() {
             myScene02.myBall.gravity = ofxAccelerometer.getForce();
             myScene02.update();
             myidentity.update();
+            cout<<myScene02.myClork.bClorkPressed<<endl;
            
         }
             break;

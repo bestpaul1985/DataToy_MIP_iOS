@@ -192,20 +192,20 @@ void scene02::update(){
                 myCities.myBall->Native_Balls_HS.resize(0);
                 myCities.myBall->Native_Balls_NO.resize(0);
                 myCities.myBall->Native_Balls_BA.resize(0);
-                myClork.bClorkPressed = false;
-                myClork.startTime = ofGetElapsedTimeMillis();
-            }
+                            }
             
             myCities.update();
             float a = 255;
             myClork.update(a);
             myBall.update();
-            
+        
             preYear = year;
+            
         }
             break;
     }
-
+    
+   
    
 }
 //-------------------------------
