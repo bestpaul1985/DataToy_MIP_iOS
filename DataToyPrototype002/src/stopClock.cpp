@@ -67,12 +67,13 @@ void stopClork::draw(){
     float a;
     float speed;
     float time = ofGetElapsedTimef()-startTime;
-    speed = 0.05;
+    speed = 0.2;
     a = RAD_TO_DEG*(time*speed);
     if (a>359){
         startTime = ofGetElapsedTimef();
+        bClorkPressed = false;
     }
-    ofRotateZ(a);
+    if(bClorkPressed)ofRotateZ(a);
     ofTranslate(-17,-80);
     img02.draw(0,0);
     ofPopMatrix();
@@ -85,7 +86,8 @@ void stopClork::touchDown(int id, int number, float x, float y){
     
     if (id == 0) {
         ofRectangle rect;
-        rect.set(740, 411, 780, 609);
+        rect.set(700, 411, 200, 200);
+      
         if (rect.inside(x, y)) {
             prePos.set(x, y);
             bTimeChange = true;
