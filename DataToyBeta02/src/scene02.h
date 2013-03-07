@@ -11,7 +11,7 @@
 
 #include "ofMain.h"
 
-
+#include "Box2D.h"
 #include "citySelect.h"
 #include "cityData.h"
 #include "superBall.h"
@@ -26,14 +26,7 @@ public:
     void    touchMove(int id, int number, float x, float y);
     void    touchUp(int id, int number, float x, float y);
     
-    int                     * myLevel;
-    int                     year;
-    int                     preYear;
-    int                     myCase;
-    int                     count;
     
-    bool                    bAddOutwardCircle;
-    bool                    timeUp;
     bool                    mouseOver;
     bool                    bPressed;
     bool                    bCitySeclect;
@@ -61,7 +54,7 @@ public:
     citySelect              select;
     cityData                myCity;
     vector<superBall>       mySuperBall;
-
+    ofxBox2d                box2d;
 
     
     

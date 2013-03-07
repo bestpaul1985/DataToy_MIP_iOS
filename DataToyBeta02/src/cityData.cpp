@@ -22,6 +22,7 @@ void cityData::setup(string &name, int &year){
     pop ="0";
     imm_pct = "0";
     imm_pct_job = "0";
+    popPreBall = 50000;
 }
 
 
@@ -33,6 +34,29 @@ void cityData::update(){
         imm_pct = ofToString(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, dBase.getCityId(*cityName) , dBase.getYearId(*cityYear)));
         imm_pct_job = ofToString(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, dBase.getCityId(*cityName),dBase.getYearId(*cityYear)));
         
+        int city = dBase.getCityId(*cityName);
+        int year = dBase.getYearId(*cityYear);
+        int all_pop = dBase.getNumVal(MPI_NUM_POPULATION,city, year);
+        int imm_pop = dBase.getNumVal(MPI_NUM_IMMIGRANTS,city, year);
+        int native_pop = all_pop - imm_pop;
+        
+        int imm_balls =int(imm_pop/popPreBall);
+        int native_balls = int(native_pop/popPreBall);
+        ball_size = imm_balls + native_balls;
+        no_num = int(imm_balls*dBase.getPctVal(MPI_PCT_DEGREE_IMMIGRANTS_NO, city,year)/100)+int(native_balls*dBase.getPctVal(MPI_PCT_DEGREE_NATIVE_NO, city,year)/100);
+        hs_num = int(imm_balls*dBase.getPctVal(MPI_PCT_DEGREE_IMMIGRANTS_HIGHSCHOOL, city,year)/100)+int(native_balls*dBase.getPctVal(MPI_PCT_DEGREE_NATIVE_HIGHSCHOOL, city,year)/100);
+        ba_num = int(imm_balls*dBase.getPctVal(MPI_PCT_DEGREE_IMMIGRANTS_BA, city,year)/100)+int(native_balls*dBase.getPctVal(MPI_PCT_DEGREE_NATIVE_BA, city,year)/100);
+        if (no_num == 0) {
+            no_num = 1;
+        }
+        
+        if (hs_num==0) {
+            hs_num = 0;
+        }
+        
+        if (no_num==0) {
+            no_num = 0;
+        }
         
         size = ofMap(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, dBase.getCityId(*cityName) , dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), 15, 60);
         

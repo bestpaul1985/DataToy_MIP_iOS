@@ -11,61 +11,56 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		4C0F620416E8F0C7004B3DB0 /* superBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F620216E8F0C7004B3DB0 /* superBall.cpp */; };
+		4C0F630216E92BA8004B3DB0 /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4C0F629A16E92BA8004B3DB0 /* install.xml */; };
+		4C0F630316E92BA8004B3DB0 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F629F16E92BA8004B3DB0 /* b2BroadPhase.cpp */; };
+		4C0F630416E92BA8004B3DB0 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62A116E92BA8004B3DB0 /* b2CollideCircle.cpp */; };
+		4C0F630516E92BA8004B3DB0 /* b2CollidePolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62A216E92BA8004B3DB0 /* b2CollidePolygon.cpp */; };
+		4C0F630616E92BA8004B3DB0 /* b2Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62A316E92BA8004B3DB0 /* b2Collision.cpp */; };
+		4C0F630716E92BA8004B3DB0 /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62A516E92BA8004B3DB0 /* b2Distance.cpp */; };
+		4C0F630816E92BA8004B3DB0 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62A716E92BA8004B3DB0 /* b2DynamicTree.cpp */; };
+		4C0F630916E92BA8004B3DB0 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62A916E92BA8004B3DB0 /* b2TimeOfImpact.cpp */; };
+		4C0F630A16E92BA8004B3DB0 /* b2CircleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62AC16E92BA8004B3DB0 /* b2CircleShape.cpp */; };
+		4C0F630B16E92BA8004B3DB0 /* b2PolygonShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62AE16E92BA8004B3DB0 /* b2PolygonShape.cpp */; };
+		4C0F630C16E92BA8004B3DB0 /* b2BlockAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62B216E92BA8004B3DB0 /* b2BlockAllocator.cpp */; };
+		4C0F630D16E92BA8004B3DB0 /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62B416E92BA8004B3DB0 /* b2Math.cpp */; };
+		4C0F630E16E92BA8004B3DB0 /* b2Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62B616E92BA8004B3DB0 /* b2Settings.cpp */; };
+		4C0F630F16E92BA8004B3DB0 /* b2StackAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62B816E92BA8004B3DB0 /* b2StackAllocator.cpp */; };
+		4C0F631016E92BA8004B3DB0 /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62BB16E92BA8004B3DB0 /* b2Body.cpp */; };
+		4C0F631116E92BA8004B3DB0 /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62BD16E92BA8004B3DB0 /* b2ContactManager.cpp */; };
+		4C0F631216E92BA8004B3DB0 /* b2Fixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62BF16E92BA8004B3DB0 /* b2Fixture.cpp */; };
+		4C0F631316E92BA8004B3DB0 /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62C116E92BA8004B3DB0 /* b2Island.cpp */; };
+		4C0F631416E92BA8004B3DB0 /* b2World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62C416E92BA8004B3DB0 /* b2World.cpp */; };
+		4C0F631516E92BA8004B3DB0 /* b2WorldCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62C616E92BA8004B3DB0 /* b2WorldCallbacks.cpp */; };
+		4C0F631616E92BA8004B3DB0 /* b2CircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62C916E92BA8004B3DB0 /* b2CircleContact.cpp */; };
+		4C0F631716E92BA8004B3DB0 /* b2Contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62CB16E92BA8004B3DB0 /* b2Contact.cpp */; };
+		4C0F631816E92BA8004B3DB0 /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62CD16E92BA8004B3DB0 /* b2ContactSolver.cpp */; };
+		4C0F631916E92BA8004B3DB0 /* b2PolygonAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62CF16E92BA8004B3DB0 /* b2PolygonAndCircleContact.cpp */; };
+		4C0F631A16E92BA8004B3DB0 /* b2PolygonContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62D116E92BA8004B3DB0 /* b2PolygonContact.cpp */; };
+		4C0F631B16E92BA8004B3DB0 /* b2TOISolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62D316E92BA8004B3DB0 /* b2TOISolver.cpp */; };
+		4C0F631C16E92BA8004B3DB0 /* b2DistanceJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62D616E92BA8004B3DB0 /* b2DistanceJoint.cpp */; };
+		4C0F631D16E92BA8004B3DB0 /* b2FrictionJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62D816E92BA8004B3DB0 /* b2FrictionJoint.cpp */; };
+		4C0F631E16E92BA8004B3DB0 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62DA16E92BA8004B3DB0 /* b2GearJoint.cpp */; };
+		4C0F631F16E92BA8004B3DB0 /* b2Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62DC16E92BA8004B3DB0 /* b2Joint.cpp */; };
+		4C0F632016E92BA8004B3DB0 /* b2LineJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62DE16E92BA8004B3DB0 /* b2LineJoint.cpp */; };
+		4C0F632116E92BA8004B3DB0 /* b2MouseJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62E016E92BA8004B3DB0 /* b2MouseJoint.cpp */; };
+		4C0F632216E92BA8004B3DB0 /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62E216E92BA8004B3DB0 /* b2PrismaticJoint.cpp */; };
+		4C0F632316E92BA8004B3DB0 /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62E416E92BA8004B3DB0 /* b2PulleyJoint.cpp */; };
+		4C0F632416E92BA8004B3DB0 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62E616E92BA8004B3DB0 /* b2RevoluteJoint.cpp */; };
+		4C0F632516E92BA8004B3DB0 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62E816E92BA8004B3DB0 /* b2WeldJoint.cpp */; };
+		4C0F632616E92BA8004B3DB0 /* del_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62EC16E92BA8004B3DB0 /* del_impl.cpp */; };
+		4C0F632716E92BA8004B3DB0 /* ofxBox2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62F216E92BA8004B3DB0 /* ofxBox2d.cpp */; };
+		4C0F632816E92BA8004B3DB0 /* ofxBox2dBaseShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62F416E92BA8004B3DB0 /* ofxBox2dBaseShape.cpp */; };
+		4C0F632916E92BA8004B3DB0 /* ofxBox2dCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62F616E92BA8004B3DB0 /* ofxBox2dCircle.cpp */; };
+		4C0F632A16E92BA8004B3DB0 /* ofxBox2dJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62F916E92BA8004B3DB0 /* ofxBox2dJoint.cpp */; };
+		4C0F632B16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62FB16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp */; };
+		4C0F632C16E92BA8004B3DB0 /* ofxBox2dRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62FE16E92BA8004B3DB0 /* ofxBox2dRect.cpp */; };
 		4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97690816E7D2590074E810 /* citySelect.cpp */; };
 		4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0D93316E8599C00A134CB /* cityData.cpp */; };
 		4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */; };
 		4CDBFE5B16E1FA8200193C1E /* MpiData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5816E1FA8100193C1E /* MpiData.cpp */; };
-		4CDBFE6816E20CEA00193C1E /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5E16E20CEA00193C1E /* README */; };
-		4CDBFE6916E20CEA00193C1E /* CollageTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE6016E20CEA00193C1E /* CollageTexture.cpp */; };
-		4CDBFE6A16E20CEA00193C1E /* LinearTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE6216E20CEA00193C1E /* LinearTexture.cpp */; };
-		4CDBFE6B16E20CEA00193C1E /* ofxSpriteSheetRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE6416E20CEA00193C1E /* ofxSpriteSheetRenderer.cpp */; };
-		4CDBFE6C16E20CEA00193C1E /* PixelTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE6616E20CEA00193C1E /* PixelTexture.cpp */; };
 		4CE8591316DBFF7A00FE31E6 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8590F16DBFF7A00FE31E6 /* particle.cpp */; };
 		4CE8591416DBFF7A00FE31E6 /* vectorField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8591116DBFF7A00FE31E6 /* vectorField.cpp */; };
 		4CE8591E16DC217B00FE31E6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591D16DC217B00FE31E6 /* logo.png */; };
-		4CE8A50516E25FCA0007FADE /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8A49D16E25FCA0007FADE /* install.xml */; };
-		4CE8A50616E25FCA0007FADE /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4A216E25FCA0007FADE /* b2BroadPhase.cpp */; };
-		4CE8A50716E25FCA0007FADE /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4A416E25FCA0007FADE /* b2CollideCircle.cpp */; };
-		4CE8A50816E25FCA0007FADE /* b2CollidePolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4A516E25FCA0007FADE /* b2CollidePolygon.cpp */; };
-		4CE8A50916E25FCA0007FADE /* b2Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4A616E25FCA0007FADE /* b2Collision.cpp */; };
-		4CE8A50A16E25FCA0007FADE /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4A816E25FCA0007FADE /* b2Distance.cpp */; };
-		4CE8A50B16E25FCA0007FADE /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4AA16E25FCA0007FADE /* b2DynamicTree.cpp */; };
-		4CE8A50C16E25FCA0007FADE /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4AC16E25FCA0007FADE /* b2TimeOfImpact.cpp */; };
-		4CE8A50D16E25FCA0007FADE /* b2CircleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4AF16E25FCA0007FADE /* b2CircleShape.cpp */; };
-		4CE8A50E16E25FCA0007FADE /* b2PolygonShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4B116E25FCA0007FADE /* b2PolygonShape.cpp */; };
-		4CE8A50F16E25FCA0007FADE /* b2BlockAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4B516E25FCA0007FADE /* b2BlockAllocator.cpp */; };
-		4CE8A51016E25FCA0007FADE /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4B716E25FCA0007FADE /* b2Math.cpp */; };
-		4CE8A51116E25FCA0007FADE /* b2Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4B916E25FCA0007FADE /* b2Settings.cpp */; };
-		4CE8A51216E25FCA0007FADE /* b2StackAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4BB16E25FCA0007FADE /* b2StackAllocator.cpp */; };
-		4CE8A51316E25FCA0007FADE /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4BE16E25FCA0007FADE /* b2Body.cpp */; };
-		4CE8A51416E25FCA0007FADE /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4C016E25FCA0007FADE /* b2ContactManager.cpp */; };
-		4CE8A51516E25FCA0007FADE /* b2Fixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4C216E25FCA0007FADE /* b2Fixture.cpp */; };
-		4CE8A51616E25FCA0007FADE /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4C416E25FCA0007FADE /* b2Island.cpp */; };
-		4CE8A51716E25FCA0007FADE /* b2World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4C716E25FCA0007FADE /* b2World.cpp */; };
-		4CE8A51816E25FCA0007FADE /* b2WorldCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4C916E25FCA0007FADE /* b2WorldCallbacks.cpp */; };
-		4CE8A51916E25FCA0007FADE /* b2CircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4CC16E25FCA0007FADE /* b2CircleContact.cpp */; };
-		4CE8A51A16E25FCA0007FADE /* b2Contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4CE16E25FCA0007FADE /* b2Contact.cpp */; };
-		4CE8A51B16E25FCA0007FADE /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4D016E25FCA0007FADE /* b2ContactSolver.cpp */; };
-		4CE8A51C16E25FCA0007FADE /* b2PolygonAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4D216E25FCA0007FADE /* b2PolygonAndCircleContact.cpp */; };
-		4CE8A51D16E25FCA0007FADE /* b2PolygonContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4D416E25FCA0007FADE /* b2PolygonContact.cpp */; };
-		4CE8A51E16E25FCA0007FADE /* b2TOISolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4D616E25FCA0007FADE /* b2TOISolver.cpp */; };
-		4CE8A51F16E25FCA0007FADE /* b2DistanceJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4D916E25FCA0007FADE /* b2DistanceJoint.cpp */; };
-		4CE8A52016E25FCA0007FADE /* b2FrictionJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4DB16E25FCA0007FADE /* b2FrictionJoint.cpp */; };
-		4CE8A52116E25FCA0007FADE /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4DD16E25FCA0007FADE /* b2GearJoint.cpp */; };
-		4CE8A52216E25FCA0007FADE /* b2Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4DF16E25FCA0007FADE /* b2Joint.cpp */; };
-		4CE8A52316E25FCA0007FADE /* b2LineJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4E116E25FCA0007FADE /* b2LineJoint.cpp */; };
-		4CE8A52416E25FCA0007FADE /* b2MouseJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4E316E25FCA0007FADE /* b2MouseJoint.cpp */; };
-		4CE8A52516E25FCA0007FADE /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4E516E25FCA0007FADE /* b2PrismaticJoint.cpp */; };
-		4CE8A52616E25FCA0007FADE /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4E716E25FCA0007FADE /* b2PulleyJoint.cpp */; };
-		4CE8A52716E25FCA0007FADE /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4E916E25FCA0007FADE /* b2RevoluteJoint.cpp */; };
-		4CE8A52816E25FCA0007FADE /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4EB16E25FCA0007FADE /* b2WeldJoint.cpp */; };
-		4CE8A52916E25FCA0007FADE /* del_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4EF16E25FCA0007FADE /* del_impl.cpp */; };
-		4CE8A52A16E25FCA0007FADE /* ofxBox2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4F516E25FCA0007FADE /* ofxBox2d.cpp */; };
-		4CE8A52B16E25FCA0007FADE /* ofxBox2dBaseShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4F716E25FCA0007FADE /* ofxBox2dBaseShape.cpp */; };
-		4CE8A52C16E25FCA0007FADE /* ofxBox2dCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4F916E25FCA0007FADE /* ofxBox2dCircle.cpp */; };
-		4CE8A52D16E25FCA0007FADE /* ofxBox2dJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4FC16E25FCA0007FADE /* ofxBox2dJoint.cpp */; };
-		4CE8A52E16E25FCA0007FADE /* ofxBox2dPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4FE16E25FCA0007FADE /* ofxBox2dPolygon.cpp */; };
-		4CE8A52F16E25FCA0007FADE /* ofxBox2dRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A50116E25FCA0007FADE /* ofxBox2dRect.cpp */; };
 		4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53B16E27ABB0007FADE /* identity.cpp */; };
 		4CE8A54216E295160007FADE /* scene02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A54016E295160007FADE /* scene02.cpp */; };
 		5326AEA810A23A0500278DE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5326AEA710A23A0500278DE6 /* CoreLocation.framework */; };
@@ -111,6 +106,100 @@
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
 		4C0F620216E8F0C7004B3DB0 /* superBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = superBall.cpp; sourceTree = "<group>"; };
 		4C0F620316E8F0C7004B3DB0 /* superBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superBall.h; sourceTree = "<group>"; };
+		4C0F629A16E92BA8004B3DB0 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		4C0F629D16E92BA8004B3DB0 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
+		4C0F629F16E92BA8004B3DB0 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
+		4C0F62A016E92BA8004B3DB0 /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
+		4C0F62A116E92BA8004B3DB0 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollideCircle.cpp; sourceTree = "<group>"; };
+		4C0F62A216E92BA8004B3DB0 /* b2CollidePolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollidePolygon.cpp; sourceTree = "<group>"; };
+		4C0F62A316E92BA8004B3DB0 /* b2Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Collision.cpp; sourceTree = "<group>"; };
+		4C0F62A416E92BA8004B3DB0 /* b2Collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Collision.h; sourceTree = "<group>"; };
+		4C0F62A516E92BA8004B3DB0 /* b2Distance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Distance.cpp; sourceTree = "<group>"; };
+		4C0F62A616E92BA8004B3DB0 /* b2Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Distance.h; sourceTree = "<group>"; };
+		4C0F62A716E92BA8004B3DB0 /* b2DynamicTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2DynamicTree.cpp; sourceTree = "<group>"; };
+		4C0F62A816E92BA8004B3DB0 /* b2DynamicTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2DynamicTree.h; sourceTree = "<group>"; };
+		4C0F62A916E92BA8004B3DB0 /* b2TimeOfImpact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2TimeOfImpact.cpp; sourceTree = "<group>"; };
+		4C0F62AA16E92BA8004B3DB0 /* b2TimeOfImpact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2TimeOfImpact.h; sourceTree = "<group>"; };
+		4C0F62AC16E92BA8004B3DB0 /* b2CircleShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CircleShape.cpp; sourceTree = "<group>"; };
+		4C0F62AD16E92BA8004B3DB0 /* b2CircleShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2CircleShape.h; sourceTree = "<group>"; };
+		4C0F62AE16E92BA8004B3DB0 /* b2PolygonShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PolygonShape.cpp; sourceTree = "<group>"; };
+		4C0F62AF16E92BA8004B3DB0 /* b2PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PolygonShape.h; sourceTree = "<group>"; };
+		4C0F62B016E92BA8004B3DB0 /* b2Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Shape.h; sourceTree = "<group>"; };
+		4C0F62B216E92BA8004B3DB0 /* b2BlockAllocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BlockAllocator.cpp; sourceTree = "<group>"; };
+		4C0F62B316E92BA8004B3DB0 /* b2BlockAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BlockAllocator.h; sourceTree = "<group>"; };
+		4C0F62B416E92BA8004B3DB0 /* b2Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Math.cpp; sourceTree = "<group>"; };
+		4C0F62B516E92BA8004B3DB0 /* b2Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Math.h; sourceTree = "<group>"; };
+		4C0F62B616E92BA8004B3DB0 /* b2Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Settings.cpp; sourceTree = "<group>"; };
+		4C0F62B716E92BA8004B3DB0 /* b2Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Settings.h; sourceTree = "<group>"; };
+		4C0F62B816E92BA8004B3DB0 /* b2StackAllocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2StackAllocator.cpp; sourceTree = "<group>"; };
+		4C0F62B916E92BA8004B3DB0 /* b2StackAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2StackAllocator.h; sourceTree = "<group>"; };
+		4C0F62BB16E92BA8004B3DB0 /* b2Body.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Body.cpp; sourceTree = "<group>"; };
+		4C0F62BC16E92BA8004B3DB0 /* b2Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Body.h; sourceTree = "<group>"; };
+		4C0F62BD16E92BA8004B3DB0 /* b2ContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2ContactManager.cpp; sourceTree = "<group>"; };
+		4C0F62BE16E92BA8004B3DB0 /* b2ContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2ContactManager.h; sourceTree = "<group>"; };
+		4C0F62BF16E92BA8004B3DB0 /* b2Fixture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Fixture.cpp; sourceTree = "<group>"; };
+		4C0F62C016E92BA8004B3DB0 /* b2Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Fixture.h; sourceTree = "<group>"; };
+		4C0F62C116E92BA8004B3DB0 /* b2Island.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Island.cpp; sourceTree = "<group>"; };
+		4C0F62C216E92BA8004B3DB0 /* b2Island.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Island.h; sourceTree = "<group>"; };
+		4C0F62C316E92BA8004B3DB0 /* b2TimeStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2TimeStep.h; sourceTree = "<group>"; };
+		4C0F62C416E92BA8004B3DB0 /* b2World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2World.cpp; sourceTree = "<group>"; };
+		4C0F62C516E92BA8004B3DB0 /* b2World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2World.h; sourceTree = "<group>"; };
+		4C0F62C616E92BA8004B3DB0 /* b2WorldCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2WorldCallbacks.cpp; sourceTree = "<group>"; };
+		4C0F62C716E92BA8004B3DB0 /* b2WorldCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WorldCallbacks.h; sourceTree = "<group>"; };
+		4C0F62C916E92BA8004B3DB0 /* b2CircleContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CircleContact.cpp; sourceTree = "<group>"; };
+		4C0F62CA16E92BA8004B3DB0 /* b2CircleContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2CircleContact.h; sourceTree = "<group>"; };
+		4C0F62CB16E92BA8004B3DB0 /* b2Contact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Contact.cpp; sourceTree = "<group>"; };
+		4C0F62CC16E92BA8004B3DB0 /* b2Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Contact.h; sourceTree = "<group>"; };
+		4C0F62CD16E92BA8004B3DB0 /* b2ContactSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2ContactSolver.cpp; sourceTree = "<group>"; };
+		4C0F62CE16E92BA8004B3DB0 /* b2ContactSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2ContactSolver.h; sourceTree = "<group>"; };
+		4C0F62CF16E92BA8004B3DB0 /* b2PolygonAndCircleContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PolygonAndCircleContact.cpp; sourceTree = "<group>"; };
+		4C0F62D016E92BA8004B3DB0 /* b2PolygonAndCircleContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PolygonAndCircleContact.h; sourceTree = "<group>"; };
+		4C0F62D116E92BA8004B3DB0 /* b2PolygonContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PolygonContact.cpp; sourceTree = "<group>"; };
+		4C0F62D216E92BA8004B3DB0 /* b2PolygonContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PolygonContact.h; sourceTree = "<group>"; };
+		4C0F62D316E92BA8004B3DB0 /* b2TOISolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2TOISolver.cpp; sourceTree = "<group>"; };
+		4C0F62D416E92BA8004B3DB0 /* b2TOISolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2TOISolver.h; sourceTree = "<group>"; };
+		4C0F62D616E92BA8004B3DB0 /* b2DistanceJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2DistanceJoint.cpp; sourceTree = "<group>"; };
+		4C0F62D716E92BA8004B3DB0 /* b2DistanceJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2DistanceJoint.h; sourceTree = "<group>"; };
+		4C0F62D816E92BA8004B3DB0 /* b2FrictionJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2FrictionJoint.cpp; sourceTree = "<group>"; };
+		4C0F62D916E92BA8004B3DB0 /* b2FrictionJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2FrictionJoint.h; sourceTree = "<group>"; };
+		4C0F62DA16E92BA8004B3DB0 /* b2GearJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2GearJoint.cpp; sourceTree = "<group>"; };
+		4C0F62DB16E92BA8004B3DB0 /* b2GearJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2GearJoint.h; sourceTree = "<group>"; };
+		4C0F62DC16E92BA8004B3DB0 /* b2Joint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Joint.cpp; sourceTree = "<group>"; };
+		4C0F62DD16E92BA8004B3DB0 /* b2Joint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Joint.h; sourceTree = "<group>"; };
+		4C0F62DE16E92BA8004B3DB0 /* b2LineJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2LineJoint.cpp; sourceTree = "<group>"; };
+		4C0F62DF16E92BA8004B3DB0 /* b2LineJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2LineJoint.h; sourceTree = "<group>"; };
+		4C0F62E016E92BA8004B3DB0 /* b2MouseJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2MouseJoint.cpp; sourceTree = "<group>"; };
+		4C0F62E116E92BA8004B3DB0 /* b2MouseJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2MouseJoint.h; sourceTree = "<group>"; };
+		4C0F62E216E92BA8004B3DB0 /* b2PrismaticJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PrismaticJoint.cpp; sourceTree = "<group>"; };
+		4C0F62E316E92BA8004B3DB0 /* b2PrismaticJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PrismaticJoint.h; sourceTree = "<group>"; };
+		4C0F62E416E92BA8004B3DB0 /* b2PulleyJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PulleyJoint.cpp; sourceTree = "<group>"; };
+		4C0F62E516E92BA8004B3DB0 /* b2PulleyJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PulleyJoint.h; sourceTree = "<group>"; };
+		4C0F62E616E92BA8004B3DB0 /* b2RevoluteJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2RevoluteJoint.cpp; sourceTree = "<group>"; };
+		4C0F62E716E92BA8004B3DB0 /* b2RevoluteJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2RevoluteJoint.h; sourceTree = "<group>"; };
+		4C0F62E816E92BA8004B3DB0 /* b2WeldJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2WeldJoint.cpp; sourceTree = "<group>"; };
+		4C0F62E916E92BA8004B3DB0 /* b2WeldJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WeldJoint.h; sourceTree = "<group>"; };
+		4C0F62EB16E92BA8004B3DB0 /* assert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = assert.hpp; sourceTree = "<group>"; };
+		4C0F62EC16E92BA8004B3DB0 /* del_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = del_impl.cpp; sourceTree = "<group>"; };
+		4C0F62ED16E92BA8004B3DB0 /* del_interface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = del_interface.hpp; sourceTree = "<group>"; };
+		4C0F62EE16E92BA8004B3DB0 /* dpoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dpoint.hpp; sourceTree = "<group>"; };
+		4C0F62EF16E92BA8004B3DB0 /* triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
+		4C0F62F016E92BA8004B3DB0 /* triangle_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = triangle_impl.hpp; sourceTree = "<group>"; };
+		4C0F62F216E92BA8004B3DB0 /* ofxBox2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2d.cpp; sourceTree = "<group>"; };
+		4C0F62F316E92BA8004B3DB0 /* ofxBox2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2d.h; sourceTree = "<group>"; };
+		4C0F62F416E92BA8004B3DB0 /* ofxBox2dBaseShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dBaseShape.cpp; sourceTree = "<group>"; };
+		4C0F62F516E92BA8004B3DB0 /* ofxBox2dBaseShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dBaseShape.h; sourceTree = "<group>"; };
+		4C0F62F616E92BA8004B3DB0 /* ofxBox2dCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dCircle.cpp; sourceTree = "<group>"; };
+		4C0F62F716E92BA8004B3DB0 /* ofxBox2dCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dCircle.h; sourceTree = "<group>"; };
+		4C0F62F816E92BA8004B3DB0 /* ofxBox2dContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dContactListener.h; sourceTree = "<group>"; };
+		4C0F62F916E92BA8004B3DB0 /* ofxBox2dJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dJoint.cpp; sourceTree = "<group>"; };
+		4C0F62FA16E92BA8004B3DB0 /* ofxBox2dJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dJoint.h; sourceTree = "<group>"; };
+		4C0F62FB16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dPolygon.cpp; sourceTree = "<group>"; };
+		4C0F62FC16E92BA8004B3DB0 /* ofxBox2dPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dPolygon.h; sourceTree = "<group>"; };
+		4C0F62FD16E92BA8004B3DB0 /* ofxBox2dPolygonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dPolygonUtils.h; sourceTree = "<group>"; };
+		4C0F62FE16E92BA8004B3DB0 /* ofxBox2dRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dRect.cpp; sourceTree = "<group>"; };
+		4C0F62FF16E92BA8004B3DB0 /* ofxBox2dRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRect.h; sourceTree = "<group>"; };
+		4C0F630016E92BA8004B3DB0 /* ofxBox2dRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRender.h; sourceTree = "<group>"; };
+		4C0F630116E92BA8004B3DB0 /* ofxBox2dUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dUtils.h; sourceTree = "<group>"; };
 		4C97690816E7D2590074E810 /* citySelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = citySelect.cpp; sourceTree = "<group>"; };
 		4C97690916E7D2590074E810 /* citySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = citySelect.h; sourceTree = "<group>"; };
 		4CD0D93316E8599C00A134CB /* cityData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cityData.cpp; sourceTree = "<group>"; };
@@ -120,115 +209,12 @@
 		4CDBFE5816E1FA8100193C1E /* MpiData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MpiData.cpp; sourceTree = "<group>"; };
 		4CDBFE5916E1FA8100193C1E /* MpiData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MpiData.h; sourceTree = "<group>"; };
 		4CDBFE5A16E1FA8200193C1E /* MpiElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MpiElements.h; sourceTree = "<group>"; };
-		4CDBFE5E16E20CEA00193C1E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		4CDBFE6016E20CEA00193C1E /* CollageTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollageTexture.cpp; sourceTree = "<group>"; };
-		4CDBFE6116E20CEA00193C1E /* CollageTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollageTexture.h; sourceTree = "<group>"; };
-		4CDBFE6216E20CEA00193C1E /* LinearTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinearTexture.cpp; sourceTree = "<group>"; };
-		4CDBFE6316E20CEA00193C1E /* LinearTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearTexture.h; sourceTree = "<group>"; };
-		4CDBFE6416E20CEA00193C1E /* ofxSpriteSheetRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSpriteSheetRenderer.cpp; sourceTree = "<group>"; };
-		4CDBFE6516E20CEA00193C1E /* ofxSpriteSheetRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSpriteSheetRenderer.h; sourceTree = "<group>"; };
-		4CDBFE6616E20CEA00193C1E /* PixelTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PixelTexture.cpp; sourceTree = "<group>"; };
-		4CDBFE6716E20CEA00193C1E /* PixelTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixelTexture.h; sourceTree = "<group>"; };
 		4CE8590F16DBFF7A00FE31E6 /* particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
 		4CE8591016DBFF7A00FE31E6 /* particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
 		4CE8591116DBFF7A00FE31E6 /* vectorField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vectorField.cpp; sourceTree = "<group>"; };
 		4CE8591216DBFF7A00FE31E6 /* vectorField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vectorField.h; sourceTree = "<group>"; };
 		4CE8591D16DC217B00FE31E6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		4CE8A49D16E25FCA0007FADE /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
-		4CE8A4A016E25FCA0007FADE /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
-		4CE8A4A216E25FCA0007FADE /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
-		4CE8A4A316E25FCA0007FADE /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
-		4CE8A4A416E25FCA0007FADE /* b2CollideCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollideCircle.cpp; sourceTree = "<group>"; };
-		4CE8A4A516E25FCA0007FADE /* b2CollidePolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollidePolygon.cpp; sourceTree = "<group>"; };
-		4CE8A4A616E25FCA0007FADE /* b2Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Collision.cpp; sourceTree = "<group>"; };
-		4CE8A4A716E25FCA0007FADE /* b2Collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Collision.h; sourceTree = "<group>"; };
-		4CE8A4A816E25FCA0007FADE /* b2Distance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Distance.cpp; sourceTree = "<group>"; };
-		4CE8A4A916E25FCA0007FADE /* b2Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Distance.h; sourceTree = "<group>"; };
-		4CE8A4AA16E25FCA0007FADE /* b2DynamicTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2DynamicTree.cpp; sourceTree = "<group>"; };
-		4CE8A4AB16E25FCA0007FADE /* b2DynamicTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2DynamicTree.h; sourceTree = "<group>"; };
-		4CE8A4AC16E25FCA0007FADE /* b2TimeOfImpact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2TimeOfImpact.cpp; sourceTree = "<group>"; };
-		4CE8A4AD16E25FCA0007FADE /* b2TimeOfImpact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2TimeOfImpact.h; sourceTree = "<group>"; };
-		4CE8A4AF16E25FCA0007FADE /* b2CircleShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CircleShape.cpp; sourceTree = "<group>"; };
-		4CE8A4B016E25FCA0007FADE /* b2CircleShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2CircleShape.h; sourceTree = "<group>"; };
-		4CE8A4B116E25FCA0007FADE /* b2PolygonShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PolygonShape.cpp; sourceTree = "<group>"; };
-		4CE8A4B216E25FCA0007FADE /* b2PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PolygonShape.h; sourceTree = "<group>"; };
-		4CE8A4B316E25FCA0007FADE /* b2Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Shape.h; sourceTree = "<group>"; };
-		4CE8A4B516E25FCA0007FADE /* b2BlockAllocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BlockAllocator.cpp; sourceTree = "<group>"; };
-		4CE8A4B616E25FCA0007FADE /* b2BlockAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BlockAllocator.h; sourceTree = "<group>"; };
-		4CE8A4B716E25FCA0007FADE /* b2Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Math.cpp; sourceTree = "<group>"; };
-		4CE8A4B816E25FCA0007FADE /* b2Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Math.h; sourceTree = "<group>"; };
-		4CE8A4B916E25FCA0007FADE /* b2Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Settings.cpp; sourceTree = "<group>"; };
-		4CE8A4BA16E25FCA0007FADE /* b2Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Settings.h; sourceTree = "<group>"; };
-		4CE8A4BB16E25FCA0007FADE /* b2StackAllocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2StackAllocator.cpp; sourceTree = "<group>"; };
-		4CE8A4BC16E25FCA0007FADE /* b2StackAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2StackAllocator.h; sourceTree = "<group>"; };
-		4CE8A4BE16E25FCA0007FADE /* b2Body.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Body.cpp; sourceTree = "<group>"; };
-		4CE8A4BF16E25FCA0007FADE /* b2Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Body.h; sourceTree = "<group>"; };
-		4CE8A4C016E25FCA0007FADE /* b2ContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2ContactManager.cpp; sourceTree = "<group>"; };
-		4CE8A4C116E25FCA0007FADE /* b2ContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2ContactManager.h; sourceTree = "<group>"; };
-		4CE8A4C216E25FCA0007FADE /* b2Fixture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Fixture.cpp; sourceTree = "<group>"; };
-		4CE8A4C316E25FCA0007FADE /* b2Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Fixture.h; sourceTree = "<group>"; };
-		4CE8A4C416E25FCA0007FADE /* b2Island.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Island.cpp; sourceTree = "<group>"; };
-		4CE8A4C516E25FCA0007FADE /* b2Island.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Island.h; sourceTree = "<group>"; };
-		4CE8A4C616E25FCA0007FADE /* b2TimeStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2TimeStep.h; sourceTree = "<group>"; };
-		4CE8A4C716E25FCA0007FADE /* b2World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2World.cpp; sourceTree = "<group>"; };
-		4CE8A4C816E25FCA0007FADE /* b2World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2World.h; sourceTree = "<group>"; };
-		4CE8A4C916E25FCA0007FADE /* b2WorldCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2WorldCallbacks.cpp; sourceTree = "<group>"; };
-		4CE8A4CA16E25FCA0007FADE /* b2WorldCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WorldCallbacks.h; sourceTree = "<group>"; };
-		4CE8A4CC16E25FCA0007FADE /* b2CircleContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CircleContact.cpp; sourceTree = "<group>"; };
-		4CE8A4CD16E25FCA0007FADE /* b2CircleContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2CircleContact.h; sourceTree = "<group>"; };
-		4CE8A4CE16E25FCA0007FADE /* b2Contact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Contact.cpp; sourceTree = "<group>"; };
-		4CE8A4CF16E25FCA0007FADE /* b2Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Contact.h; sourceTree = "<group>"; };
-		4CE8A4D016E25FCA0007FADE /* b2ContactSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2ContactSolver.cpp; sourceTree = "<group>"; };
-		4CE8A4D116E25FCA0007FADE /* b2ContactSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2ContactSolver.h; sourceTree = "<group>"; };
-		4CE8A4D216E25FCA0007FADE /* b2PolygonAndCircleContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PolygonAndCircleContact.cpp; sourceTree = "<group>"; };
-		4CE8A4D316E25FCA0007FADE /* b2PolygonAndCircleContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PolygonAndCircleContact.h; sourceTree = "<group>"; };
-		4CE8A4D416E25FCA0007FADE /* b2PolygonContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PolygonContact.cpp; sourceTree = "<group>"; };
-		4CE8A4D516E25FCA0007FADE /* b2PolygonContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PolygonContact.h; sourceTree = "<group>"; };
-		4CE8A4D616E25FCA0007FADE /* b2TOISolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2TOISolver.cpp; sourceTree = "<group>"; };
-		4CE8A4D716E25FCA0007FADE /* b2TOISolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2TOISolver.h; sourceTree = "<group>"; };
-		4CE8A4D916E25FCA0007FADE /* b2DistanceJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2DistanceJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4DA16E25FCA0007FADE /* b2DistanceJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2DistanceJoint.h; sourceTree = "<group>"; };
-		4CE8A4DB16E25FCA0007FADE /* b2FrictionJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2FrictionJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4DC16E25FCA0007FADE /* b2FrictionJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2FrictionJoint.h; sourceTree = "<group>"; };
-		4CE8A4DD16E25FCA0007FADE /* b2GearJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2GearJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4DE16E25FCA0007FADE /* b2GearJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2GearJoint.h; sourceTree = "<group>"; };
-		4CE8A4DF16E25FCA0007FADE /* b2Joint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Joint.cpp; sourceTree = "<group>"; };
-		4CE8A4E016E25FCA0007FADE /* b2Joint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Joint.h; sourceTree = "<group>"; };
-		4CE8A4E116E25FCA0007FADE /* b2LineJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2LineJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4E216E25FCA0007FADE /* b2LineJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2LineJoint.h; sourceTree = "<group>"; };
-		4CE8A4E316E25FCA0007FADE /* b2MouseJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2MouseJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4E416E25FCA0007FADE /* b2MouseJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2MouseJoint.h; sourceTree = "<group>"; };
-		4CE8A4E516E25FCA0007FADE /* b2PrismaticJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PrismaticJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4E616E25FCA0007FADE /* b2PrismaticJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PrismaticJoint.h; sourceTree = "<group>"; };
-		4CE8A4E716E25FCA0007FADE /* b2PulleyJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2PulleyJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4E816E25FCA0007FADE /* b2PulleyJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2PulleyJoint.h; sourceTree = "<group>"; };
-		4CE8A4E916E25FCA0007FADE /* b2RevoluteJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2RevoluteJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4EA16E25FCA0007FADE /* b2RevoluteJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2RevoluteJoint.h; sourceTree = "<group>"; };
-		4CE8A4EB16E25FCA0007FADE /* b2WeldJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2WeldJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4EC16E25FCA0007FADE /* b2WeldJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WeldJoint.h; sourceTree = "<group>"; };
-		4CE8A4EE16E25FCA0007FADE /* assert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = assert.hpp; sourceTree = "<group>"; };
-		4CE8A4EF16E25FCA0007FADE /* del_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = del_impl.cpp; sourceTree = "<group>"; };
-		4CE8A4F016E25FCA0007FADE /* del_interface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = del_interface.hpp; sourceTree = "<group>"; };
-		4CE8A4F116E25FCA0007FADE /* dpoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dpoint.hpp; sourceTree = "<group>"; };
-		4CE8A4F216E25FCA0007FADE /* triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
-		4CE8A4F316E25FCA0007FADE /* triangle_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = triangle_impl.hpp; sourceTree = "<group>"; };
-		4CE8A4F516E25FCA0007FADE /* ofxBox2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2d.cpp; sourceTree = "<group>"; };
-		4CE8A4F616E25FCA0007FADE /* ofxBox2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2d.h; sourceTree = "<group>"; };
-		4CE8A4F716E25FCA0007FADE /* ofxBox2dBaseShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dBaseShape.cpp; sourceTree = "<group>"; };
-		4CE8A4F816E25FCA0007FADE /* ofxBox2dBaseShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dBaseShape.h; sourceTree = "<group>"; };
-		4CE8A4F916E25FCA0007FADE /* ofxBox2dCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dCircle.cpp; sourceTree = "<group>"; };
-		4CE8A4FA16E25FCA0007FADE /* ofxBox2dCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dCircle.h; sourceTree = "<group>"; };
-		4CE8A4FB16E25FCA0007FADE /* ofxBox2dContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dContactListener.h; sourceTree = "<group>"; };
-		4CE8A4FC16E25FCA0007FADE /* ofxBox2dJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dJoint.cpp; sourceTree = "<group>"; };
-		4CE8A4FD16E25FCA0007FADE /* ofxBox2dJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dJoint.h; sourceTree = "<group>"; };
-		4CE8A4FE16E25FCA0007FADE /* ofxBox2dPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dPolygon.cpp; sourceTree = "<group>"; };
-		4CE8A4FF16E25FCA0007FADE /* ofxBox2dPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dPolygon.h; sourceTree = "<group>"; };
-		4CE8A50016E25FCA0007FADE /* ofxBox2dPolygonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dPolygonUtils.h; sourceTree = "<group>"; };
-		4CE8A50116E25FCA0007FADE /* ofxBox2dRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBox2dRect.cpp; sourceTree = "<group>"; };
-		4CE8A50216E25FCA0007FADE /* ofxBox2dRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRect.h; sourceTree = "<group>"; };
-		4CE8A50316E25FCA0007FADE /* ofxBox2dRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRender.h; sourceTree = "<group>"; };
-		4CE8A50416E25FCA0007FADE /* ofxBox2dUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dUtils.h; sourceTree = "<group>"; };
 		4CE8A53B16E27ABB0007FADE /* identity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = identity.cpp; sourceTree = "<group>"; };
 		4CE8A53C16E27ABB0007FADE /* identity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = identity.h; sourceTree = "<group>"; };
 		4CE8A54016E295160007FADE /* scene02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene02.cpp; sourceTree = "<group>"; };
@@ -322,6 +308,188 @@
 			name = "core frameworks";
 			sourceTree = "<group>";
 		};
+		4C0F629916E92BA8004B3DB0 /* ofxBox2d */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F629A16E92BA8004B3DB0 /* install.xml */,
+				4C0F629B16E92BA8004B3DB0 /* libs */,
+				4C0F62F116E92BA8004B3DB0 /* src */,
+			);
+			name = ofxBox2d;
+			path = ../ofxBox2d;
+			sourceTree = "<group>";
+		};
+		4C0F629B16E92BA8004B3DB0 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F629C16E92BA8004B3DB0 /* Box2D */,
+				4C0F62EA16E92BA8004B3DB0 /* triangle */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		4C0F629C16E92BA8004B3DB0 /* Box2D */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F629D16E92BA8004B3DB0 /* Box2D.h */,
+				4C0F629E16E92BA8004B3DB0 /* Collision */,
+				4C0F62B116E92BA8004B3DB0 /* Common */,
+				4C0F62BA16E92BA8004B3DB0 /* Dynamics */,
+			);
+			path = Box2D;
+			sourceTree = "<group>";
+		};
+		4C0F629E16E92BA8004B3DB0 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F629F16E92BA8004B3DB0 /* b2BroadPhase.cpp */,
+				4C0F62A016E92BA8004B3DB0 /* b2BroadPhase.h */,
+				4C0F62A116E92BA8004B3DB0 /* b2CollideCircle.cpp */,
+				4C0F62A216E92BA8004B3DB0 /* b2CollidePolygon.cpp */,
+				4C0F62A316E92BA8004B3DB0 /* b2Collision.cpp */,
+				4C0F62A416E92BA8004B3DB0 /* b2Collision.h */,
+				4C0F62A516E92BA8004B3DB0 /* b2Distance.cpp */,
+				4C0F62A616E92BA8004B3DB0 /* b2Distance.h */,
+				4C0F62A716E92BA8004B3DB0 /* b2DynamicTree.cpp */,
+				4C0F62A816E92BA8004B3DB0 /* b2DynamicTree.h */,
+				4C0F62A916E92BA8004B3DB0 /* b2TimeOfImpact.cpp */,
+				4C0F62AA16E92BA8004B3DB0 /* b2TimeOfImpact.h */,
+				4C0F62AB16E92BA8004B3DB0 /* Shapes */,
+			);
+			path = Collision;
+			sourceTree = "<group>";
+		};
+		4C0F62AB16E92BA8004B3DB0 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62AC16E92BA8004B3DB0 /* b2CircleShape.cpp */,
+				4C0F62AD16E92BA8004B3DB0 /* b2CircleShape.h */,
+				4C0F62AE16E92BA8004B3DB0 /* b2PolygonShape.cpp */,
+				4C0F62AF16E92BA8004B3DB0 /* b2PolygonShape.h */,
+				4C0F62B016E92BA8004B3DB0 /* b2Shape.h */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		4C0F62B116E92BA8004B3DB0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62B216E92BA8004B3DB0 /* b2BlockAllocator.cpp */,
+				4C0F62B316E92BA8004B3DB0 /* b2BlockAllocator.h */,
+				4C0F62B416E92BA8004B3DB0 /* b2Math.cpp */,
+				4C0F62B516E92BA8004B3DB0 /* b2Math.h */,
+				4C0F62B616E92BA8004B3DB0 /* b2Settings.cpp */,
+				4C0F62B716E92BA8004B3DB0 /* b2Settings.h */,
+				4C0F62B816E92BA8004B3DB0 /* b2StackAllocator.cpp */,
+				4C0F62B916E92BA8004B3DB0 /* b2StackAllocator.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4C0F62BA16E92BA8004B3DB0 /* Dynamics */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62BB16E92BA8004B3DB0 /* b2Body.cpp */,
+				4C0F62BC16E92BA8004B3DB0 /* b2Body.h */,
+				4C0F62BD16E92BA8004B3DB0 /* b2ContactManager.cpp */,
+				4C0F62BE16E92BA8004B3DB0 /* b2ContactManager.h */,
+				4C0F62BF16E92BA8004B3DB0 /* b2Fixture.cpp */,
+				4C0F62C016E92BA8004B3DB0 /* b2Fixture.h */,
+				4C0F62C116E92BA8004B3DB0 /* b2Island.cpp */,
+				4C0F62C216E92BA8004B3DB0 /* b2Island.h */,
+				4C0F62C316E92BA8004B3DB0 /* b2TimeStep.h */,
+				4C0F62C416E92BA8004B3DB0 /* b2World.cpp */,
+				4C0F62C516E92BA8004B3DB0 /* b2World.h */,
+				4C0F62C616E92BA8004B3DB0 /* b2WorldCallbacks.cpp */,
+				4C0F62C716E92BA8004B3DB0 /* b2WorldCallbacks.h */,
+				4C0F62C816E92BA8004B3DB0 /* Contacts */,
+				4C0F62D516E92BA8004B3DB0 /* Joints */,
+			);
+			path = Dynamics;
+			sourceTree = "<group>";
+		};
+		4C0F62C816E92BA8004B3DB0 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62C916E92BA8004B3DB0 /* b2CircleContact.cpp */,
+				4C0F62CA16E92BA8004B3DB0 /* b2CircleContact.h */,
+				4C0F62CB16E92BA8004B3DB0 /* b2Contact.cpp */,
+				4C0F62CC16E92BA8004B3DB0 /* b2Contact.h */,
+				4C0F62CD16E92BA8004B3DB0 /* b2ContactSolver.cpp */,
+				4C0F62CE16E92BA8004B3DB0 /* b2ContactSolver.h */,
+				4C0F62CF16E92BA8004B3DB0 /* b2PolygonAndCircleContact.cpp */,
+				4C0F62D016E92BA8004B3DB0 /* b2PolygonAndCircleContact.h */,
+				4C0F62D116E92BA8004B3DB0 /* b2PolygonContact.cpp */,
+				4C0F62D216E92BA8004B3DB0 /* b2PolygonContact.h */,
+				4C0F62D316E92BA8004B3DB0 /* b2TOISolver.cpp */,
+				4C0F62D416E92BA8004B3DB0 /* b2TOISolver.h */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		4C0F62D516E92BA8004B3DB0 /* Joints */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62D616E92BA8004B3DB0 /* b2DistanceJoint.cpp */,
+				4C0F62D716E92BA8004B3DB0 /* b2DistanceJoint.h */,
+				4C0F62D816E92BA8004B3DB0 /* b2FrictionJoint.cpp */,
+				4C0F62D916E92BA8004B3DB0 /* b2FrictionJoint.h */,
+				4C0F62DA16E92BA8004B3DB0 /* b2GearJoint.cpp */,
+				4C0F62DB16E92BA8004B3DB0 /* b2GearJoint.h */,
+				4C0F62DC16E92BA8004B3DB0 /* b2Joint.cpp */,
+				4C0F62DD16E92BA8004B3DB0 /* b2Joint.h */,
+				4C0F62DE16E92BA8004B3DB0 /* b2LineJoint.cpp */,
+				4C0F62DF16E92BA8004B3DB0 /* b2LineJoint.h */,
+				4C0F62E016E92BA8004B3DB0 /* b2MouseJoint.cpp */,
+				4C0F62E116E92BA8004B3DB0 /* b2MouseJoint.h */,
+				4C0F62E216E92BA8004B3DB0 /* b2PrismaticJoint.cpp */,
+				4C0F62E316E92BA8004B3DB0 /* b2PrismaticJoint.h */,
+				4C0F62E416E92BA8004B3DB0 /* b2PulleyJoint.cpp */,
+				4C0F62E516E92BA8004B3DB0 /* b2PulleyJoint.h */,
+				4C0F62E616E92BA8004B3DB0 /* b2RevoluteJoint.cpp */,
+				4C0F62E716E92BA8004B3DB0 /* b2RevoluteJoint.h */,
+				4C0F62E816E92BA8004B3DB0 /* b2WeldJoint.cpp */,
+				4C0F62E916E92BA8004B3DB0 /* b2WeldJoint.h */,
+			);
+			path = Joints;
+			sourceTree = "<group>";
+		};
+		4C0F62EA16E92BA8004B3DB0 /* triangle */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62EB16E92BA8004B3DB0 /* assert.hpp */,
+				4C0F62EC16E92BA8004B3DB0 /* del_impl.cpp */,
+				4C0F62ED16E92BA8004B3DB0 /* del_interface.hpp */,
+				4C0F62EE16E92BA8004B3DB0 /* dpoint.hpp */,
+				4C0F62EF16E92BA8004B3DB0 /* triangle.h */,
+				4C0F62F016E92BA8004B3DB0 /* triangle_impl.hpp */,
+			);
+			path = triangle;
+			sourceTree = "<group>";
+		};
+		4C0F62F116E92BA8004B3DB0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F62F216E92BA8004B3DB0 /* ofxBox2d.cpp */,
+				4C0F62F316E92BA8004B3DB0 /* ofxBox2d.h */,
+				4C0F62F416E92BA8004B3DB0 /* ofxBox2dBaseShape.cpp */,
+				4C0F62F516E92BA8004B3DB0 /* ofxBox2dBaseShape.h */,
+				4C0F62F616E92BA8004B3DB0 /* ofxBox2dCircle.cpp */,
+				4C0F62F716E92BA8004B3DB0 /* ofxBox2dCircle.h */,
+				4C0F62F816E92BA8004B3DB0 /* ofxBox2dContactListener.h */,
+				4C0F62F916E92BA8004B3DB0 /* ofxBox2dJoint.cpp */,
+				4C0F62FA16E92BA8004B3DB0 /* ofxBox2dJoint.h */,
+				4C0F62FB16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp */,
+				4C0F62FC16E92BA8004B3DB0 /* ofxBox2dPolygon.h */,
+				4C0F62FD16E92BA8004B3DB0 /* ofxBox2dPolygonUtils.h */,
+				4C0F62FE16E92BA8004B3DB0 /* ofxBox2dRect.cpp */,
+				4C0F62FF16E92BA8004B3DB0 /* ofxBox2dRect.h */,
+				4C0F630016E92BA8004B3DB0 /* ofxBox2dRender.h */,
+				4C0F630116E92BA8004B3DB0 /* ofxBox2dUtils.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		4CCD814416E2F251005B6B62 /* scene02 */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,213 +526,6 @@
 			name = MPI;
 			sourceTree = "<group>";
 		};
-		4CDBFE5D16E20CEA00193C1E /* ofxSpriteSheetRenderer */ = {
-			isa = PBXGroup;
-			children = (
-				4CDBFE5E16E20CEA00193C1E /* README */,
-				4CDBFE5F16E20CEA00193C1E /* src */,
-			);
-			name = ofxSpriteSheetRenderer;
-			path = ../../../addons/ofxSpriteSheetRenderer;
-			sourceTree = "<group>";
-		};
-		4CDBFE5F16E20CEA00193C1E /* src */ = {
-			isa = PBXGroup;
-			children = (
-				4CDBFE6016E20CEA00193C1E /* CollageTexture.cpp */,
-				4CDBFE6116E20CEA00193C1E /* CollageTexture.h */,
-				4CDBFE6216E20CEA00193C1E /* LinearTexture.cpp */,
-				4CDBFE6316E20CEA00193C1E /* LinearTexture.h */,
-				4CDBFE6416E20CEA00193C1E /* ofxSpriteSheetRenderer.cpp */,
-				4CDBFE6516E20CEA00193C1E /* ofxSpriteSheetRenderer.h */,
-				4CDBFE6616E20CEA00193C1E /* PixelTexture.cpp */,
-				4CDBFE6716E20CEA00193C1E /* PixelTexture.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		4CE8A49C16E25FCA0007FADE /* ofxBox2d */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A49D16E25FCA0007FADE /* install.xml */,
-				4CE8A49E16E25FCA0007FADE /* libs */,
-				4CE8A4F416E25FCA0007FADE /* src */,
-			);
-			name = ofxBox2d;
-			path = ../../../addons/ofxBox2d;
-			sourceTree = "<group>";
-		};
-		4CE8A49E16E25FCA0007FADE /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A49F16E25FCA0007FADE /* Box2D */,
-				4CE8A4ED16E25FCA0007FADE /* triangle */,
-			);
-			path = libs;
-			sourceTree = "<group>";
-		};
-		4CE8A49F16E25FCA0007FADE /* Box2D */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4A016E25FCA0007FADE /* Box2D.h */,
-				4CE8A4A116E25FCA0007FADE /* Collision */,
-				4CE8A4B416E25FCA0007FADE /* Common */,
-				4CE8A4BD16E25FCA0007FADE /* Dynamics */,
-			);
-			path = Box2D;
-			sourceTree = "<group>";
-		};
-		4CE8A4A116E25FCA0007FADE /* Collision */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4A216E25FCA0007FADE /* b2BroadPhase.cpp */,
-				4CE8A4A316E25FCA0007FADE /* b2BroadPhase.h */,
-				4CE8A4A416E25FCA0007FADE /* b2CollideCircle.cpp */,
-				4CE8A4A516E25FCA0007FADE /* b2CollidePolygon.cpp */,
-				4CE8A4A616E25FCA0007FADE /* b2Collision.cpp */,
-				4CE8A4A716E25FCA0007FADE /* b2Collision.h */,
-				4CE8A4A816E25FCA0007FADE /* b2Distance.cpp */,
-				4CE8A4A916E25FCA0007FADE /* b2Distance.h */,
-				4CE8A4AA16E25FCA0007FADE /* b2DynamicTree.cpp */,
-				4CE8A4AB16E25FCA0007FADE /* b2DynamicTree.h */,
-				4CE8A4AC16E25FCA0007FADE /* b2TimeOfImpact.cpp */,
-				4CE8A4AD16E25FCA0007FADE /* b2TimeOfImpact.h */,
-				4CE8A4AE16E25FCA0007FADE /* Shapes */,
-			);
-			path = Collision;
-			sourceTree = "<group>";
-		};
-		4CE8A4AE16E25FCA0007FADE /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4AF16E25FCA0007FADE /* b2CircleShape.cpp */,
-				4CE8A4B016E25FCA0007FADE /* b2CircleShape.h */,
-				4CE8A4B116E25FCA0007FADE /* b2PolygonShape.cpp */,
-				4CE8A4B216E25FCA0007FADE /* b2PolygonShape.h */,
-				4CE8A4B316E25FCA0007FADE /* b2Shape.h */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
-		4CE8A4B416E25FCA0007FADE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4B516E25FCA0007FADE /* b2BlockAllocator.cpp */,
-				4CE8A4B616E25FCA0007FADE /* b2BlockAllocator.h */,
-				4CE8A4B716E25FCA0007FADE /* b2Math.cpp */,
-				4CE8A4B816E25FCA0007FADE /* b2Math.h */,
-				4CE8A4B916E25FCA0007FADE /* b2Settings.cpp */,
-				4CE8A4BA16E25FCA0007FADE /* b2Settings.h */,
-				4CE8A4BB16E25FCA0007FADE /* b2StackAllocator.cpp */,
-				4CE8A4BC16E25FCA0007FADE /* b2StackAllocator.h */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		4CE8A4BD16E25FCA0007FADE /* Dynamics */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4BE16E25FCA0007FADE /* b2Body.cpp */,
-				4CE8A4BF16E25FCA0007FADE /* b2Body.h */,
-				4CE8A4C016E25FCA0007FADE /* b2ContactManager.cpp */,
-				4CE8A4C116E25FCA0007FADE /* b2ContactManager.h */,
-				4CE8A4C216E25FCA0007FADE /* b2Fixture.cpp */,
-				4CE8A4C316E25FCA0007FADE /* b2Fixture.h */,
-				4CE8A4C416E25FCA0007FADE /* b2Island.cpp */,
-				4CE8A4C516E25FCA0007FADE /* b2Island.h */,
-				4CE8A4C616E25FCA0007FADE /* b2TimeStep.h */,
-				4CE8A4C716E25FCA0007FADE /* b2World.cpp */,
-				4CE8A4C816E25FCA0007FADE /* b2World.h */,
-				4CE8A4C916E25FCA0007FADE /* b2WorldCallbacks.cpp */,
-				4CE8A4CA16E25FCA0007FADE /* b2WorldCallbacks.h */,
-				4CE8A4CB16E25FCA0007FADE /* Contacts */,
-				4CE8A4D816E25FCA0007FADE /* Joints */,
-			);
-			path = Dynamics;
-			sourceTree = "<group>";
-		};
-		4CE8A4CB16E25FCA0007FADE /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4CC16E25FCA0007FADE /* b2CircleContact.cpp */,
-				4CE8A4CD16E25FCA0007FADE /* b2CircleContact.h */,
-				4CE8A4CE16E25FCA0007FADE /* b2Contact.cpp */,
-				4CE8A4CF16E25FCA0007FADE /* b2Contact.h */,
-				4CE8A4D016E25FCA0007FADE /* b2ContactSolver.cpp */,
-				4CE8A4D116E25FCA0007FADE /* b2ContactSolver.h */,
-				4CE8A4D216E25FCA0007FADE /* b2PolygonAndCircleContact.cpp */,
-				4CE8A4D316E25FCA0007FADE /* b2PolygonAndCircleContact.h */,
-				4CE8A4D416E25FCA0007FADE /* b2PolygonContact.cpp */,
-				4CE8A4D516E25FCA0007FADE /* b2PolygonContact.h */,
-				4CE8A4D616E25FCA0007FADE /* b2TOISolver.cpp */,
-				4CE8A4D716E25FCA0007FADE /* b2TOISolver.h */,
-			);
-			path = Contacts;
-			sourceTree = "<group>";
-		};
-		4CE8A4D816E25FCA0007FADE /* Joints */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4D916E25FCA0007FADE /* b2DistanceJoint.cpp */,
-				4CE8A4DA16E25FCA0007FADE /* b2DistanceJoint.h */,
-				4CE8A4DB16E25FCA0007FADE /* b2FrictionJoint.cpp */,
-				4CE8A4DC16E25FCA0007FADE /* b2FrictionJoint.h */,
-				4CE8A4DD16E25FCA0007FADE /* b2GearJoint.cpp */,
-				4CE8A4DE16E25FCA0007FADE /* b2GearJoint.h */,
-				4CE8A4DF16E25FCA0007FADE /* b2Joint.cpp */,
-				4CE8A4E016E25FCA0007FADE /* b2Joint.h */,
-				4CE8A4E116E25FCA0007FADE /* b2LineJoint.cpp */,
-				4CE8A4E216E25FCA0007FADE /* b2LineJoint.h */,
-				4CE8A4E316E25FCA0007FADE /* b2MouseJoint.cpp */,
-				4CE8A4E416E25FCA0007FADE /* b2MouseJoint.h */,
-				4CE8A4E516E25FCA0007FADE /* b2PrismaticJoint.cpp */,
-				4CE8A4E616E25FCA0007FADE /* b2PrismaticJoint.h */,
-				4CE8A4E716E25FCA0007FADE /* b2PulleyJoint.cpp */,
-				4CE8A4E816E25FCA0007FADE /* b2PulleyJoint.h */,
-				4CE8A4E916E25FCA0007FADE /* b2RevoluteJoint.cpp */,
-				4CE8A4EA16E25FCA0007FADE /* b2RevoluteJoint.h */,
-				4CE8A4EB16E25FCA0007FADE /* b2WeldJoint.cpp */,
-				4CE8A4EC16E25FCA0007FADE /* b2WeldJoint.h */,
-			);
-			path = Joints;
-			sourceTree = "<group>";
-		};
-		4CE8A4ED16E25FCA0007FADE /* triangle */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4EE16E25FCA0007FADE /* assert.hpp */,
-				4CE8A4EF16E25FCA0007FADE /* del_impl.cpp */,
-				4CE8A4F016E25FCA0007FADE /* del_interface.hpp */,
-				4CE8A4F116E25FCA0007FADE /* dpoint.hpp */,
-				4CE8A4F216E25FCA0007FADE /* triangle.h */,
-				4CE8A4F316E25FCA0007FADE /* triangle_impl.hpp */,
-			);
-			path = triangle;
-			sourceTree = "<group>";
-		};
-		4CE8A4F416E25FCA0007FADE /* src */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8A4F516E25FCA0007FADE /* ofxBox2d.cpp */,
-				4CE8A4F616E25FCA0007FADE /* ofxBox2d.h */,
-				4CE8A4F716E25FCA0007FADE /* ofxBox2dBaseShape.cpp */,
-				4CE8A4F816E25FCA0007FADE /* ofxBox2dBaseShape.h */,
-				4CE8A4F916E25FCA0007FADE /* ofxBox2dCircle.cpp */,
-				4CE8A4FA16E25FCA0007FADE /* ofxBox2dCircle.h */,
-				4CE8A4FB16E25FCA0007FADE /* ofxBox2dContactListener.h */,
-				4CE8A4FC16E25FCA0007FADE /* ofxBox2dJoint.cpp */,
-				4CE8A4FD16E25FCA0007FADE /* ofxBox2dJoint.h */,
-				4CE8A4FE16E25FCA0007FADE /* ofxBox2dPolygon.cpp */,
-				4CE8A4FF16E25FCA0007FADE /* ofxBox2dPolygon.h */,
-				4CE8A50016E25FCA0007FADE /* ofxBox2dPolygonUtils.h */,
-				4CE8A50116E25FCA0007FADE /* ofxBox2dRect.cpp */,
-				4CE8A50216E25FCA0007FADE /* ofxBox2dRect.h */,
-				4CE8A50316E25FCA0007FADE /* ofxBox2dRender.h */,
-				4CE8A50416E25FCA0007FADE /* ofxBox2dUtils.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		BB16E9930F2B1E5900518274 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,8 +537,7 @@
 		BB16F26B0F2B646B00518274 /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				4CE8A49C16E25FCA0007FADE /* ofxBox2d */,
-				4CDBFE5D16E20CEA00193C1E /* ofxSpriteSheetRenderer */,
+				4C0F629916E92BA8004B3DB0 /* ofxBox2d */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -697,9 +657,8 @@
 				E41D3ED713B38FB500A75A5D /* Project.xcconfig in Resources */,
 				E41D3EE613B3906D00A75A5D /* CoreOF.xcconfig in Resources */,
 				4CE8591E16DC217B00FE31E6 /* logo.png in Resources */,
-				4CDBFE6816E20CEA00193C1E /* README in Resources */,
 				4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */,
-				4CE8A50516E25FCA0007FADE /* install.xml in Resources */,
+				4C0F630216E92BA8004B3DB0 /* install.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,57 +690,53 @@
 				4CE8591316DBFF7A00FE31E6 /* particle.cpp in Sources */,
 				4CE8591416DBFF7A00FE31E6 /* vectorField.cpp in Sources */,
 				4CDBFE5B16E1FA8200193C1E /* MpiData.cpp in Sources */,
-				4CDBFE6916E20CEA00193C1E /* CollageTexture.cpp in Sources */,
-				4CDBFE6A16E20CEA00193C1E /* LinearTexture.cpp in Sources */,
-				4CDBFE6B16E20CEA00193C1E /* ofxSpriteSheetRenderer.cpp in Sources */,
-				4CDBFE6C16E20CEA00193C1E /* PixelTexture.cpp in Sources */,
-				4CE8A50616E25FCA0007FADE /* b2BroadPhase.cpp in Sources */,
-				4CE8A50716E25FCA0007FADE /* b2CollideCircle.cpp in Sources */,
-				4CE8A50816E25FCA0007FADE /* b2CollidePolygon.cpp in Sources */,
-				4CE8A50916E25FCA0007FADE /* b2Collision.cpp in Sources */,
-				4CE8A50A16E25FCA0007FADE /* b2Distance.cpp in Sources */,
-				4CE8A50B16E25FCA0007FADE /* b2DynamicTree.cpp in Sources */,
-				4CE8A50C16E25FCA0007FADE /* b2TimeOfImpact.cpp in Sources */,
-				4CE8A50D16E25FCA0007FADE /* b2CircleShape.cpp in Sources */,
-				4CE8A50E16E25FCA0007FADE /* b2PolygonShape.cpp in Sources */,
-				4CE8A50F16E25FCA0007FADE /* b2BlockAllocator.cpp in Sources */,
-				4CE8A51016E25FCA0007FADE /* b2Math.cpp in Sources */,
-				4CE8A51116E25FCA0007FADE /* b2Settings.cpp in Sources */,
-				4CE8A51216E25FCA0007FADE /* b2StackAllocator.cpp in Sources */,
-				4CE8A51316E25FCA0007FADE /* b2Body.cpp in Sources */,
-				4CE8A51416E25FCA0007FADE /* b2ContactManager.cpp in Sources */,
-				4CE8A51516E25FCA0007FADE /* b2Fixture.cpp in Sources */,
-				4CE8A51616E25FCA0007FADE /* b2Island.cpp in Sources */,
-				4CE8A51716E25FCA0007FADE /* b2World.cpp in Sources */,
-				4CE8A51816E25FCA0007FADE /* b2WorldCallbacks.cpp in Sources */,
-				4CE8A51916E25FCA0007FADE /* b2CircleContact.cpp in Sources */,
-				4CE8A51A16E25FCA0007FADE /* b2Contact.cpp in Sources */,
-				4CE8A51B16E25FCA0007FADE /* b2ContactSolver.cpp in Sources */,
-				4CE8A51C16E25FCA0007FADE /* b2PolygonAndCircleContact.cpp in Sources */,
-				4CE8A51D16E25FCA0007FADE /* b2PolygonContact.cpp in Sources */,
-				4CE8A51E16E25FCA0007FADE /* b2TOISolver.cpp in Sources */,
-				4CE8A51F16E25FCA0007FADE /* b2DistanceJoint.cpp in Sources */,
-				4CE8A52016E25FCA0007FADE /* b2FrictionJoint.cpp in Sources */,
-				4CE8A52116E25FCA0007FADE /* b2GearJoint.cpp in Sources */,
-				4CE8A52216E25FCA0007FADE /* b2Joint.cpp in Sources */,
-				4CE8A52316E25FCA0007FADE /* b2LineJoint.cpp in Sources */,
-				4CE8A52416E25FCA0007FADE /* b2MouseJoint.cpp in Sources */,
-				4CE8A52516E25FCA0007FADE /* b2PrismaticJoint.cpp in Sources */,
-				4CE8A52616E25FCA0007FADE /* b2PulleyJoint.cpp in Sources */,
-				4CE8A52716E25FCA0007FADE /* b2RevoluteJoint.cpp in Sources */,
-				4CE8A52816E25FCA0007FADE /* b2WeldJoint.cpp in Sources */,
-				4CE8A52916E25FCA0007FADE /* del_impl.cpp in Sources */,
-				4CE8A52A16E25FCA0007FADE /* ofxBox2d.cpp in Sources */,
-				4CE8A52B16E25FCA0007FADE /* ofxBox2dBaseShape.cpp in Sources */,
-				4CE8A52C16E25FCA0007FADE /* ofxBox2dCircle.cpp in Sources */,
-				4CE8A52D16E25FCA0007FADE /* ofxBox2dJoint.cpp in Sources */,
-				4CE8A52E16E25FCA0007FADE /* ofxBox2dPolygon.cpp in Sources */,
-				4CE8A52F16E25FCA0007FADE /* ofxBox2dRect.cpp in Sources */,
 				4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */,
 				4CE8A54216E295160007FADE /* scene02.cpp in Sources */,
 				4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */,
 				4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */,
 				4C0F620416E8F0C7004B3DB0 /* superBall.cpp in Sources */,
+				4C0F630316E92BA8004B3DB0 /* b2BroadPhase.cpp in Sources */,
+				4C0F630416E92BA8004B3DB0 /* b2CollideCircle.cpp in Sources */,
+				4C0F630516E92BA8004B3DB0 /* b2CollidePolygon.cpp in Sources */,
+				4C0F630616E92BA8004B3DB0 /* b2Collision.cpp in Sources */,
+				4C0F630716E92BA8004B3DB0 /* b2Distance.cpp in Sources */,
+				4C0F630816E92BA8004B3DB0 /* b2DynamicTree.cpp in Sources */,
+				4C0F630916E92BA8004B3DB0 /* b2TimeOfImpact.cpp in Sources */,
+				4C0F630A16E92BA8004B3DB0 /* b2CircleShape.cpp in Sources */,
+				4C0F630B16E92BA8004B3DB0 /* b2PolygonShape.cpp in Sources */,
+				4C0F630C16E92BA8004B3DB0 /* b2BlockAllocator.cpp in Sources */,
+				4C0F630D16E92BA8004B3DB0 /* b2Math.cpp in Sources */,
+				4C0F630E16E92BA8004B3DB0 /* b2Settings.cpp in Sources */,
+				4C0F630F16E92BA8004B3DB0 /* b2StackAllocator.cpp in Sources */,
+				4C0F631016E92BA8004B3DB0 /* b2Body.cpp in Sources */,
+				4C0F631116E92BA8004B3DB0 /* b2ContactManager.cpp in Sources */,
+				4C0F631216E92BA8004B3DB0 /* b2Fixture.cpp in Sources */,
+				4C0F631316E92BA8004B3DB0 /* b2Island.cpp in Sources */,
+				4C0F631416E92BA8004B3DB0 /* b2World.cpp in Sources */,
+				4C0F631516E92BA8004B3DB0 /* b2WorldCallbacks.cpp in Sources */,
+				4C0F631616E92BA8004B3DB0 /* b2CircleContact.cpp in Sources */,
+				4C0F631716E92BA8004B3DB0 /* b2Contact.cpp in Sources */,
+				4C0F631816E92BA8004B3DB0 /* b2ContactSolver.cpp in Sources */,
+				4C0F631916E92BA8004B3DB0 /* b2PolygonAndCircleContact.cpp in Sources */,
+				4C0F631A16E92BA8004B3DB0 /* b2PolygonContact.cpp in Sources */,
+				4C0F631B16E92BA8004B3DB0 /* b2TOISolver.cpp in Sources */,
+				4C0F631C16E92BA8004B3DB0 /* b2DistanceJoint.cpp in Sources */,
+				4C0F631D16E92BA8004B3DB0 /* b2FrictionJoint.cpp in Sources */,
+				4C0F631E16E92BA8004B3DB0 /* b2GearJoint.cpp in Sources */,
+				4C0F631F16E92BA8004B3DB0 /* b2Joint.cpp in Sources */,
+				4C0F632016E92BA8004B3DB0 /* b2LineJoint.cpp in Sources */,
+				4C0F632116E92BA8004B3DB0 /* b2MouseJoint.cpp in Sources */,
+				4C0F632216E92BA8004B3DB0 /* b2PrismaticJoint.cpp in Sources */,
+				4C0F632316E92BA8004B3DB0 /* b2PulleyJoint.cpp in Sources */,
+				4C0F632416E92BA8004B3DB0 /* b2RevoluteJoint.cpp in Sources */,
+				4C0F632516E92BA8004B3DB0 /* b2WeldJoint.cpp in Sources */,
+				4C0F632616E92BA8004B3DB0 /* del_impl.cpp in Sources */,
+				4C0F632716E92BA8004B3DB0 /* ofxBox2d.cpp in Sources */,
+				4C0F632816E92BA8004B3DB0 /* ofxBox2dBaseShape.cpp in Sources */,
+				4C0F632916E92BA8004B3DB0 /* ofxBox2dCircle.cpp in Sources */,
+				4C0F632A16E92BA8004B3DB0 /* ofxBox2dJoint.cpp in Sources */,
+				4C0F632B16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp in Sources */,
+				4C0F632C16E92BA8004B3DB0 /* ofxBox2dRect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

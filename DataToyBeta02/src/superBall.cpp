@@ -8,20 +8,23 @@
 
 #include "superBall.h"
 
-void superBall::setup(MpiData &data){
-
-    dbase = &data;
-    
+superBall::superBall(){
+    color.set(30, 0, 255);
+    cs =3;
 }
-
-
-void superBall::update(){
-
-
-}
-
 
 void superBall::draw(){
 
+    float radius = getRadius();
+    
+    glPushMatrix();
+    glTranslatef(getPosition().x, getPosition().y, 0);
+    ofSetCircleResolution(cs);
+    ofSetColor(color.r, color.g, color.b,100);
+    ofFill();
+    ofCircle(0, 0, radius);
+    
+    glPopMatrix();
+    
 
 }

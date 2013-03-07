@@ -27,40 +27,75 @@ void scene02::setup(int &level){
     }
     
       //others
-    myLevel = &level;
-    myCase = 0;
+
     startTime = ofGetElapsedTimeMillis();
-    count = 0;
+
     mouseOver = false;
     bPressed = false;
     bCitySeclect = false;
     bBalls = false;
-    year = 2005;
-    preYear = 2005;
+   
     ButtonSize = 70;
     
     //select
     cityName = "0";
     preCityName = cityName;
     cityYear = 2005;
-    preYear = cityYear;
+    preCityYear = cityYear;
     
     selectRect.set(228, 443, 190, 97);
     selectRect2.set(632, 443, 170, 97);
     select.setup(cityName,cityYear,bCitySeclect, bBalls);
     myCity.setup(cityName, cityYear);
+    
+    box2d.init();
+	box2d.setGravity(0, 15);
+	box2d.createBounds();
+	box2d.setFPS(30.0);
+    box2d.registerGrabbing();
+    box2d.setIterations(1, 1);
    
 }
 //-------------------------------
 void scene02::update(){
     
+    box2d.update();
+    
     if (bCitySeclect) select.update();
     myCity.update();
+    
     if (cityName != preCityName || cityYear != preCityYear) {
-        superBall b;
-        cout<<"ok"<<endl;
-        //----add something
-        mySuperBall.push_back(b);
+        
+        cout<<myCity.no_num<<" "<<myCity.hs_num<<" "<<myCity.ba_num<<endl;
+       
+        
+        for (int i =0; i<myCity.no_num; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 10);
+            b.setVelocity(0, 0);
+            b.cs = myCity.shape;
+            mySuperBall.push_back(b);
+        }
+
+        for (int i =0; i<myCity.hs_num; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 10);
+            b.setVelocity(0, 0);
+            b.cs = myCity.shape;
+            mySuperBall.push_back(b);
+        }
+        
+        for (int i =0; i<myCity.ba_num; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 10);
+            b.setVelocity(0, 0);
+            b.cs = myCity.shape;
+            mySuperBall.push_back(b);
+        }
+      
         preCityName = cityName;
         preCityYear = cityYear;
     }
@@ -92,7 +127,7 @@ void scene02::draw(){
     rect = font.getStringBoundingBox(cityName, 0, 0);
     font.drawString(cityName, int(317-rect.getWidth()/2), 503);
     myCity.draw();
-
+    
     rect = font2.getStringBoundingBox("Population: " + myCity.pop, 0, 0);
     font2.drawString("Population: " + myCity.pop, int(317-rect.getWidth()/2), 567+30);
     rect = font2.getStringBoundingBox("Imm Pop Pct: "+ myCity.imm_pct, 0, 0);
@@ -107,10 +142,20 @@ void scene02::draw(){
 
     font.drawString(ofToString(cityYear), 685, 505);
 
-    if (bCitySeclect) {
-    select.draw();
-    }
   
+    
+    if (mySuperBall.size()>0) {
+        for (int i=0; i<mySuperBall.size(); i++) {
+            mySuperBall[i].draw();
+        }
+    }
+    
+    
+    if (bCitySeclect) {
+        select.draw();
+    }
+    
+    
 }
 //-------------------------------
 void scene02::touchDown(int id, int number, float x, float y){
@@ -128,13 +173,7 @@ void scene02::touchDown(int id, int number, float x, float y){
 //-------------------------------
 void scene02::touchMove(int id, int number, float x, float y){
   
-    if (selectRect.inside(x, y)&& bCitySeclect == false) {
-        select.width = 0;
-        select.height = 0;
-        select.pct = 0;
-        bCitySeclect = true;
-        
-    }
+
     if (bCitySeclect) select.mouseMove(id, number, x, y);
          
 }

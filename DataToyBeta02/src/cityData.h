@@ -30,9 +30,14 @@ public:
     string                          imm_pct_job;
     string                          imm_change;
     int                             preYear;
+    int                             no_num;
+    int                             hs_num;
+    int                             ba_num;
+    int                             ball_size;
     float                           alpha;
     float                           size;
     float                           shape;
+    int                             popPreBall;
                         
 };
 
