@@ -34,6 +34,7 @@ void scene02::setup(int &level){
     mouseOver = false;
     bPressed = false;
     bCitySeclect = false;
+    bBalls = false;
     year = 2005;
     preYear = 2005;
     ButtonSize = 70;
@@ -43,9 +44,9 @@ void scene02::setup(int &level){
     cityYear = 2005;
     selectRect.set(228, 443, 190, 97);
     selectRect2.set(632, 443, 170, 97);
-    select.setup(cityName,cityYear,bCitySeclect);
+    select.setup(cityName,cityYear,bCitySeclect, bBalls);
     myCity.setup(cityName, cityYear);
-    myBalls.setup(cityName, cityYear);
+    
     
 }
 //-------------------------------
@@ -53,7 +54,10 @@ void scene02::update(){
     
     if (bCitySeclect) select.update();
     myCity.update();
-
+    
+    if (bBalls) {
+        myBalls.update();
+    };
    
 }
 //-------------------------------
@@ -106,12 +110,27 @@ void scene02::draw(){
 //-------------------------------
 void scene02::touchDown(int id, int number, float x, float y){
     
+    if (selectRect.inside(x, y)&& bCitySeclect == false) {
+        select.width = 0;
+        select.height = 0;
+        select.pct = 0;
+        bCitySeclect = true;
+        bBalls = false;
+    }
     
     if (bCitySeclect) select.mouseDown(id, number, x, y);
 }
 //-------------------------------
 void scene02::touchMove(int id, int number, float x, float y){
-   
+  
+    if (selectRect.inside(x, y)&& bCitySeclect == false) {
+        select.width = 0;
+        select.height = 0;
+        select.pct = 0;
+        bCitySeclect = true;
+        bBalls = false;
+        
+    }
     if (bCitySeclect) select.mouseMove(id, number, x, y);
          
 }
@@ -119,12 +138,6 @@ void scene02::touchMove(int id, int number, float x, float y){
 //-------------------------------
 void scene02::touchUp(int id, int number, float x, float y){
     
-    if (selectRect.inside(x, y)&& bCitySeclect == false) {
-    select.width = 0;
-    select.height = 0;
-    select.pct = 0;
-    bCitySeclect = true;
-    }
 
     if (bCitySeclect) {
     select.mouseUp(id, number, x, y);

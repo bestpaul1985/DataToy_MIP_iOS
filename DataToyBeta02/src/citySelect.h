@@ -19,7 +19,7 @@ public:
     
     
     citySelect();
-    void setup(string &name,int &year,bool &select);
+    void setup(string &name,int &year,bool &select, bool & bBalls);
     void update();
     void draw();
     void mouseDown(int id, int number, float x, float y);
@@ -39,6 +39,7 @@ public:
     string*             cityName;
     int*                cityYear;
     bool *              bSelect;
+    bool *             bBall;
     bool                bSelect1;
     ofTrueTypeFont      font;
     MpiData             dBase;

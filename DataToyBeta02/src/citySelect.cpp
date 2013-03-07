@@ -27,8 +27,8 @@ citySelect::citySelect(){
 }
 
 //--------------------------------------------------------------
-void citySelect::setup(string &name,int &year,bool &select){
-    
+void citySelect::setup(string &name,int &year,bool &select, bool & bBalls){
+    bBall = &bBalls;
     bSelect = &select;
     cityName =&name;
     cityYear =&year;
@@ -207,6 +207,7 @@ void citySelect::mouseUp(int id, int number, float x, float y){
                 colors[i].set(255, 255, 255,0);
                 *cityName = dBase.getCity(i);
                 *bSelect = false;
+                *bBall = true;
             }
             
         }

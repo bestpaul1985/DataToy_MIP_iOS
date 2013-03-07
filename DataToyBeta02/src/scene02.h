@@ -40,6 +40,7 @@ public:
         
     //------new
     bool                    bCitySeclect;
+    bool                    bBalls;
     string                  cityName;
     int                     cityYear;
     ofTrueTypeFont          font2;
@@ -55,7 +56,7 @@ public:
     citySelect              select;
     cityData                myCity;
     balls                   myBalls;
-    //--------old
+   
 
 
 
