@@ -36,7 +36,7 @@ void cityData::update(){
         
         size = ofMap(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, dBase.getCityId(*cityName) , dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), 15, 60);
         
-        shape = ofMap(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, dBase.getCityId(*cityName),dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), 3, 20);
+        shape = ofMap(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, dBase.getCityId(*cityName),dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), 3, 12);
         
         if (*cityYear == 2010) {
             int k1 = dBase.getNumVal(MPI_NUM_IMMIGRANTS, dBase.getCityId(*cityName), dBase.getYearId(2010))*dBase.getPctVal(MPI_PCT_RECENT_ARRIVALS, dBase.getCityId(*cityName),dBase.getYearId(2010));

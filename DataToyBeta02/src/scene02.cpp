@@ -47,6 +47,7 @@ void scene02::setup(int &level){
     select.setup(cityName,cityYear,bCitySeclect, bBalls);
     myCity.setup(cityName, cityYear);
     
+    myBalls.setup(cityName, cityYear);
     
 }
 //-------------------------------
@@ -106,6 +107,9 @@ void scene02::draw(){
     select.draw();
     }
     
+    if(bBalls){
+        myBalls.draw();
+    }
 }
 //-------------------------------
 void scene02::touchDown(int id, int number, float x, float y){

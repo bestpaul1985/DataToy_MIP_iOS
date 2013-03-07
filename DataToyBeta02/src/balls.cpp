@@ -66,12 +66,13 @@ void balls::setup(string &name, int &year){
         myballs.push_back(p);
     }
     
-    pre_imm_all = imm_all;
+    preYear = *cityYear;
+    preName = *cityName;
 }
 
 void balls::update(){
     
-    if (imm_all !=pre_imm_all) {
+    if (*cityName!=preName || *cityYear != preYear) {
         int city = dBase.getCityId(*cityName);
         int time = dBase.getYearId(*cityYear);
         
@@ -122,7 +123,7 @@ void balls::update(){
     
     world.update();
     
-
+    cout<<"ok"<<endl;
 }
 
 

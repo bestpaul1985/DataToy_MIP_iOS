@@ -81,7 +81,8 @@ public:
     int                             hs_balls;
     int                             ba_balls;
     int                             Pop_Per_Ball;
-    int                             pre_imm_all;
+    string                             preName;
+    int                                 preYear;
 };
 
 #endif /* defined(__DataToyBeta02__balls__) */

@@ -60,7 +60,7 @@ void citySelect::update(){
         float temAlpha;
         temSize = ofMap(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, i , dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), 8, 30);
         
-        temShape = ofMap(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, i,dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), 3, 20);
+        temShape = ofMap(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, i,dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), 3, 12);
         
         if (*cityYear == 2010) {
             int k1 = dBase.getNumVal(MPI_NUM_IMMIGRANTS, i, dBase.getYearId(2010))* dBase.getPctVal(MPI_PCT_RECENT_ARRIVALS,dBase.getCityId(*cityName), dBase.getYearId(2010));
