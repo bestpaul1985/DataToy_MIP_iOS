@@ -133,7 +133,7 @@ void citySelect::draw(){
             ofPushStyle();
             ofSetCircleResolution(int(shape[i]));
             ofSetColor(237, 0, 140,int(alpha[i]));
-            ofCircle(165, space*i+35*i+18, int(size[i]));
+            ofCircle(170, space*i+35*i+18, int(size[i]));
             ofPopStyle();
         }
     

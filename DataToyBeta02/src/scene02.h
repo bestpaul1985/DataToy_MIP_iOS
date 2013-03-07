@@ -11,12 +11,6 @@
 
 #include "ofMain.h"
 
-#include "particle.h"
-#include "vectorField.h"
-#include "cities.h"
-#include "stopClock.h"
-#include "dataBall.h"
-
 
 #include "citySelect.h"
 #include "cityData.h"
@@ -50,6 +44,8 @@ public:
     ofTrueTypeFont          font2;
     ofImage                 platForm[3];
     ofImage                 character01;
+    ofImage                 selectLayout01;
+    ofImage                 selectLayout02;
     ofImage                 info01;
     ofImage                 icons[25];
     ofTrueTypeFont          font;
@@ -58,22 +54,9 @@ public:
     citySelect              select;
     cityData                myCity;
     //--------old
-    ofPoint                 AddOutwardCirclePos;
-    ofImage                 formula;
-    ofImage                 charactor01;
-    ofImage                 selectLayout01;
-    ofImage                 selectLayout02;
-    ofImage                 halo[6];
-    ofImage                 cityIcon;
-    ofImage                 chooseCity;
-    vector<particle>        particles;
-    vectorField             VF;
-    cities                  myCities;
-    stopClork               myClork;
-    ofTrueTypeFont          city;
-    ofTrueTypeFont          city2;
-    string                  name;
-    dataBall                myBall;
+
+
+
     
     
 };

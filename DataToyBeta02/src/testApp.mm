@@ -8,7 +8,6 @@ void testApp::setup(){
 	ofSetFrameRate(60);
 	ofEnableAlphaBlending();
     ofEnableSmoothing();
-    
     ofxAccelerometer.setup();
     
     level =                     1;
@@ -30,7 +29,6 @@ void testApp::setup(){
     bg1.loadImage("image/bg02.png");
     
     myidentity.setup(level, eductionID);
-    myScene02.myBall.gravity = ofxAccelerometer.getForce();
 }
 
 
@@ -52,11 +50,9 @@ void testApp::update() {
             
         case 1:
         {
-            myScene02.myBall.educationID = &eductionID;
-            myScene02.myBall.gravity = ofxAccelerometer.getForce();
+            
             myScene02.update();
             myidentity.update();
-//            cout<<myScene02.myClork.bClorkPressed<<endl;
            
         }
             break;
