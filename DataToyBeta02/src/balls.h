@@ -11,13 +11,16 @@
 
 #include "ofMain.h"
 #include "ofxBox2d.h"
-#include "MpiData.h"
+
 // ------------------------------------------------- a simple extended box2d circle
 class CustomParticle : public ofxBox2dCircle {
 	
 public:
 	CustomParticle() {
 	}
+    
+    void setup(string &name, int &year);
+    void update();
 	ofColor color;
 	void draw() {
 		float radius = getRadius();
@@ -32,18 +35,8 @@ public:
 		glPopMatrix();
 		
 	}
-};
-
-class balls{
-
-public:
-    void setup(string &name, int &year);
-    void update();
-    void draw();
-
-    ofxBox2d                        world;
-    vector<CustomParticle>          myballs;
-    MpiData                         dBase;
+    
+    
     string*                         cityName;
     int*                            cityYear;
     int                             imm_num_HS;
@@ -61,5 +54,6 @@ public:
     string                             preName;
     int                                 preYear;
 };
+
 
 #endif /* defined(__DataToyBeta02__balls__) */

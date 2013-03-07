@@ -10,11 +10,9 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		4C0F620416E8F0C7004B3DB0 /* superBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F620216E8F0C7004B3DB0 /* superBall.cpp */; };
 		4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97690816E7D2590074E810 /* citySelect.cpp */; };
-		4CCD814B16E3E83B005B6B62 /* stopClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD814916E3E83A005B6B62 /* stopClock.cpp */; };
-		4CCD816016E4EBDC005B6B62 /* dataBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */; };
 		4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0D93316E8599C00A134CB /* cityData.cpp */; };
-		4CD0D93816E8897900A134CB /* balls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0D93616E8897900A134CB /* balls.cpp */; };
 		4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */; };
 		4CDBFE5B16E1FA8200193C1E /* MpiData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5816E1FA8100193C1E /* MpiData.cpp */; };
 		4CDBFE6816E20CEA00193C1E /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5E16E20CEA00193C1E /* README */; };
@@ -70,7 +68,6 @@
 		4CE8A52F16E25FCA0007FADE /* ofxBox2dRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A50116E25FCA0007FADE /* ofxBox2dRect.cpp */; };
 		4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53B16E27ABB0007FADE /* identity.cpp */; };
 		4CE8A54216E295160007FADE /* scene02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A54016E295160007FADE /* scene02.cpp */; };
-		4CE8A55A16E2EF7A0007FADE /* citiesParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A55816E2EF7A0007FADE /* citiesParticle.cpp */; };
 		5326AEA810A23A0500278DE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5326AEA710A23A0500278DE6 /* CoreLocation.framework */; };
 		53F323EB10A20EDB00E0DAE4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */; };
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
@@ -112,16 +109,12 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
+		4C0F620216E8F0C7004B3DB0 /* superBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = superBall.cpp; sourceTree = "<group>"; };
+		4C0F620316E8F0C7004B3DB0 /* superBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superBall.h; sourceTree = "<group>"; };
 		4C97690816E7D2590074E810 /* citySelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = citySelect.cpp; sourceTree = "<group>"; };
 		4C97690916E7D2590074E810 /* citySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = citySelect.h; sourceTree = "<group>"; };
-		4CCD814916E3E83A005B6B62 /* stopClock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stopClock.cpp; sourceTree = "<group>"; };
-		4CCD814A16E3E83B005B6B62 /* stopClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stopClock.h; sourceTree = "<group>"; };
-		4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dataBall.cpp; sourceTree = "<group>"; };
-		4CCD815F16E4EBDC005B6B62 /* dataBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataBall.h; sourceTree = "<group>"; };
 		4CD0D93316E8599C00A134CB /* cityData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cityData.cpp; sourceTree = "<group>"; };
 		4CD0D93416E8599C00A134CB /* cityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cityData.h; sourceTree = "<group>"; };
-		4CD0D93616E8897900A134CB /* balls.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = balls.cpp; sourceTree = "<group>"; };
-		4CD0D93716E8897900A134CB /* balls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = balls.h; sourceTree = "<group>"; };
 		4CDB009216E2177F00193C1E /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		4CDBFE5016E1E15000193C1E /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		4CDBFE5816E1FA8100193C1E /* MpiData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MpiData.cpp; sourceTree = "<group>"; };
@@ -240,8 +233,6 @@
 		4CE8A53C16E27ABB0007FADE /* identity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = identity.h; sourceTree = "<group>"; };
 		4CE8A54016E295160007FADE /* scene02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene02.cpp; sourceTree = "<group>"; };
 		4CE8A54116E295160007FADE /* scene02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene02.h; sourceTree = "<group>"; };
-		4CE8A55816E2EF7A0007FADE /* citiesParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = citiesParticle.cpp; sourceTree = "<group>"; };
-		4CE8A55916E2EF7A0007FADE /* citiesParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = citiesParticle.h; sourceTree = "<group>"; };
 		5326AEA710A23A0500278DE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		9b3cb4a2c4079beea4da443dac96ccb5 /* Ball.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Ball.h; path = src/Ball.h; sourceTree = SOURCE_ROOT; };
@@ -340,14 +331,8 @@
 				4C97690916E7D2590074E810 /* citySelect.h */,
 				4CD0D93316E8599C00A134CB /* cityData.cpp */,
 				4CD0D93416E8599C00A134CB /* cityData.h */,
-				4CD0D93616E8897900A134CB /* balls.cpp */,
-				4CD0D93716E8897900A134CB /* balls.h */,
-				4CCD814916E3E83A005B6B62 /* stopClock.cpp */,
-				4CCD814A16E3E83B005B6B62 /* stopClock.h */,
-				4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */,
-				4CCD815F16E4EBDC005B6B62 /* dataBall.h */,
-				4CE8A55816E2EF7A0007FADE /* citiesParticle.cpp */,
-				4CE8A55916E2EF7A0007FADE /* citiesParticle.h */,
+				4C0F620216E8F0C7004B3DB0 /* superBall.cpp */,
+				4C0F620316E8F0C7004B3DB0 /* superBall.h */,
 			);
 			name = scene02;
 			sourceTree = "<group>";
@@ -631,9 +616,9 @@
 				E4D8936B11527B74007E1F53 /* main.mm */,
 				E4D8936D11527B74007E1F53 /* testApp.mm */,
 				E4D8936C11527B74007E1F53 /* testApp.h */,
-				9b3cb4a2c4079beea4da443dac96ccb5 /* Ball.h */,
 				4CE8A53B16E27ABB0007FADE /* identity.cpp */,
 				4CE8A53C16E27ABB0007FADE /* identity.h */,
+				9b3cb4a2c4079beea4da443dac96ccb5 /* Ball.h */,
 				4CCD814416E2F251005B6B62 /* scene02 */,
 				4CDB008D16E20DA700193C1E /* MPI */,
 				4CCD815116E45211005B6B62 /* algo */,
@@ -794,12 +779,9 @@
 				4CE8A52F16E25FCA0007FADE /* ofxBox2dRect.cpp in Sources */,
 				4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */,
 				4CE8A54216E295160007FADE /* scene02.cpp in Sources */,
-				4CE8A55A16E2EF7A0007FADE /* citiesParticle.cpp in Sources */,
-				4CCD814B16E3E83B005B6B62 /* stopClock.cpp in Sources */,
-				4CCD816016E4EBDC005B6B62 /* dataBall.cpp in Sources */,
 				4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */,
 				4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */,
-				4CD0D93816E8897900A134CB /* balls.cpp in Sources */,
+				4C0F620416E8F0C7004B3DB0 /* superBall.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

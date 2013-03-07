@@ -8,13 +8,8 @@
 
 #include "balls.h"
 
-void balls::setup(string &name, int &year){
+void CustomParticle::setup(string &name, int &year){
   
-    dBase.loadCities("cities.csv");
-    dBase.loadYear(2000, "2000.csv");
-    dBase.loadYear(2005, "2005.csv");
-    dBase.loadYear(2010, "2010.csv");
-    
     cityName = &name;
     cityYear = &year;
     Pop_Per_Ball = 100000;

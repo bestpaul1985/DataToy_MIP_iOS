@@ -14,7 +14,7 @@
 
 #include "citySelect.h"
 #include "cityData.h"
-#include "balls.h"
+#include "superBall.h"
 
 class scene02{
 public:
@@ -31,18 +31,23 @@ public:
     int                     preYear;
     int                     myCase;
     int                     count;
+    
     bool                    bAddOutwardCircle;
     bool                    timeUp;
     bool                    mouseOver;
     bool                    bPressed;
+    bool                    bCitySeclect;
+    bool                    bBalls;
+    
     float                   startTime;
     float                   ButtonSize;
         
-    //------new
-    bool                    bCitySeclect;
-    bool                    bBalls;
+   
     string                  cityName;
+    string                  preCityName;
     int                     cityYear;
+    int                     preCityYear;
+    
     ofTrueTypeFont          font2;
     ofImage                 platForm[3];
     ofImage                 character01;
@@ -55,9 +60,7 @@ public:
     ofRectangle             selectRect2;
     citySelect              select;
     cityData                myCity;
-    balls                   myBalls;
-   
-
+    vector<superBall>       mySuperBall;
 
 
     

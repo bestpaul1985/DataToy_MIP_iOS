@@ -41,24 +41,29 @@ void scene02::setup(int &level){
     
     //select
     cityName = "0";
+    preCityName = cityName;
     cityYear = 2005;
+    preYear = cityYear;
+    
     selectRect.set(228, 443, 190, 97);
     selectRect2.set(632, 443, 170, 97);
     select.setup(cityName,cityYear,bCitySeclect, bBalls);
     myCity.setup(cityName, cityYear);
-    myBalls.setup(cityName, cityYear);
-    
+   
 }
 //-------------------------------
 void scene02::update(){
     
     if (bCitySeclect) select.update();
     myCity.update();
-    
-    if (bBalls) {
-    myBalls.update();
-    };
-   
+    if (cityName != preCityName || cityYear != preCityYear) {
+        superBall b;
+        cout<<"ok"<<endl;
+        //----add something
+        mySuperBall.push_back(b);
+        preCityName = cityName;
+        preCityYear = cityYear;
+    }
 }
 //-------------------------------
 void scene02::draw(){
@@ -105,10 +110,7 @@ void scene02::draw(){
     if (bCitySeclect) {
     select.draw();
     }
-    
-    if(bBalls){
-        myBalls.draw();
-    }
+  
 }
 //-------------------------------
 void scene02::touchDown(int id, int number, float x, float y){
@@ -118,7 +120,7 @@ void scene02::touchDown(int id, int number, float x, float y){
         select.height = 0;
         select.pct = 0;
         bCitySeclect = true;
-        bBalls = false;
+      
     }
     
     if (bCitySeclect) select.mouseDown(id, number, x, y);
@@ -131,7 +133,6 @@ void scene02::touchMove(int id, int number, float x, float y){
         select.height = 0;
         select.pct = 0;
         bCitySeclect = true;
-        bBalls = false;
         
     }
     if (bCitySeclect) select.mouseMove(id, number, x, y);
