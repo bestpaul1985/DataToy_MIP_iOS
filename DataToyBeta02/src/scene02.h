@@ -54,6 +54,7 @@ public:
     ofImage                 icons[25];
     ofTrueTypeFont          font;
     ofRectangle             selectRect;
+    ofRectangle             selectRect2;
     citySelect              select;
     cityData                myCity;
     //--------old

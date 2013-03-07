@@ -11,6 +11,7 @@
 
 #include "ofMain.h"
 #include "MpiData.h"
+#include "cityData.h"
 
 class citySelect{
 
@@ -18,7 +19,7 @@ public:
     
     
     citySelect();
-    void setup(string &name,bool &select);
+    void setup(string &name,int &year,bool &select);
     void update();
     void draw();
     void mouseDown(int id, int number, float x, float y);
@@ -34,9 +35,10 @@ public:
     float space;
     float offSet;
     
+    
     ofPoint             boxPos;
-   
     string*             cityName;
+    int*                cityYear;
     bool *              bSelect;
     bool                bSelect1;
     ofTrueTypeFont      font;
@@ -46,7 +48,10 @@ public:
     ofPoint             prePos1;
     vector<ofRectangle> rects;
     vector<ofColor>     colors;
-    
+    vector<ofPoint>     circles;
+    vector<float>       size;
+    vector<float>       shape;
+    vector<float>       alpha;
     ofPoint             temPos;
 };
 

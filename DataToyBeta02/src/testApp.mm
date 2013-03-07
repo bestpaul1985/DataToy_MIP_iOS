@@ -8,6 +8,7 @@ void testApp::setup(){
 	ofSetFrameRate(60);
 	ofEnableAlphaBlending();
     ofEnableSmoothing();
+    
     ofxAccelerometer.setup();
     
     level =                     1;

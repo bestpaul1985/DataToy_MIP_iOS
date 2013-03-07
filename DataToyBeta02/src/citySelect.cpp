@@ -15,7 +15,7 @@ citySelect::citySelect(){
     width = 0;
     speed = 0.03f;
     pct = 0;
-    W = 200;
+    W = 220;
     H = 768;
     space = 10;
     pos.set(0, 0);
@@ -27,10 +27,11 @@ citySelect::citySelect(){
 }
 
 //--------------------------------------------------------------
-void citySelect::setup(string &name,bool &select){
+void citySelect::setup(string &name,int &year,bool &select){
     
     bSelect = &select;
     cityName =&name;
+    cityYear =&year;
     font.loadFont("fonts/Futura-CondensedMedium.ttf",20);
     dBase.loadCities("cities.csv");
     dBase.loadYear(2000, "2000.csv");
@@ -46,10 +47,56 @@ void citySelect::setup(string &name,bool &select){
         rects.push_back(temp);
     }
     
-}
+    
+   }
 
 //--------------------------------------------------------------
 void citySelect::update(){
+
+    for (int i=0; i<25; i++) {
+        
+        float temSize;
+        float temShape;
+        float temAlpha;
+        temSize = ofMap(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, i , dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), 8, 30);
+        
+        temShape = ofMap(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, i,dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), 3, 20);
+        
+        if (*cityYear == 2010) {
+            int k1 = dBase.getNumVal(MPI_NUM_IMMIGRANTS, i, dBase.getYearId(2010))* dBase.getPctVal(MPI_PCT_RECENT_ARRIVALS,dBase.getCityId(*cityName), dBase.getYearId(2010));
+            
+            int k2 =   dBase.getNumVal(MPI_NUM_IMMIGRANTS, i, dBase.getYearId(2005))* dBase.getPctVal(MPI_PCT_RECENT_ARRIVALS, i, dBase.getYearId(2005));
+            
+            int k =  k1 - k2;
+            
+            if (k>0) {
+                temAlpha = 255;
+            }else{
+                temAlpha = 128;
+            }
+        }else if (*cityYear == 2005){
+            
+            int k1 = dBase.getNumVal(MPI_NUM_IMMIGRANTS, i, dBase.getYearId(2005))* dBase.getPctVal(MPI_PCT_RECENT_ARRIVALS,i, dBase.getYearId(2005));
+            
+            int k2 =   dBase.getNumVal(MPI_NUM_IMMIGRANTS, i, dBase.getYearId(2000))* dBase.getPctVal(MPI_PCT_RECENT_ARRIVALS,i, dBase.getYearId(2000));
+            
+            int k =  k1 - k2;
+            
+            if (k>0) {
+                temAlpha = 255;
+            }else{
+                temAlpha = 128;
+            }
+        }else{
+            
+            temAlpha = 255;
+            
+        }
+        
+        shape.push_back(temShape);
+        size.push_back(temSize);
+        alpha.push_back(temAlpha);
+    }
 
   
     pct += speed;
@@ -58,6 +105,8 @@ void citySelect::update(){
     }
     width = (1-pct) * width + pct * W;
     height = (1-pct) * height + pct * H;
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -74,13 +123,21 @@ void citySelect::draw(){
             ofSetColor(colors[i]);
             ofRect(rects[i]);
         }
+    
         for (int i = 0; i<25; i++) {
             ofRectangle rect;
             rect = font.getStringBoundingBox(dBase.getCity(i), 0, 0);
             ofSetColor(255, 255, 255);
-            font.drawString(dBase.getCity(i),W/2 -int(rect.getWidth()/2), space*i+35*i+28);
+            font.drawString(dBase.getCity(i),30, space*i+35*i+28);
+          
+            ofPushStyle();
+            ofSetCircleResolution(int(shape[i]));
+            ofSetColor(237, 0, 140,int(alpha[i]));
+            ofCircle(165, space*i+35*i+18, int(size[i]));
+            ofPopStyle();
         }
     
+        
     ofPopMatrix();
     
 

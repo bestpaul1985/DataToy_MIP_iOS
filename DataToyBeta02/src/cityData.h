@@ -25,6 +25,10 @@ public:
     string*                         cityName;
     int*                            cityYear;
     string                          preName;
+    string                          pop;
+    string                          imm_pct;
+    string                          imm_pct_job;
+    
     int                             preYear;
     float                           alpha;
     float                           size;

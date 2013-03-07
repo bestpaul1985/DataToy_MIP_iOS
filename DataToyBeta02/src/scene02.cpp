@@ -72,8 +72,9 @@ void scene02::setup(int &level){
     //select
     cityName = "0";
     cityYear = 2005;
-    select.setup(cityName,bCitySeclect);
     selectRect.set(228, 443, 190, 97);
+    selectRect2.set(632, 443, 170, 97);
+    select.setup(cityName,cityYear,bCitySeclect);
     myCity.setup(cityName, cityYear);
     
 }
@@ -207,7 +208,7 @@ void scene02::draw(){
             ofSetColor(255, 255, 255,179);
             platForm[0].draw(376,166);
             ofSetColor(255, 255, 255,255);
-            character01.draw(430, 337);
+//            character01.draw(430, 337);
             ofSetColor(255, 255, 255,255);
             info01.draw(396, 211);
             selectLayout01.draw(236, 439);
@@ -220,6 +221,17 @@ void scene02::draw(){
                 rect = font.getStringBoundingBox(cityName, 0, 0);
                 font.drawString(cityName, int(317-rect.getWidth()/2), 503);
                 myCity.draw();
+                
+//                rect = font2.getStringBoundingBox("Pop", 0, 0);
+//                font2.drawString("Pop:",int(317-rect.getWidth()/2),567);
+                rect = font2.getStringBoundingBox("Population: " + myCity.pop, 0, 0);
+                font2.drawString("Population: " + myCity.pop, int(317-rect.getWidth()/2), 567+30);
+                rect = font2.getStringBoundingBox("Imm Pop Pct: "+ myCity.imm_pct, 0, 0);
+                font2.drawString("Imm Pop Pct: " + myCity.imm_pct, int(317-rect.getWidth()/2), 567+60);
+                rect = font2.getStringBoundingBox("Imm Job Pct: "+ myCity.imm_pct_job, 0, 0);
+                font2.drawString("Imm Job Pct: " + myCity.imm_pct_job, int(317-rect.getWidth()/2), 567+90);
+                
+                
             }
             
             font.drawString(ofToString(cityYear), 685, 505);
@@ -229,9 +241,7 @@ void scene02::draw(){
             }
             
             
-//            ofRectangle rect(632, 443, 170, 97);
-//            ofRect(rect);
-//                       
+                       
         }
             break;
             
