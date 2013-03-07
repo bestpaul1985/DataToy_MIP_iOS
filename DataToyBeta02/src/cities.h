@@ -12,7 +12,6 @@
 #include "ofMain.h"
 #include "citiesParticle.h"
 #include "MpiData.h"
-
 #include "dataBall.h"
 class cities{
 

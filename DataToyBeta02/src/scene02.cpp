@@ -58,6 +58,7 @@ void scene02::setup(int &level){
     name = "ok";
     mouseOver = false;
     bPressed = false;
+    bCitySeclect = false;
     year = 2005;
     preYear = 2005;
     ButtonSize = 70;
@@ -68,7 +69,10 @@ void scene02::setup(int &level){
     
     
     //select
-    seclet01.setup();
+    cityName = "0";
+    select.setup(cityName,bCitySeclect);
+    selectRect.set(228, 443, 190, 97);
+    
 }
 //-------------------------------
 void scene02::update(){
@@ -76,7 +80,10 @@ void scene02::update(){
     switch (myCase) {
         case 0:{
             
-            seclet01.update();
+            if (bCitySeclect) {
+                 select.update();
+            }
+           
         }
             break;
         case 1:{
@@ -204,7 +211,14 @@ void scene02::draw(){
             font.drawString("SELECT A CITY", 231, 505);
             font.drawString("2005", 685, 505);
             
-            seclet01.draw();
+            if (bCitySeclect) {
+                select.draw();
+            }
+            
+            
+             ofRectangle rect(612, 443, 170, 97);
+            ofRect(rect);
+            cout<<bCitySeclect<<endl;
             
         }
             break;
@@ -298,22 +312,9 @@ void scene02::touchDown(int id, int number, float x, float y){
     
     switch (myCase) {
         case 0:{
-            
-            seclet01.mouseDown(id, number, x, y);
-
-            
-//            ofPoint p1;
-//            p1.set(x,y);
-//            ofPoint p2;
-//            p2.set(343,526);
-//            float dis = p1.distance(p2);
-//            
-//            if (dis <ButtonSize) {
-//                mouseOver = true;
-//                bPressed = true;
-//            }else{
-//                mouseOver = false;
-//            }
+            if (bCitySeclect) {
+                 select.mouseDown(id, number, x, y);
+            }
         }
             break;
         
@@ -346,8 +347,12 @@ void scene02::touchDown(int id, int number, float x, float y){
 void scene02::touchMove(int id, int number, float x, float y){
     switch (myCase) {
         case 0:{
-            seclet01.mouseMove(id, number, x, y);
-
+            
+                if (bCitySeclect) {
+                     select.mouseMove(id, number, x, y);
+                }
+           
+            }
             
             break;
         case 1:
@@ -369,8 +374,8 @@ void scene02::touchMove(int id, int number, float x, float y){
             }
                        break;
         }
-    }
 }
+
 //-------------------------------
 void scene02::touchUp(int id, int number, float x, float y){
     
@@ -378,7 +383,21 @@ void scene02::touchUp(int id, int number, float x, float y){
        
     switch (myCase) {
         case 0:{
-            seclet01.mouseUp(id, number, x, y);
+            
+   
+            if (selectRect.inside(x, y)&& bCitySeclect == false) {
+                select.width = 0;
+                select.height = 0;
+                select.pct = 0;
+                bCitySeclect = true;
+            }
+            
+            if (bCitySeclect) {
+                select.mouseUp(id, number, x, y);
+            }
+            
+
+           
 
         }
             break;

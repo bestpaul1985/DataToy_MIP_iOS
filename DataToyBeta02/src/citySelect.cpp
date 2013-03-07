@@ -10,21 +10,26 @@
 
 citySelect::citySelect(){
     
+    
     height = 0;
     width = 0;
     speed = 0.03f;
     pct = 0;
-    W = 160;
-    H = 600;
+    W = 200;
+    H = 768;
     space = 10;
     pos.set(0, 0);
     prePos.set(0, 0);
-    offSet =0;
+    offSet = 25;
+    boxPos.set(220, 0);
+    
+    bSelect1 = false;
 }
 
 //--------------------------------------------------------------
-void citySelect::setup(){
+void citySelect::setup(string &name,bool &select){
     
+    bSelect = &select;
     font.loadFont("fonts/Futura-CondensedMedium.ttf",20);
     dBase.loadCities("cities.csv");
     dBase.loadYear(2000, "2000.csv");
@@ -33,7 +38,7 @@ void citySelect::setup(){
     pos.set(0, 0);
     for (int i=0; i<25; i++) {
         ofColor c;
-        c.set(255, 255, 255,100);
+        c.set(255, 255, 255,0);
         colors.push_back(c);
         ofRectangle temp;
         temp.set(0,space*i+35*i,W,35);
@@ -60,6 +65,9 @@ void citySelect::draw(){
     ofSetColor(51, 60, 65);
     
     ofPushMatrix();
+    
+        ofTranslate(boxPos.x, boxPos.y);
+        ofSetColor(51, 60, 64);
         ofRect(0, 0, width, height);
         ofTranslate(0, offSet);
         for (int i =0; i<25; i++) {
@@ -67,9 +75,12 @@ void citySelect::draw(){
             ofRect(rects[i]);
         }
         for (int i = 0; i<25; i++) {
+            ofRectangle rect;
+            rect = font.getStringBoundingBox(dBase.getCity(i), 0, 0);
             ofSetColor(255, 255, 255);
-            font.drawString(dBase.getCity(i), 0, space*i+35*i+25);
+            font.drawString(dBase.getCity(i),W/2 -int(rect.getWidth()/2), space*i+35*i+28);
         }
+    
     ofPopMatrix();
     
 }
@@ -77,18 +88,17 @@ void citySelect::draw(){
 //--------------------------------------------------------------
 void citySelect::mouseDown(int id, int number, float x, float y){
 
-    if (id ==0) {
+    if (id ==0 && bSelect1 == false) {
         pos.set(x, y);
-        
+        bSelect1 = true;
+       
         for (int i=0; i<25; i++) {
-            
             ofRectangle tempRect;
             tempRect.set(rects[i].getPosition().x,rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
-            
-            if(tempRect.inside(x, y)){
-                colors[i].set(255, 255, 255,179);
+            if(tempRect.inside(x-boxPos.x, y-boxPos.y)){
+                colors[i].set(255, 255, 255,50);
             }else{
-                colors[i].set(255, 255, 255,100);
+                colors[i].set(255, 255, 255,0);
             }
         }
         
@@ -109,37 +119,44 @@ void citySelect::mouseMove(int id, int number, float x, float y){
             diff = pos.y - prePos.y;
             offSet += diff;
         }
-        if (offSet< -(space*11+35*11+25)) {
-            offSet= -(space*11+35*11+25);
-        }else if(offSet>0){
-            offSet=0;
+        if (offSet< -(space*8+35*8+14)) {
+            offSet= -(space*8+35*8+14);
+        }else if(offSet>28){
+            offSet=28;
         }
         
         for (int i=0; i<25; i++) {
             
             ofRectangle tempRect;
             tempRect.set(rects[i].getPosition().x,rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
-            if(tempRect.inside(x, y)){
-                colors[i].set(255, 255, 255,179);
+            if(tempRect.inside(x-boxPos.x, y-boxPos.y)){
+                colors[i].set(255, 255, 255,50);
             }else{
-                colors[i].set(255, 255, 255,100);
+                colors[i].set(255, 255, 255,0);
             }
         }
         prePos = pos;
     }
 }
 
-
+//--------------------------------------------------------------
 void citySelect::mouseUp(int id, int number, float x, float y){
    
     if (id == 0) {
         for (int i=0; i<25; i++) {
-            colors[i].set(255, 255, 255,100);
+            colors[i].set(255, 255, 255,0);
             ofRectangle tempRect;
             tempRect.set(rects[i].getPosition().x,rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
-            if(tempRect.inside(x, y)&& prePos1.y == pos.y){
-                cout<<dBase.getCity(i)<<endl;
+            if(tempRect.inside(x-boxPos.x, y-boxPos.y)&& prePos1.y == pos.y && bSelect1 == true){
+                *cityName = dBase.getCity(i);
+                *bSelect = false;
+                bSelect1 = false;
+               
             }
+            
+            pos.set(x, y);
+            prePos = pos;
+            prePos1 = pos;
         }
     }
 

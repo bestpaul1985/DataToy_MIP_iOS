@@ -40,13 +40,15 @@ public:
     float                   ButtonSize;
         
     //------new
+    bool                    bCitySeclect;
+    string                  cityName;
     ofImage                 platForm[3];
     ofImage                 character01;
     ofImage                 info01;
     ofImage                 icons[25];
     ofTrueTypeFont          font;
-    
-    citySelect              seclet01;
+    ofRectangle             selectRect;
+    citySelect              select;
     //--------old
     ofPoint                 AddOutwardCirclePos;
     ofImage                 formula;

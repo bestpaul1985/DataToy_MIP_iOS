@@ -43,7 +43,6 @@ void testApp::update() {
         {
             
             myidentity.update();
-            
             for(int i=0; i < balls.size(); i++){
                 balls[i].update();
             }

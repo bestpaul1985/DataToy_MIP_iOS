@@ -13,6 +13,7 @@
 		4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97690816E7D2590074E810 /* citySelect.cpp */; };
 		4CCD814B16E3E83B005B6B62 /* stopClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD814916E3E83A005B6B62 /* stopClock.cpp */; };
 		4CCD816016E4EBDC005B6B62 /* dataBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */; };
+		4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0D93316E8599C00A134CB /* cityData.cpp */; };
 		4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */; };
 		4CDBFE5B16E1FA8200193C1E /* MpiData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5816E1FA8100193C1E /* MpiData.cpp */; };
 		4CDBFE6816E20CEA00193C1E /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5E16E20CEA00193C1E /* README */; };
@@ -107,7 +108,7 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* DataToyBeta01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataToyBeta01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* DataToyBeta02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataToyBeta02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
@@ -117,6 +118,8 @@
 		4CCD814A16E3E83B005B6B62 /* stopClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stopClock.h; sourceTree = "<group>"; };
 		4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dataBall.cpp; sourceTree = "<group>"; };
 		4CCD815F16E4EBDC005B6B62 /* dataBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataBall.h; sourceTree = "<group>"; };
+		4CD0D93316E8599C00A134CB /* cityData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cityData.cpp; sourceTree = "<group>"; };
+		4CD0D93416E8599C00A134CB /* cityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cityData.h; sourceTree = "<group>"; };
 		4CDB009216E2177F00193C1E /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		4CDBFE5016E1E15000193C1E /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		4CDBFE5816E1FA8100193C1E /* MpiData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MpiData.cpp; sourceTree = "<group>"; };
@@ -287,7 +290,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* DataToyBeta01.app */,
+				1D6058910D05DD3D006BFB54 /* DataToyBeta02.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,6 +336,10 @@
 			children = (
 				4CE8A54016E295160007FADE /* scene02.cpp */,
 				4CE8A54116E295160007FADE /* scene02.h */,
+				4C97690816E7D2590074E810 /* citySelect.cpp */,
+				4C97690916E7D2590074E810 /* citySelect.h */,
+				4CD0D93316E8599C00A134CB /* cityData.cpp */,
+				4CD0D93416E8599C00A134CB /* cityData.h */,
 				4CE8A53216E26F7D0007FADE /* cities.cpp */,
 				4CE8A53316E26F7D0007FADE /* cities.h */,
 				4CCD814916E3E83A005B6B62 /* stopClock.cpp */,
@@ -341,8 +348,6 @@
 				4CCD815F16E4EBDC005B6B62 /* dataBall.h */,
 				4CE8A55816E2EF7A0007FADE /* citiesParticle.cpp */,
 				4CE8A55916E2EF7A0007FADE /* citiesParticle.h */,
-				4C97690816E7D2590074E810 /* citySelect.cpp */,
-				4C97690916E7D2590074E810 /* citySelect.h */,
 			);
 			name = scene02;
 			sourceTree = "<group>";
@@ -655,7 +660,7 @@
 			);
 			name = DataToyBeta02;
 			productName = iPhone;
-			productReference = 1D6058910D05DD3D006BFB54 /* DataToyBeta01.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* DataToyBeta02.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -794,6 +799,7 @@
 				4CCD814B16E3E83B005B6B62 /* stopClock.cpp in Sources */,
 				4CCD816016E4EBDC005B6B62 /* dataBall.cpp in Sources */,
 				4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */,
+				4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

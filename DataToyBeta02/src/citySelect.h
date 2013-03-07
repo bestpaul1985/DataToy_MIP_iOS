@@ -18,7 +18,7 @@ public:
     
     
     citySelect();
-    void setup();
+    void setup(string &name,bool &select);
     void update();
     void draw();
     void mouseDown(int id, int number, float x, float y);
@@ -33,13 +33,19 @@ public:
     float H;
     float space;
     float offSet;
-    vector<ofColor>     colors;
+    
+    ofPoint             boxPos;
+   
+    string*              cityName;
+    bool *              bSelect;
+    bool                bSelect1;
     ofTrueTypeFont      font;
     MpiData             dBase;
     ofPoint             pos;
     ofPoint             prePos;
     ofPoint             prePos1;
     vector<ofRectangle> rects;
+    vector<ofColor>     colors;
 };
 
 #endif /* defined(__DataToyBeta02__citySelect__) */
