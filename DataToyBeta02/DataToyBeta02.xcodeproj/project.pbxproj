@@ -67,7 +67,6 @@
 		4CE8A52D16E25FCA0007FADE /* ofxBox2dJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4FC16E25FCA0007FADE /* ofxBox2dJoint.cpp */; };
 		4CE8A52E16E25FCA0007FADE /* ofxBox2dPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A4FE16E25FCA0007FADE /* ofxBox2dPolygon.cpp */; };
 		4CE8A52F16E25FCA0007FADE /* ofxBox2dRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A50116E25FCA0007FADE /* ofxBox2dRect.cpp */; };
-		4CE8A53416E26F7D0007FADE /* cities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53216E26F7D0007FADE /* cities.cpp */; };
 		4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53B16E27ABB0007FADE /* identity.cpp */; };
 		4CE8A54216E295160007FADE /* scene02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A54016E295160007FADE /* scene02.cpp */; };
 		4CE8A55A16E2EF7A0007FADE /* citiesParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A55816E2EF7A0007FADE /* citiesParticle.cpp */; };
@@ -234,8 +233,6 @@
 		4CE8A50216E25FCA0007FADE /* ofxBox2dRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRect.h; sourceTree = "<group>"; };
 		4CE8A50316E25FCA0007FADE /* ofxBox2dRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRender.h; sourceTree = "<group>"; };
 		4CE8A50416E25FCA0007FADE /* ofxBox2dUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dUtils.h; sourceTree = "<group>"; };
-		4CE8A53216E26F7D0007FADE /* cities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cities.cpp; sourceTree = "<group>"; };
-		4CE8A53316E26F7D0007FADE /* cities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cities.h; sourceTree = "<group>"; };
 		4CE8A53B16E27ABB0007FADE /* identity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = identity.cpp; sourceTree = "<group>"; };
 		4CE8A53C16E27ABB0007FADE /* identity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = identity.h; sourceTree = "<group>"; };
 		4CE8A54016E295160007FADE /* scene02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene02.cpp; sourceTree = "<group>"; };
@@ -340,8 +337,6 @@
 				4C97690916E7D2590074E810 /* citySelect.h */,
 				4CD0D93316E8599C00A134CB /* cityData.cpp */,
 				4CD0D93416E8599C00A134CB /* cityData.h */,
-				4CE8A53216E26F7D0007FADE /* cities.cpp */,
-				4CE8A53316E26F7D0007FADE /* cities.h */,
 				4CCD814916E3E83A005B6B62 /* stopClock.cpp */,
 				4CCD814A16E3E83B005B6B62 /* stopClock.h */,
 				4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */,
@@ -792,7 +787,6 @@
 				4CE8A52D16E25FCA0007FADE /* ofxBox2dJoint.cpp in Sources */,
 				4CE8A52E16E25FCA0007FADE /* ofxBox2dPolygon.cpp in Sources */,
 				4CE8A52F16E25FCA0007FADE /* ofxBox2dRect.cpp in Sources */,
-				4CE8A53416E26F7D0007FADE /* cities.cpp in Sources */,
 				4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */,
 				4CE8A54216E295160007FADE /* scene02.cpp in Sources */,
 				4CE8A55A16E2EF7A0007FADE /* citiesParticle.cpp in Sources */,

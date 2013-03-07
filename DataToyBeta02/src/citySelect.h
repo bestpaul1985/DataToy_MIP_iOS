@@ -35,7 +35,6 @@ public:
     float space;
     float offSet;
     
-    
     ofPoint             boxPos;
     string*             cityName;
     int*                cityYear;
@@ -53,6 +52,7 @@ public:
     vector<float>       shape;
     vector<float>       alpha;
     ofPoint             temPos;
+    
 };
 
 #endif /* defined(__DataToyBeta02__citySelect__) */

@@ -28,7 +28,7 @@ public:
     string                          pop;
     string                          imm_pct;
     string                          imm_pct_job;
-    
+    string                          imm_change;
     int                             preYear;
     float                           alpha;
     float                           size;
