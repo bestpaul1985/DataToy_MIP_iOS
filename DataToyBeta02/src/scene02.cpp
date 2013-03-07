@@ -46,7 +46,6 @@ void scene02::setup(int &level){
     selectRect2.set(632, 443, 170, 97);
     select.setup(cityName,cityYear,bCitySeclect, bBalls);
     myCity.setup(cityName, cityYear);
-    
     myBalls.setup(cityName, cityYear);
     
 }
@@ -57,7 +56,7 @@ void scene02::update(){
     myCity.update();
     
     if (bBalls) {
-        myBalls.update();
+    myBalls.update();
     };
    
 }

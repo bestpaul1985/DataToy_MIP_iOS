@@ -28,7 +28,7 @@ void cityData::setup(string &name, int &year){
 void cityData::update(){
     
     if (*cityName !=preName || *cityYear !=preYear) {
-        
+    
         pop = ofToString(dBase.getNumVal(MPI_NUM_POPULATION,dBase.getCityId(*cityName)),dBase.getYearId(*cityYear));
         imm_pct = ofToString(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, dBase.getCityId(*cityName) , dBase.getYearId(*cityYear)));
         imm_pct_job = ofToString(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, dBase.getCityId(*cityName),dBase.getYearId(*cityYear)));

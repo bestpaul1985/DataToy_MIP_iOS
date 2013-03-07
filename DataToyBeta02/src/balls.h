@@ -18,43 +18,20 @@ class CustomParticle : public ofxBox2dCircle {
 public:
 	CustomParticle() {
 	}
-	
+	ofColor color;
 	void draw() {
-        
-        switch (education) {
-            case 0:
-                glPushMatrix();
-                glTranslatef(getPosition().x- getRadius(), getPosition().y- getRadius(), 0);
-                ofSetColor(247,151,121,200);
-                ofFill();
-                ofCircle(0, 0, getRadius());
-                glPopMatrix();
-                break;
-             case 1:
-                glPushMatrix();
-                glTranslatef(getPosition().x- getRadius(), getPosition().y- getRadius(), 0);
-                ofSetColor(151,205,171,200);
-                ofFill();
-                ofCircle(0, 0, getRadius());
-                glPopMatrix();
-                 break;
-            case 2:
-                glPushMatrix();
-                glTranslatef(getPosition().x- getRadius(), getPosition().y- getRadius(), 0);
-                ofSetColor(135,129,190,200);
-                ofFill();
-                ofCircle(0, 0, getRadius());
-                glPopMatrix();
-                break;
-        }
-       
+		float radius = getRadius();
 		
+		glPushMatrix();
+		glTranslatef(getPosition().x, getPosition().y, 0);
 		
-    }
-    
-    int education; // 0 = no high school , 1 = HS, 2 = BA
-                
-
+		ofSetColor(color.r, color.g, color.b);
+		ofFill();
+		ofCircle(0, 0, radius);
+		
+		glPopMatrix();
+		
+	}
 };
 
 class balls{
