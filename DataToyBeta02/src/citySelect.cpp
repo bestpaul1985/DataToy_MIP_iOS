@@ -22,7 +22,7 @@ citySelect::citySelect(){
     prePos.set(0, 0);
     offSet = 25;
     boxPos.set(220, 0);
-    
+    temPos.set(0, 0);
     bSelect1 = false;
 }
 
@@ -39,7 +39,7 @@ void citySelect::setup(string &name,bool &select){
     pos.set(0, 0);
     for (int i=0; i<25; i++) {
         ofColor c;
-        c.set(255, 255, 255,0);
+        c.set(255, 255, 255,100);
         colors.push_back(c);
         ofRectangle temp;
         temp.set(0,space*i+35*i,W,35);
@@ -67,7 +67,6 @@ void citySelect::draw(){
     
     ofPushMatrix();
     
-        ofTranslate(boxPos.x, boxPos.y);
         ofSetColor(51, 60, 64);
         ofRect(0, 0, width, height);
         ofTranslate(0, offSet);
@@ -84,19 +83,19 @@ void citySelect::draw(){
     
     ofPopMatrix();
     
+
+    
 }
 
 //--------------------------------------------------------------
 void citySelect::mouseDown(int id, int number, float x, float y){
 
-    if (id ==0 && bSelect1 == false) {
+    if (id ==0) {
         pos.set(x, y);
-        bSelect1 = true;
-       
         for (int i=0; i<25; i++) {
             ofRectangle tempRect;
             tempRect.set(rects[i].getPosition().x,rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
-            if(tempRect.inside(x-boxPos.x, y-boxPos.y)){
+            if(tempRect.inside(x, y)){
                 colors[i].set(255, 255, 255,50);
             }else{
                 colors[i].set(255, 255, 255,0);
@@ -114,12 +113,11 @@ void citySelect::mouseMove(int id, int number, float x, float y){
     
     if (id ==0) {
         pos.set(x, y);
-        float dis = pos.distance(prePos);
-        if (dis>0) {
-            float diff;
-            diff = pos.y - prePos.y;
-            offSet += diff;
-        }
+
+        float diff;
+        diff = pos.y - prePos.y;
+        offSet += diff;
+        
         if (offSet< -(space*8+35*8+14)) {
             offSet= -(space*8+35*8+14);
         }else if(offSet>28){
@@ -127,10 +125,9 @@ void citySelect::mouseMove(int id, int number, float x, float y){
         }
         
         for (int i=0; i<25; i++) {
-            
             ofRectangle tempRect;
-            tempRect.set(rects[i].getPosition().x,rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
-            if(tempRect.inside(x-boxPos.x, y-boxPos.y)){
+            tempRect.set(rects[i].getPosition().x, rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
+            if(tempRect.inside(x, y)){
                 colors[i].set(255, 255, 255,50);
             }else{
                 colors[i].set(255, 255, 255,0);
@@ -144,20 +141,17 @@ void citySelect::mouseMove(int id, int number, float x, float y){
 void citySelect::mouseUp(int id, int number, float x, float y){
    
     if (id == 0) {
+    
         for (int i=0; i<25; i++) {
             colors[i].set(255, 255, 255,0);
             ofRectangle tempRect;
             tempRect.set(rects[i].getPosition().x,rects[i].getPosition().y + offSet, rects[i].getWidth(), rects[i].getHeight());
-            if(tempRect.inside(x-boxPos.x, y-boxPos.y)&& prePos1.y == pos.y && bSelect1 == true){
+            if(tempRect.inside(x, y) && prePos1.y == pos.y){
+                colors[i].set(255, 255, 255,0);
                 *cityName = dBase.getCity(i);
                 *bSelect = false;
-                bSelect1 = false;
-               
             }
             
-            pos.set(x, y);
-            prePos = pos;
-            prePos1 = pos;
         }
     }
 

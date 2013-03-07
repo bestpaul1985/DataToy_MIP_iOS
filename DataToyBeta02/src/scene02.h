@@ -10,12 +10,16 @@
 #define __DataToyPrototype002__scene02__
 
 #include "ofMain.h"
+
 #include "particle.h"
 #include "vectorField.h"
 #include "cities.h"
 #include "stopClock.h"
 #include "dataBall.h"
+
+
 #include "citySelect.h"
+#include "cityData.h"
 
 class scene02{
 public:
@@ -42,6 +46,8 @@ public:
     //------new
     bool                    bCitySeclect;
     string                  cityName;
+    int                     cityYear;
+    ofTrueTypeFont          font2;
     ofImage                 platForm[3];
     ofImage                 character01;
     ofImage                 info01;
@@ -49,6 +55,7 @@ public:
     ofTrueTypeFont          font;
     ofRectangle             selectRect;
     citySelect              select;
+    cityData                myCity;
     //--------old
     ofPoint                 AddOutwardCirclePos;
     ofImage                 formula;

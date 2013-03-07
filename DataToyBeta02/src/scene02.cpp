@@ -24,6 +24,7 @@ void scene02::setup(int &level){
     selectLayout02.loadImage("image/SelectingLayout02.png");
     
     font.loadFont("fonts/Futura-CondensedMedium.ttf",30);
+    font2.loadFont("fonts/Futura.ttc",18);
     city.loadFont("fonts/[z] Arista light.ttf", 28);
     city2.loadFont("fonts/[z] Arista ExtraFilled.ttf", 27);
     for (int i =0; i<3; i++) {
@@ -70,8 +71,10 @@ void scene02::setup(int &level){
     
     //select
     cityName = "0";
+    cityYear = 2005;
     select.setup(cityName,bCitySeclect);
     selectRect.set(228, 443, 190, 97);
+    myCity.setup(cityName, cityYear);
     
 }
 //-------------------------------
@@ -83,6 +86,7 @@ void scene02::update(){
             if (bCitySeclect) {
                  select.update();
             }
+            myCity.update();
            
         }
             break;
@@ -208,18 +212,26 @@ void scene02::draw(){
             info01.draw(396, 211);
             selectLayout01.draw(236, 439);
             selectLayout02.draw(660, 439);
-            font.drawString("SELECT A CITY", 231, 505);
-            font.drawString("2005", 685, 505);
+            
+            if (cityName == "0") {
+                font.drawString("SELECT A CITY", 231, 505);
+            }else{
+                ofRectangle rect;
+                rect = font.getStringBoundingBox(cityName, 0, 0);
+                font.drawString(cityName, int(317-rect.getWidth()/2), 503);
+                myCity.draw();
+            }
+            
+            font.drawString(ofToString(cityYear), 685, 505);
             
             if (bCitySeclect) {
                 select.draw();
             }
             
             
-             ofRectangle rect(612, 443, 170, 97);
-            ofRect(rect);
-            cout<<bCitySeclect<<endl;
-            
+//            ofRectangle rect(632, 443, 170, 97);
+//            ofRect(rect);
+//                       
         }
             break;
             

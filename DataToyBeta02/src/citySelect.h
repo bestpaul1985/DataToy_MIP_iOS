@@ -46,6 +46,8 @@ public:
     ofPoint             prePos1;
     vector<ofRectangle> rects;
     vector<ofColor>     colors;
+    
+    ofPoint             temPos;
 };
 
 #endif /* defined(__DataToyBeta02__citySelect__) */

@@ -63,7 +63,7 @@ class Ball{
         void draw() {
             if( bDragged ){
                 ofSetColor(touchCol);
-                ofCircle(pos.x, pos.y, 80);
+                ofCircle(pos.x, pos.y, 30);
             }
         }
 	
