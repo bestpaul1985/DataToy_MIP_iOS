@@ -14,6 +14,7 @@
 
 #include "citySelect.h"
 #include "cityData.h"
+#include "balls.h"
 
 class scene02{
 public:
@@ -53,6 +54,7 @@ public:
     ofRectangle             selectRect2;
     citySelect              select;
     cityData                myCity;
+    balls                   myBalls;
     //--------old
 
 

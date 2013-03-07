@@ -45,6 +45,7 @@ void scene02::setup(int &level){
     selectRect2.set(632, 443, 170, 97);
     select.setup(cityName,cityYear,bCitySeclect);
     myCity.setup(cityName, cityYear);
+    myBalls.setup(cityName, cityYear);
     
 }
 //-------------------------------
@@ -89,7 +90,7 @@ void scene02::draw(){
     font2.drawString("Imm Pop Pct: " + myCity.imm_pct, int(317-rect.getWidth()/2), 567+60);
     rect = font2.getStringBoundingBox("Imm Job Pct: "+ myCity.imm_pct_job, 0, 0);
     font2.drawString("Imm Job Pct: " + myCity.imm_pct_job, int(317-rect.getWidth()/2), 567+90);
-    rect = font2.getStringBoundingBox("Imm pop +/-: "+ myCity.imm_change, 0, 0);
+    rect = font2.getStringBoundingBox("Recent Arrived Imm +/-: "+ myCity.imm_change, 0, 0);
     font2.drawString("Recent Arrived Imm +/-: " + myCity.imm_change, int(317-rect.getWidth()/2), 567+120);
 
 
