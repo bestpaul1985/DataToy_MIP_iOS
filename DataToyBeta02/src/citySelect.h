@@ -36,7 +36,7 @@ public:
     
     ofPoint             boxPos;
    
-    string*              cityName;
+    string*             cityName;
     bool *              bSelect;
     bool                bSelect1;
     ofTrueTypeFont      font;

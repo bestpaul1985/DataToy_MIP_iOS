@@ -30,6 +30,7 @@ citySelect::citySelect(){
 void citySelect::setup(string &name,bool &select){
     
     bSelect = &select;
+    cityName =&name;
     font.loadFont("fonts/Futura-CondensedMedium.ttf",20);
     dBase.loadCities("cities.csv");
     dBase.loadYear(2000, "2000.csv");
