@@ -7,7 +7,6 @@
 #include "particle.h"
 #include "vectorField.h"
 #include "ofxBox2d.h"
-#include "scene01.h"
 #include "scene02.h"
 #include "identity.h"
 class testApp : public ofxiPhoneApp{
@@ -31,9 +30,9 @@ class testApp : public ofxiPhoneApp{
         int                     level;
         int                     eductionID;// 0 = NO, 1 = HS, 2 = BA
         ofImage                 arrow;
-        ofImage                 bg3;
+        ofImage                 bg;
+        ofImage                 bg1;
         vector<Ball>            balls;
-        scene01                 myScene01;
         scene02                 myScene02;
         identity                myidentity;
     

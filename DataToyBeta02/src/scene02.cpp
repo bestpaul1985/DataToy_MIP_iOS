@@ -14,16 +14,20 @@ scene02::scene02(){
 //-------------------------------
 void scene02::setup(int &level){
     //images
-    bg2.loadImage("images/bg2.png");
     cityIcon.loadImage("images/cityIcon.png");
     charactor01.loadImage("images/character01.png");
-    name01.loadImage("images/name01.png");
+    info01.loadImage("image/info01.png");
     chooseCity.loadImage("images/choosecity.png");
     formula.loadImage("images/formula.png");
+    character01.loadImage("image/character01.png");
+    selectLayout01.loadImage("image/SelectingLayout01.png");
+    selectLayout02.loadImage("image/SelectingLayout02.png");
+    
+    font.loadFont("fonts/Futura-CondensedMedium.ttf",30);
     city.loadFont("fonts/[z] Arista light.ttf", 28);
     city2.loadFont("fonts/[z] Arista ExtraFilled.ttf", 27);
     for (int i =0; i<3; i++) {
-        platForm[i].loadImage("images/c0" + ofToString(i+1)+".png");
+        platForm[i].loadImage("image/c0" + ofToString(i+1)+".png");
     }
     
     for (int i =0; i<5; i++) {
@@ -61,60 +65,22 @@ void scene02::setup(int &level){
     //stopClork
     myClork.setup(year);
     myBall.setup();
+    
+    
+    //select
+    seclet01.setup();
 }
 //-------------------------------
 void scene02::update(){
     
-    
     switch (myCase) {
-      
-            
         case 0:{
-            if (bAddOutwardCircle) {
-                VF.addOutwardCircle(AddOutwardCirclePos.x,AddOutwardCirclePos.y, 180, 5) ;
-                VF.addOutwardCircle(AddOutwardCirclePos.x+150,AddOutwardCirclePos.y, 180, 5) ;
-            }
             
-            
-            
-            
-            for (int i = 0; i < particles.size(); i++){
-                particles[i].resetForce();
-            }
-            
-            for (int i = 0; i < particles.size(); i++){
-                
-                particles[i].addAttractionForce(-500, particles[i].initialY, 2000, 1.1);
-                
-                ofVec2f frc;
-                frc = VF.getForceFromPos(particles[i].pos.x, particles[i].pos.y);
-                particles[i].addForce(frc.x, frc.y);
-                
-                for (int j = 0; j < i; j++){
-                    particles[i].addRepulsionForce(particles[j], 50, 0.4);
-                }
-            }
-            
-            for (int i = 0; i < particles.size(); i++){
-                
-                particles[i].addDampingForce();
-                particles[i].update();
-                
-                if (particles[i].pos.x < 0) {
-                    particles[i].setInitialCondition(ofGetWidth(), ofRandom(ofGetHeight()), -10, 0);
-                    
-                }
-            }
-            
-            VF.fadeField(0.97f);
-            
-            //stopClork
-            float a = 30;
-            myClork.update(a);
-           
+            seclet01.update();
         }
             break;
         case 1:{
+            
             myCities.update();
             if (myCities.bDestry) {
                 for (int i=0; i<myCities.myBall->IMM_Balls_BA.size(); i++) {
@@ -127,7 +93,6 @@ void scene02::update(){
                     myCities.myBall->IMM_Balls_NO[i].destroy();
                     
                 }
-               
                 
                 for (int i=0; i<myCities.myBall->Native_Balls_BA.size(); i++) {
                   myCities.myBall->Native_Balls_BA[i].destroy();
@@ -215,128 +180,109 @@ void scene02::update(){
 }
 //-------------------------------
 void scene02::draw(){
-    ofSetColor(255, 255, 255,255);
-    bg2.draw(0, 0);
+
     
     switch (myCase) {
         case 0:{
             
-           
-            myClork.draw();
-
-            ofPushStyle();            
             ofColor myColor;
             mouseOver ? myColor.set(255, 255, 255,150) : myColor.set(255, 255, 255, 250);
             ofSetColor(myColor);
-            platForm[0].draw(143,326);
-           
-            ofPopStyle();
             
-            platForm[2].draw(338,100);
-            charactor01.draw(420,230);
-            name01.draw(420, 140);
+            ofSetColor(255, 255, 255,179);
+            platForm[1].draw(177,270);
+            ofSetColor(255, 255, 255,179);
+            platForm[2].draw(573,270);
+            ofSetColor(255, 255, 255,179);
+            platForm[0].draw(376,166);
+            ofSetColor(255, 255, 255,255);
+            character01.draw(430, 337);
+            ofSetColor(255, 255, 255,255);
+            info01.draw(396, 211);
+            selectLayout01.draw(236, 439);
+            selectLayout02.draw(660, 439);
+            font.drawString("SELECT A CITY", 231, 505);
+            font.drawString("2005", 685, 505);
             
+            seclet01.draw();
             
-            ofPushStyle();
-            mouseOver ? myColor.set(255, 255, 255,150) : myColor.set(255, 255, 255, 250);
-            ofSetColor(myColor);
-            
-            if (ofGetElapsedTimeMillis()-startTime > 120) {
-                startTime = ofGetElapsedTimeMillis();
-                count ++;
-                if (count>3) {
-                    count = 0;
-                }
-            }
-            
-            halo[count].draw(210, 495,halo[3-count].getWidth()-40, halo[3-count].getHeight()-40);
-            cityIcon.draw(250, 430+(5*sin(ofGetElapsedTimef()*10)));
-            chooseCity.draw(250,530);
-            ofPopStyle();
-            
-            //    VF.draw();
-            
-            for (int i = 0; i < particles.size(); i++){
-                particles[i].draw();
-            }
-
         }
             break;
             
         case 1:{
-            
-            myClork.draw();
-            
-            
-            formula.draw(700, 50);
-
-            
-            ofPushStyle();
-            ofColor myColor;
-            myColor.set(255, 255, 255,100);
-            ofSetColor(myColor);
-            platForm[0].draw(143,326);
-            ofPopStyle();
-            
-            ofPushStyle();
-            myColor.set(255, 255, 255,100);
-            ofSetColor(myColor);
-            platForm[2].draw(338,100);
-            charactor01.draw(420,230);
+//            
+//            myClork.draw();
+//            
+//            
+//            formula.draw(700, 50);
+//
+//            
+//            ofPushStyle();
+//            ofColor myColor;
+//            myColor.set(255, 255, 255,100);
+//            ofSetColor(myColor);
+//            platForm[0].draw(143,326);
+//            ofPopStyle();
+//            
+//            ofPushStyle();
+//            myColor.set(255, 255, 255,100);
+//            ofSetColor(myColor);
+//            platForm[2].draw(338,100);
+//            charactor01.draw(420,230);
             //        name01.draw(420, 140);
-            ofPopStyle();
-            
-            ofPushStyle();
-            myColor.set(255, 255, 255,50);
-            ofSetColor(myColor);
-            halo[4].draw(210, 495,halo[3-count].getWidth()-40, halo[3-count].getHeight()-40);
-            cityIcon.draw(250, 430);
+//            ofPopStyle();
+//            
+//            ofPushStyle();
+//            myColor.set(255, 255, 255,50);
+//            ofSetColor(myColor);
+//            halo[4].draw(210, 495,halo[3-count].getWidth()-40, halo[3-count].getHeight()-40);
+//            cityIcon.draw(250, 430);
             //        chooseCity.draw(250,530);
-            ofPopStyle();
-            
-            myCities.draw();
+//            ofPopStyle();
+//            
+//            myCities.draw();
             
             
             
         }
             break;
         case 2:{
-            myClork.draw();
-            
-            ofPushStyle();
-            ofColor myColor;
-            mouseOver ? myColor.set(255, 255, 255,150) : myColor.set(255, 255, 255, 250);
-            ofSetColor(myColor);
-            platForm[0].draw(143,326);
-            ofPopStyle();
-            
-            platForm[2].draw(338,100);
-            charactor01.draw(420,230);
-            name01.draw(420, 140);
-            
-            
-            ofPushStyle();
-            mouseOver ? myColor.set(255, 255, 255,150) : myColor.set(255, 255, 255, 250);
-            ofSetColor(myColor);
-            
-           
-            halo[4].draw(210, 495,halo[4].getWidth()-40, halo[4].getHeight()-40);
-            cityIcon.draw(250, 430+(5*sin(ofGetElapsedTimef())));
-            ofPopStyle();
-            
-            ofPushStyle();
-            
-            ofRectangle rect;
-            ofSetColor(255, 255, 255);
-            rect = city2.getStringBoundingBox(name, 0, 0);
-            city2.drawString(name, 343-rect.getWidth()/2+2, 526+rect.getHeight()/2-3);
-            ofSetColor(0, 0, 0);
-            rect = city.getStringBoundingBox(name, 0, 0);
-            city.drawString(name, 343-rect.getWidth()/2, 526+rect.getHeight()/2);
-            ofPopStyle();
-            
-            myBall.draw();
-            
+//            myClork.draw();
+//            
+//            ofPushStyle();
+//            ofColor myColor;
+//            mouseOver ? myColor.set(255, 255, 255,150) : myColor.set(255, 255, 255, 250);
+//            ofSetColor(myColor);
+//            platForm[0].draw(143,326);
+//            ofPopStyle();
+//            
+//            platForm[2].draw(338,100);
+//            charactor01.draw(420,230);
+//            info01.draw(420, 140);
+//            
+//            
+//            ofPushStyle();
+//            mouseOver ? myColor.set(255, 255, 255,150) : myColor.set(255, 255, 255, 250);
+//            ofSetColor(myColor);
+//            
+//           
+//            halo[4].draw(210, 495,halo[4].getWidth()-40, halo[4].getHeight()-40);
+//            cityIcon.draw(250, 430+(5*sin(ofGetElapsedTimef())));
+//            ofPopStyle();
+//            
+//            ofPushStyle();
+//            
+//            ofRectangle rect;
+//            ofSetColor(255, 255, 255);
+//            rect = city2.getStringBoundingBox(name, 0, 0);
+//            city2.drawString(name, 343-rect.getWidth()/2+2, 526+rect.getHeight()/2-3);
+//            ofSetColor(0, 0, 0);
+//            rect = city.getStringBoundingBox(name, 0, 0);
+//            city.drawString(name, 343-rect.getWidth()/2, 526+rect.getHeight()/2);
+//            ofPopStyle();
+//            
+//            myBall.draw();
+//            
         }
             
     }
@@ -352,23 +298,22 @@ void scene02::touchDown(int id, int number, float x, float y){
     
     switch (myCase) {
         case 0:{
-            if (id == 0) {
-                AddOutwardCirclePos.set(x, y);
-                bAddOutwardCircle = true;
-            }
             
-            ofPoint p1;
-            p1.set(x,y);
-            ofPoint p2;
-            p2.set(343,526);
-            float dis = p1.distance(p2);
+            seclet01.mouseDown(id, number, x, y);
+
             
-            if (dis <ButtonSize) {
-                mouseOver = true;
-                bPressed = true;
-            }else{
-                mouseOver = false;
-            }
+//            ofPoint p1;
+//            p1.set(x,y);
+//            ofPoint p2;
+//            p2.set(343,526);
+//            float dis = p1.distance(p2);
+//            
+//            if (dis <ButtonSize) {
+//                mouseOver = true;
+//                bPressed = true;
+//            }else{
+//                mouseOver = false;
+//            }
         }
             break;
         
@@ -401,23 +346,9 @@ void scene02::touchDown(int id, int number, float x, float y){
 void scene02::touchMove(int id, int number, float x, float y){
     switch (myCase) {
         case 0:{
-            if (id == 0) {
-                AddOutwardCirclePos.set(x, y);
-            }
-            
-            ofPoint p1;
-            p1.set(x,y);
-            ofPoint p2;
-            p2.set(343,526);
-            float dis = p1.distance(p2);
-            
-            if (dis <ButtonSize) {
-                mouseOver = true;
-            }else{
-                mouseOver = false;
-            }
+            seclet01.mouseMove(id, number, x, y);
 
-        }
+            
             break;
         case 1:
             myCities.touchMove(id, number, x, y);
@@ -437,6 +368,7 @@ void scene02::touchMove(int id, int number, float x, float y){
                 mouseOver = false;
             }
                        break;
+        }
     }
 }
 //-------------------------------
@@ -446,28 +378,7 @@ void scene02::touchUp(int id, int number, float x, float y){
        
     switch (myCase) {
         case 0:{
-            if (id == 0) {
-                bAddOutwardCircle = false;
-            }
-            
-            ofPoint p1;
-            p1.set(x,y);
-            ofPoint p2;
-            p2.set(343,526);
-            float dis = p1.distance(p2);
-            
-            if (dis <ButtonSize&& bPressed) {
-                mouseOver = false;
-                bPressed = false;
-                myCase = 1;
-                myCities.setup(particles,myCase,name,year,myBall);
-            }
-            
-            else{
-                mouseOver = false;
-            }
-            
-           
+            seclet01.mouseUp(id, number, x, y);
 
         }
             break;

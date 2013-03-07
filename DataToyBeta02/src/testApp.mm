@@ -10,10 +10,9 @@ void testApp::setup(){
     ofEnableSmoothing();
     ofxAccelerometer.setup();
     
-    level =                     0;
+    level =                     1;
     eductionID =                0;
     //sences
-    myScene01.setup(level);
     myScene02.setup(level);
     
 	// initialize the accelerometer
@@ -26,7 +25,8 @@ void testApp::setup(){
 		balls[i].init(i);
 	}
     //background image
-    bg3.loadImage("images/bg3.jpg");
+    bg.loadImage("image/bg01.png");
+    bg1.loadImage("image/bg02.png");
     
     myidentity.setup(level, eductionID);
     myScene02.myBall.gravity = ofxAccelerometer.getForce();
@@ -42,7 +42,6 @@ void testApp::update() {
         case 0:
         {
             
-            myScene01.update();
             myidentity.update();
             
             for(int i=0; i < balls.size(); i++){
@@ -72,12 +71,17 @@ void testApp::draw() {
     
     switch (level) {
         case 0:{
-            myScene01.draw();
+            ofSetColor(255, 255, 255,255);
+            bg.draw(0, 0);
+            ofSetColor(255, 255, 255,255);
+            bg1.draw(0, 0);
             myidentity.draw();
         }
             break;
             
        case 1:{
+            ofSetColor(255, 255, 255,255);
+            bg.draw(0, 0);
             myScene02.draw();
             myidentity.draw();
             }
@@ -85,7 +89,7 @@ void testApp::draw() {
             
         case 2:{
             ofSetColor(255, 255, 255,255);
-            bg3.draw(0, 0);
+            bg.draw(0, 0);
             myidentity.draw();
         }
             break;
@@ -111,7 +115,6 @@ void testApp::touchDown(ofTouchEventArgs & touch){
 	balls[touch.id].moveTo(touch.x, touch.y);
 	balls[touch.id].bDragged = true;
   
-    myScene01.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
     myScene02.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
     myidentity.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
     
@@ -125,7 +128,6 @@ void testApp::touchMoved(ofTouchEventArgs & touch){
 	balls[touch.id].bDragged = true;
     
 
-    myScene01.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
     myScene02.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
     myidentity.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
    
@@ -136,7 +138,6 @@ void testApp::touchUp(ofTouchEventArgs & touch){
   
 	balls[touch.id].bDragged = false;
   
-    myScene01.touchUp(touch.id, touch.numTouches, touch.x, touch.y);
     myScene02.touchUp(touch.id, touch.numTouches, touch.x, touch.y);
     myidentity.touchUp(touch.id, touch.numTouches, touch.x, touch.y);
     

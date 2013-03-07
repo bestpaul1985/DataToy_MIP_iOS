@@ -15,6 +15,7 @@
 #include "cities.h"
 #include "stopClock.h"
 #include "dataBall.h"
+#include "citySelect.h"
 
 class scene02{
 public:
@@ -37,16 +38,23 @@ public:
     bool                    bPressed;
     float                   startTime;
     float                   ButtonSize;
-    ofPoint                 AddOutwardCirclePos;
+        
+    //------new
+    ofImage                 platForm[3];
+    ofImage                 character01;
+    ofImage                 info01;
+    ofImage                 icons[25];
+    ofTrueTypeFont          font;
     
+    citySelect              seclet01;
+    //--------old
+    ofPoint                 AddOutwardCirclePos;
     ofImage                 formula;
     ofImage                 charactor01;
-    ofImage                 icons[25];
-    ofImage                 bg2;
+    ofImage                 selectLayout01;
+    ofImage                 selectLayout02;
     ofImage                 halo[6];
     ofImage                 cityIcon;
-    ofImage                 platForm[3];
-    ofImage                 name01;
     ofImage                 chooseCity;
     vector<particle>        particles;
     vectorField             VF;
@@ -55,7 +63,6 @@ public:
     ofTrueTypeFont          city;
     ofTrueTypeFont          city2;
     string                  name;
-   
     dataBall                myBall;
     
     

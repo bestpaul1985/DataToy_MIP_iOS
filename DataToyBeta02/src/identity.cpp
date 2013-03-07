@@ -39,7 +39,7 @@ void identity::setup(int &level, int &educationID){
     
     //img
     for (int i =0; i<3; i++) {
-        circle[i].loadImage("images/c0" + ofToString(i+1)+".png");
+        circle[i].loadImage("image/c0" + ofToString(i+1)+".png");
     }
 
     for (int i=0; i< num; i++) {
@@ -61,7 +61,7 @@ void identity::update(){
                     if (dis>250&&dis<280) {
                         bDelay = true;
                         startTime = ofGetElapsedTimeMillis();
-                        cout<<dis<<endl;
+//                        cout<<dis<<endl;
                     }
                 }
             }
@@ -83,13 +83,13 @@ void identity::update(){
                     
                     if (i!=j) {
                         dis = touches[i].distance(touches[j]);
-                        cout<<dis<<endl;
+//                        cout<<dis<<endl;
                         if (dis>250 &&dis<280) { //declear charaters
                             
                             *myLevel = 1;
                             *myEducation = 0;
                             if (bSound) {
-                                 sound1.play();
+                                sound1.play();
                                 bSound = false;
                             }
                            
@@ -115,14 +115,14 @@ void identity::update(){
 void identity::draw(){
     
     if (bDelay) {
-        
+        ofPoint size(143,143);
         ofPushMatrix();
         ofTranslate(touches[0].x, touches[0].y);
         ofRotateZ(RAD_TO_DEG*ofGetElapsedTimef());
         ofTranslate(100*sin(ofGetElapsedTimef()*3)-200, 0);
         ofRotateZ(RAD_TO_DEG*ofGetElapsedTimef()*2);
         ofSetColor(255, 255, 255);
-        circle[0].draw(0,0);
+        circle[0].draw(0,0,size.x,size.y);
         ofPopMatrix();
         
         ofPushMatrix();
@@ -131,7 +131,7 @@ void identity::draw(){
         ofTranslate(100*sin(ofGetElapsedTimef()*3)-200, 0);
         ofRotateZ(RAD_TO_DEG*ofGetElapsedTimef()*2);
         ofSetColor(255, 255, 255);
-        circle[1].draw(0,0);
+        circle[1].draw(0,0,size.x,size.y);
         ofPopMatrix();
         
         ofPushMatrix();

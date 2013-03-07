@@ -30,7 +30,7 @@ void    scene01::setup(int &level){
     
 	VF.setupField(ofGetWidth()/50, ofGetHeight()/50,ofGetWidth(), ofGetHeight());
     //bg
-    bg.loadImage("images/bg.jpg");
+    bg.loadImage("image/bg01.png");
     
     
     
@@ -115,10 +115,10 @@ void    scene01::touchMove(int id, int number, float x, float y){
 //-------------------------------
 void    scene01::touchUp(int id, int number, float x, float y){
 
-    if (id == 0) {
-        bAddOutwardCircle = false;
-    }
-   
+//    if (id == 0) {
+//        bAddOutwardCircle = false;
+//    }
+//   
 
 }
 
