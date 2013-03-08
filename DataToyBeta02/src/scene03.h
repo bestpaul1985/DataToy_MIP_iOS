@@ -31,7 +31,8 @@ public:
     bool                    bPressed;
     bool                    bCitySeclect;
     bool                    bBalls;
-    
+    bool                    bYear;
+
     float                   startTime;
     float                   ButtonSize;
     
@@ -56,7 +57,7 @@ public:
     vector<superBall>       mySuperBall;
     ofxBox2d                box2d;
     ofPoint                 *gravity;
-    
+     float                   yearTouch;
     
 };
 

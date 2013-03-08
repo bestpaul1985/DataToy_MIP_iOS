@@ -283,6 +283,14 @@ void scene03::touchDown(int id, int number, float x, float y){
         bCitySeclect = true;
         
     }
+    if (id == 0) {
+        if (selectRect2.inside(x, y) && bYear == false) {
+            yearTouch = y;
+            bYear = true;
+            cout<<bYear<<endl;
+        }
+    }
+    
     
     if (bCitySeclect) select.mouseDown(id, number, x, y);
 }
@@ -300,7 +308,26 @@ void scene03::touchUp(int id, int number, float x, float y){
     if (bCitySeclect) {
         select.mouseUp(id, number, x, y);
     }
-    
+    if(id==0) {
+        
+        if (bYear) {
+            if(y-yearTouch>0){
+                cityYear +=5;
+            }else if(y-yearTouch<0){
+                cityYear -=5;
+            }
+            
+            if (cityYear>2010) {
+                cityYear = 2010;
+            }else if(cityYear <2000){
+                cityYear = 2000;
+            }
+            
+            yearTouch = y;
+            bYear = false;
+            
+        }
+    }
     
 }
 
