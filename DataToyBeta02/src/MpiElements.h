@@ -48,6 +48,7 @@ enum mpiNumValue{
     //
     MPI_NUM_POPULATION,
     MPI_NUM_IMMIGRANTS,
+    MPI_NUM_NATIVE,
     MPI_NUM_EMPLOYED,               //  (pop. 16+)
     MPI_NUM_EMPLOYED_IMMIGRANTS,    //  (pop. 16+)
     MPI_NUM_EMPLOYED_NATIVE         //  (pop. 16+)
@@ -85,7 +86,16 @@ enum mpiPctValue{
     //
     //  CULTURAL
     //
-    MPI_PCT_CREATIVE_CLASS
+    MPI_PCT_CREATIVE_CLASS,
+    //
+    //  UNEMPLOYMENT -> EDUCATION
+    //
+    MPI_PCT_UNEMPLOY_IMMIGRANTS_NO_DEGREE,
+    MPI_PCT_UNEMPLOY_IMMIGRANTS_HIGHSCHOOL_DEGREE,
+    MPI_PCT_UNEMPLOY_IMMIGRANTS_BA_DEGREE,
+    MPI_PCT_UNEMPLOY_NATIVE_NO_DEGREE,
+    MPI_PCT_UNEMPLOY_NATIVE_HIGHSCHOOL_DEGREE,
+    MPI_PCT_UNEMPLOY_NATIVE_BA_DEGREE
 };
 
 //  There is a city sample for each year that city was censed
@@ -100,6 +110,8 @@ struct mpiCitySample {
                 return pop;
             case MPI_NUM_IMMIGRANTS:
                 return popImm;
+            case MPI_NUM_NATIVE:
+                return pop - popImm;
             case MPI_NUM_EMPLOYED:
                 return employedTotal;
             case MPI_NUM_EMPLOYED_IMMIGRANTS:
@@ -150,6 +162,19 @@ struct mpiCitySample {
                 return nonEnglSpk;
             case MPI_PCT_CREATIVE_CLASS:
                 return creativeClass;
+                
+            case MPI_PCT_UNEMPLOY_IMMIGRANTS_NO_DEGREE:
+                return noDegreeUnEmployImm;
+            case MPI_PCT_UNEMPLOY_IMMIGRANTS_HIGHSCHOOL_DEGREE:
+                return hsDegreeUnEmployImm;
+            case MPI_PCT_UNEMPLOY_IMMIGRANTS_BA_DEGREE:
+                return baDegreeUnEmployImm;
+            case MPI_PCT_UNEMPLOY_NATIVE_NO_DEGREE:
+                return noDegreeUnEmployNat;
+            case MPI_PCT_UNEMPLOY_NATIVE_HIGHSCHOOL_DEGREE:
+                return hsDegreeUnEmployNat;
+            case MPI_PCT_UNEMPLOY_NATIVE_BA_DEGREE:
+                return baDegreeUnEmployNat;
             default:
                 return -1;      //  Every time you recive a -1 means you are doing something wrong
         }
@@ -255,6 +280,17 @@ struct mpiCitySample {
     
     float   creativeClass;  //  % Creative class
     //  i.e., share employed in professional occupations and had at least a bachelorÕs degree among all employed adults
+    
+    
+    //  UNEMPLOYMENT -> EDUCATION
+    //
+    float   noDegreeUnEmployImm;
+    float   hsDegreeUnEmployImm;
+    float   baDegreeUnEmployImm;
+    float   noDegreeUnEmployNat;
+    float   hsDegreeUnEmployNat;
+    float   baDegreeUnEmployNat;
+    
 };
 
 #endif

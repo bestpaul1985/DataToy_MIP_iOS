@@ -41,6 +41,9 @@ public:
     float   getWellBeing(int _cityId);
     mpiCityCategory getCityCategory( int _cityId); //return the city category
     
+    float   getGrowthImmPop( int _cityId, int _fromYearId, int _toYearId);
+    float   getGrowthNatPop( int _cityId, int _fromYearId, int _toYearId);
+    
     mpiCity getCityInfo( int _cityId );  // giving a city ID return a mpiCity
     vector<mpiCity> getCitiesBy( mpiCityCategory _category ); //return a vector of cities by cat.
     vector<mpiCity> getCitiesBy( string _state ); // return a vector of cities by giving a state

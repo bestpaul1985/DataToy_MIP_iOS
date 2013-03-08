@@ -11,7 +11,7 @@ void testApp::setup(){
     ofxAccelerometer.setup();
     
     reset =                     false;
-    level =                     0;
+    level =                     1;
     eductionID =                0;
     //sences
     myScene02.setup(level);
@@ -109,13 +109,13 @@ void testApp::draw() {
             break;
     }
     
-    ofSetColor(54);
-    ofPushStyle();
-    ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
-    for(int i = 0; i< balls.size(); i++){
-        balls[i].draw();
-    }
-    ofPopStyle();
+//    ofSetColor(54);
+//    ofPushStyle();
+//    ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
+//    for(int i = 0; i< balls.size(); i++){
+//        balls[i].draw();
+//    }
+//    ofPopStyle();
 }
 
 //--------------------------------------------------------------

@@ -14,7 +14,7 @@ scene02::scene02(){
 //-------------------------------
 void scene02::setup(int &level){
     //images
-    info01.loadImage("image/info01.png");
+    info01.loadImage("image/info02.png");
     character.loadImage("image/gal.png");
     selectLayout01.loadImage("image/SelectingLayout01.png");
     selectLayout02.loadImage("image/SelectingLayout02.png");

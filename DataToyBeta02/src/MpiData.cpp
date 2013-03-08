@@ -142,6 +142,15 @@ void MpiData::loadYear( int _year, string _cvsFile ){
                     
                     newSample.creativeClass = ofToFloat(values[24]);
                     
+                    //  Job -> education
+                    //
+                    newSample.noDegreeUnEmployImm = ofToFloat(values[25]);
+                    newSample.hsDegreeUnEmployImm = ofToFloat(values[26]);
+                    newSample.baDegreeUnEmployImm = ofToFloat(values[27]);
+                    newSample.noDegreeUnEmployNat = ofToFloat(values[28]);
+                    newSample.hsDegreeUnEmployNat = ofToFloat(values[29]);
+                    newSample.baDegreeUnEmployNat = ofToFloat(values[30]);
+                    
                     newYearSample.push_back(newSample);
                     
                 }
@@ -162,6 +171,14 @@ void MpiData::loadYear( int _year, string _cvsFile ){
         samples.insert(samples.begin()+offSet,newYearSample);
         
     }
+}
+
+float MpiData::getGrowthImmPop(int _cityId,  int _fromYearId, int _toYearId){
+    return ( getNumVal( MPI_NUM_IMMIGRANTS, _cityId, _toYearId ) - getNumVal( MPI_NUM_IMMIGRANTS, _cityId, _fromYearId ) )*100/getNumVal( MPI_NUM_IMMIGRANTS, _cityId, _fromYearId );
+}
+
+float MpiData::getGrowthNatPop(int _cityId, int _fromYearId, int _toYearId){
+    return ( getNumVal( MPI_NUM_NATIVE, _cityId, _toYearId ) - getNumVal( MPI_NUM_NATIVE, _cityId, _fromYearId ) )*100/getNumVal( MPI_NUM_NATIVE, _cityId, _fromYearId );
 }
 
 int MpiData::getTotalYears(){
