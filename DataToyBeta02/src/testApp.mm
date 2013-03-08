@@ -11,7 +11,7 @@ void testApp::setup(){
     ofxAccelerometer.setup();
     
     reset =                     false;
-    level =                     1;
+    level =                     0;
     eductionID =                0;
     //sences
     myScene02.setup(level,ofxAccelerometer.getForce());

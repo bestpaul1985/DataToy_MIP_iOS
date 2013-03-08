@@ -62,6 +62,17 @@ void cityData::update(){
         nat_hs_yes =1 + int((nat_pop * dBase.getPctVal(MPI_PCT_DEGREE_NATIVE_HIGHSCHOOL, city,year)/100/popPreBall)- nat_hs_no);
         nat_ba_yes =1 + int((nat_pop * dBase.getPctVal(MPI_PCT_DEGREE_NATIVE_BA, city,year)/100/popPreBall)- nat_ba_no);
         
+        
+        if (nat_hs_yes > 33) {
+            nat_hs_yes = 33;
+        }
+        if (nat_no_yes > 33) {
+            nat_no_yes = 33;
+        }
+        if (nat_ba_yes > 33) {
+            nat_ba_yes = 33;
+        }
+        
         size = ofMap(dBase.getPctVal(MPI_PCT_POPULATION_SHARE, dBase.getCityId(*cityName) , dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_POPULATION_SHARE,-1,dBase.getYearId(*cityYear)), 15, 60);
         
         shape = ofMap(dBase.getPctVal(MPI_PCT_EMPLOYED_SHARE, dBase.getCityId(*cityName),dBase.getYearId(*cityYear)), dBase.getMinPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), dBase.getMaxPctVal(MPI_PCT_EMPLOYED_SHARE,-1,dBase.getYearId(*cityYear)), 3, 12);
