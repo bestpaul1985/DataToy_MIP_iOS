@@ -14,6 +14,7 @@ superBall::superBall(){
     duration = 3000;
     startTime = ofGetElapsedTimeMicros();
     bDead = false;
+    bTimer  = false;
     alpha = 179;
 }
 

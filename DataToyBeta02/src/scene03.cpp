@@ -90,9 +90,9 @@ void scene03::update(){
         
         superBall b;
         b.setPhysics(3.0, 0, 0.1);
-        b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 44);
+        b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
         b.setVelocity(0, 0);
-        b.color.set(230, 64, 163);
+        b.color.set(237, 0, 140);
         b.alpha = 255;
         mySuperBall.push_back(b);
         

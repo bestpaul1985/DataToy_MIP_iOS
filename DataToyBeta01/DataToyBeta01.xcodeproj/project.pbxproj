@@ -53,6 +53,7 @@
 		4C0F63BF16E92BD1004B3DB0 /* ofxBox2dJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F638E16E92BD1004B3DB0 /* ofxBox2dJoint.cpp */; };
 		4C0F63C016E92BD1004B3DB0 /* ofxBox2dPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F639016E92BD1004B3DB0 /* ofxBox2dPolygon.cpp */; };
 		4C0F63C116E92BD1004B3DB0 /* ofxBox2dRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F639316E92BD1004B3DB0 /* ofxBox2dRect.cpp */; };
+		4C12F64316EA371E00D804D8 /* small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C12F64216EA371E00D804D8 /* small.png */; };
 		4CCD814B16E3E83B005B6B62 /* stopClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD814916E3E83A005B6B62 /* stopClock.cpp */; };
 		4CCD816016E4EBDC005B6B62 /* dataBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */; };
 		4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */; };
@@ -64,7 +65,6 @@
 		4CDBFE6C16E20CEA00193C1E /* PixelTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE6616E20CEA00193C1E /* PixelTexture.cpp */; };
 		4CE8591316DBFF7A00FE31E6 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8590F16DBFF7A00FE31E6 /* particle.cpp */; };
 		4CE8591416DBFF7A00FE31E6 /* vectorField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8591116DBFF7A00FE31E6 /* vectorField.cpp */; };
-		4CE8591E16DC217B00FE31E6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591D16DC217B00FE31E6 /* logo.png */; };
 		4CE8A53416E26F7D0007FADE /* cities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53216E26F7D0007FADE /* cities.cpp */; };
 		4CE8A53A16E272E80007FADE /* scene01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53816E272E80007FADE /* scene01.cpp */; };
 		4CE8A53D16E27ABB0007FADE /* identity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A53B16E27ABB0007FADE /* identity.cpp */; };
@@ -205,6 +205,7 @@
 		4C0F639416E92BD1004B3DB0 /* ofxBox2dRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRect.h; sourceTree = "<group>"; };
 		4C0F639516E92BD1004B3DB0 /* ofxBox2dRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRender.h; sourceTree = "<group>"; };
 		4C0F639616E92BD1004B3DB0 /* ofxBox2dUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dUtils.h; sourceTree = "<group>"; };
+		4C12F64216EA371E00D804D8 /* small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small.png; sourceTree = "<group>"; };
 		4CCD814916E3E83A005B6B62 /* stopClock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stopClock.cpp; sourceTree = "<group>"; };
 		4CCD814A16E3E83B005B6B62 /* stopClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stopClock.h; sourceTree = "<group>"; };
 		4CCD815E16E4EBDC005B6B62 /* dataBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dataBall.cpp; sourceTree = "<group>"; };
@@ -295,6 +296,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4C12F64216EA371E00D804D8 /* small.png */,
 				4CDB009216E2177F00193C1E /* Default-Landscape@2x~ipad.png */,
 				4CDBFE5016E1E15000193C1E /* Default-Landscape~ipad.png */,
 				4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */,
@@ -714,10 +716,10 @@
 				BB24DDCA10DA781C00E9C588 /* ofxiphone-Info.plist in Resources */,
 				E41D3ED713B38FB500A75A5D /* Project.xcconfig in Resources */,
 				E41D3EE613B3906D00A75A5D /* CoreOF.xcconfig in Resources */,
-				4CE8591E16DC217B00FE31E6 /* logo.png in Resources */,
 				4CDBFE6816E20CEA00193C1E /* README in Resources */,
 				4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */,
 				4C0F639716E92BD1004B3DB0 /* install.xml in Resources */,
+				4C12F64316EA371E00D804D8 /* small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

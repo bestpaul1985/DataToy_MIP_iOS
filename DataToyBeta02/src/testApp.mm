@@ -145,7 +145,7 @@ void testApp::touchMoved(ofTouchEventArgs & touch){
 
     myScene02.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
     myScene03.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
-    myidentity.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
+    myidentity.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
    
 }
 
