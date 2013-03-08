@@ -33,9 +33,9 @@ void scene03::setup(int &level,ofPoint &grav){
     bPressed = false;
     bCitySeclect = false;
     bBalls = false;
-    ButtonSize = 70;
     gravity = &grav;
-    
+    ButtonSize = 70;
+    lastSize = 0;
     //select
     cityName = "0";
     preCityName = cityName;
@@ -53,11 +53,11 @@ void scene03::setup(int &level,ofPoint &grav){
 	box2d.setFPS(30.0);
     box2d.registerGrabbing();
     box2d.setIterations(1, 1);
+
     
 }
 //-------------------------------
 void scene03::update(){
-    
     ofPoint g;
     g = *gravity;
     g.x *= -1;
@@ -90,8 +90,8 @@ void scene03::update(){
         
         superBall b;
         b.setPhysics(3.0, 0, 0.1);
+        b.setVelocity(0, 10);
         b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
-        b.setVelocity(0, 0);
         b.color.set(237, 0, 140);
         b.alpha = 255;
         mySuperBall.push_back(b);
@@ -105,8 +105,8 @@ void scene03::update(){
         for (int i =0; i<myCity.imm_no_no; i++) {
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
-            b.setVelocity(0, 0);
             b.color = umImpolie;
             mySuperBall.push_back(b);
         }
@@ -115,25 +115,24 @@ void scene03::update(){
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
-            b.setVelocity(0, 0);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
         
         for (int i =0; i<myCity.nat_no_no; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
-            b.setVelocity(0, 0);
             b.color = umImpolie;
             mySuperBall.push_back(b);
         }
         
         for (int i =0; i<myCity.nat_no_yes; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
-            b.setVelocity(0, 0);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
@@ -141,7 +140,8 @@ void scene03::update(){
         //-----HS-----
         for (int i =0; i<myCity.imm_hs_no; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
             b.setVelocity(0, 0);
             b.color = umImpolie;
@@ -150,16 +150,17 @@ void scene03::update(){
         
         for (int i =0; i<myCity.imm_hs_yes; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
-            b.setVelocity(0, 0);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
         
         for (int i =0; i<myCity.nat_hs_no; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
             b.setVelocity(0, 0);
             b.color = umImpolie;
@@ -168,9 +169,9 @@ void scene03::update(){
         
         for (int i =0; i<myCity.nat_hs_yes; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
-            b.setVelocity(0, 0);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
@@ -178,34 +179,34 @@ void scene03::update(){
         //-----BA-----
         for (int i =0; i<myCity.imm_ba_no; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
-            b.setVelocity(0, 0);
             b.color = umImpolie;
             mySuperBall.push_back(b);
         }
         for (int i =0; i<myCity.imm_ba_yes; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
-            b.setVelocity(0, 0);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
         
         for (int i =0; i<myCity.nat_ba_no; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
-            b.setVelocity(0, 0);
             b.color = umImpolie;
             mySuperBall.push_back(b);
         }
         for (int i =0; i<myCity.nat_ba_yes; i++) {
             superBall b;
-            b.setPhysics(3.0, 0, 0.1);
+            b.setPhysics(3.0, 0.3, 0.1);
+            b.setVelocity(0, 10);
             b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
-            b.setVelocity(0, 0);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
@@ -213,7 +214,7 @@ void scene03::update(){
         
         preCityName = cityName;
         preCityYear = cityYear;
-
+        
     }
 }
 //-------------------------------
@@ -233,12 +234,20 @@ void scene03::draw(){
     character.draw(430, 337);
     ofSetColor(255, 255, 255,255);
     info01.draw(396, 211);
+  
+    if (mySuperBall.size()>0) {
+        for (int i=0; i<mySuperBall.size(); i++) {
+            mySuperBall[i].draw();
+        }
+    }
+    ofSetColor(255, 255, 255);
     selectLayout01.draw(236, 439);
     selectLayout02.draw(660, 439);
     
     if (cityName == "0") {
         font.drawString("SELECT A CITY", 231, 505);
     }else{
+        
         ofRectangle rect;
         rect = font.getStringBoundingBox(cityName, 0, 0);
         font.drawString(cityName, int(317-rect.getWidth()/2), 503);
@@ -255,16 +264,11 @@ void scene03::draw(){
         
         
     }
-    
+     ofSetColor(255, 255, 255);
     font.drawString(ofToString(cityYear), 685, 505);
     
     
-    
-    if (mySuperBall.size()>0) {
-        for (int i=0; i<mySuperBall.size(); i++) {
-            mySuperBall[i].draw();
-        }
-    }
+ 
     
     
     if (bCitySeclect) {
@@ -283,8 +287,7 @@ void scene03::touchDown(int id, int number, float x, float y){
         bCitySeclect = true;
         
     }
-    
-    if (cityName != "0"){
+    if (cityName != "0") {
         if (id == 0) {
             if (selectRect2.inside(x, y) && bYear == false) {
                 yearTouch = y;
@@ -292,15 +295,17 @@ void scene03::touchDown(int id, int number, float x, float y){
                 cout<<bYear<<endl;
             }
         }
+        
     }
-
+    
     
     
     if (bCitySeclect) select.mouseDown(id, number, x, y);
 }
 //-------------------------------
 void scene03::touchMove(int id, int number, float x, float y){
-
+    
+    
     if (bCitySeclect) select.mouseMove(id, number, x, y);
     
 }
@@ -311,7 +316,9 @@ void scene03::touchUp(int id, int number, float x, float y){
     
     if (bCitySeclect) {
         select.mouseUp(id, number, x, y);
+        
     }
+    
     if(id==0) {
         
         if (bYear) {
@@ -332,7 +339,6 @@ void scene03::touchUp(int id, int number, float x, float y){
             
         }
     }
-    
 }
 
 void scene03::reset(){
@@ -346,7 +352,8 @@ void scene03::reset(){
     cityYear = 2005;
     preCityYear = cityYear;
     
-//    for (int i= mySuperBall.size() ; i>=0; i--) {
-//        mySuperBall[i].destroy();
-//    }
+    //    for (int i= 0 ; i<mySuperBall.size(); i++) {
+    //        mySuperBall[i].destroy();
+    //    }
 }
+
