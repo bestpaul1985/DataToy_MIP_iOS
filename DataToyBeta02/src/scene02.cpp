@@ -116,7 +116,7 @@ void scene02::draw(){
     ofSetColor(255, 255, 255,255);
     character.draw(430, 337);
     ofSetColor(255, 255, 255,255);
-    info01.draw(396, 211);
+    info01.draw(406, 211);
     selectLayout01.draw(236, 439);
     selectLayout02.draw(660, 439);
 
