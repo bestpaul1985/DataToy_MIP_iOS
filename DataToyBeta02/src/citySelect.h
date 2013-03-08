@@ -40,7 +40,7 @@ public:
     int*                cityYear;
     bool *              bSelect;
     bool *             bBall;
-    bool                bSelect1;
+    bool                bDone;
     ofTrueTypeFont      font;
     MpiData             dBase;
     ofPoint             pos;

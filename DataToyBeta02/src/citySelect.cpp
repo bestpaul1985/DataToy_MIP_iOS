@@ -23,7 +23,7 @@ citySelect::citySelect(){
     offSet = 25;
     boxPos.set(220, 0);
     temPos.set(0, 0);
-    bSelect1 = false;
+    bDone = false;
 }
 
 //--------------------------------------------------------------
@@ -208,6 +208,7 @@ void citySelect::mouseUp(int id, int number, float x, float y){
                 *cityName = dBase.getCity(i);
                 *bSelect = false;
                 *bBall = true;
+                bDone = true;
             }
             
         }

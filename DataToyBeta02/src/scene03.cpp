@@ -12,7 +12,7 @@ scene03::scene03(){
     
 }
 //-------------------------------
-void scene03::setup(int &level){
+void scene03::setup(int &level,ofPoint &grav){
     //images
     info01.loadImage("image/info01.png");
     character.loadImage("image/dad.png");
@@ -33,8 +33,8 @@ void scene03::setup(int &level){
     bPressed = false;
     bCitySeclect = false;
     bBalls = false;
-    
     ButtonSize = 70;
+    gravity = &grav;
     
     //select
     cityName = "0";
@@ -58,6 +58,13 @@ void scene03::setup(int &level){
 //-------------------------------
 void scene03::update(){
     
+    ofPoint g;
+    g = *gravity;
+    g.x *= -1;
+    g.y *= -1;
+    g *= 30;
+    box2d.setGravity(g.y,g.x);
+    
     box2d.update();
     
     if (bCitySeclect) select.update();
@@ -65,38 +72,148 @@ void scene03::update(){
     
     if (cityName != preCityName || cityYear != preCityYear) {
         
-        cout<<myCity.no_num<<" "<<myCity.hs_num<<" "<<myCity.ba_num<<endl;
+        if (box2d.getBodyCount()>0) {
+            for (int i=0; i<mySuperBall.size(); i++) {
+                if (mySuperBall[i].bDead ==false) {
+                    mySuperBall[i].bTimer = true;
+                    mySuperBall[i].startTime = ofGetElapsedTimeMillis();
+                }else{
+                    mySuperBall[i].destroy();
+                }
+            }
+        }
         
+        ofColor umImpolie;
+        ofColor impolied;
+        umImpolie.set(130, 202,156);
+        impolied.set(1135, 129, 190);
         
-        for (int i =0; i<myCity.no_num; i++) {
+        superBall b;
+        b.setPhysics(3.0, 0, 0.1);
+        b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 44);
+        b.setVelocity(0, 0);
+        b.color.set(230, 64, 163);
+        b.alpha = 255;
+        mySuperBall.push_back(b);
+        
+        cout<<"imm_no_no: "<<myCity.imm_no_no<<" imm_HS_no: "<<myCity.imm_hs_no<<" imm_BA_no: "<<myCity.imm_ba_no<<endl;
+        cout<<"imm_no_yes: "<<myCity.imm_no_yes<<" imm_HS_yes: "<<myCity.imm_hs_yes<<" imm_BA_yes: "<<myCity.imm_ba_yes<<endl;
+        cout<<"Nat_no_no: "<<myCity.nat_no_no<<" Nat_HS_no: "<<myCity.nat_hs_no<<" Nat_BA_no: "<<myCity.nat_ba_no<<endl;
+        cout<<"Nat_no_yes: "<<myCity.nat_no_yes<<" Nat_HS_yes: "<<myCity.nat_hs_yes<<" Nat_BA_yes: "<<myCity.nat_ba_yes<<endl;
+        
+        //-----NO-----
+        for (int i =0; i<myCity.imm_no_no; i++) {
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 10);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
             b.setVelocity(0, 0);
-            b.cs = myCity.shape;
+            b.color = umImpolie;
             mySuperBall.push_back(b);
         }
         
-        for (int i =0; i<myCity.hs_num; i++) {
+        for (int i =0; i<myCity.imm_no_yes; i++) {
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 10);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
             b.setVelocity(0, 0);
-            b.cs = myCity.shape;
+            b.color = impolied;
             mySuperBall.push_back(b);
         }
         
-        for (int i =0; i<myCity.ba_num; i++) {
+        for (int i =0; i<myCity.nat_no_no; i++) {
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 10);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
             b.setVelocity(0, 0);
-            b.cs = myCity.shape;
+            b.color = umImpolie;
             mySuperBall.push_back(b);
         }
+        
+        for (int i =0; i<myCity.nat_no_yes; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
+            b.setVelocity(0, 0);
+            b.color = impolied;
+            mySuperBall.push_back(b);
+        }
+        
+        //-----HS-----
+        for (int i =0; i<myCity.imm_hs_no; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
+            b.setVelocity(0, 0);
+            b.color = umImpolie;
+            mySuperBall.push_back(b);
+        }
+        
+        for (int i =0; i<myCity.imm_hs_yes; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
+            b.setVelocity(0, 0);
+            b.color = impolied;
+            mySuperBall.push_back(b);
+        }
+        
+        for (int i =0; i<myCity.nat_hs_no; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
+            b.setVelocity(0, 0);
+            b.color = umImpolie;
+            mySuperBall.push_back(b);
+        }
+        
+        for (int i =0; i<myCity.nat_hs_yes; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 32);
+            b.setVelocity(0, 0);
+            b.color = impolied;
+            mySuperBall.push_back(b);
+        }
+        
+        //-----BA-----
+        for (int i =0; i<myCity.imm_ba_no; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
+            b.setVelocity(0, 0);
+            b.color = umImpolie;
+            mySuperBall.push_back(b);
+        }
+        for (int i =0; i<myCity.imm_ba_yes; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
+            b.setVelocity(0, 0);
+            b.color = impolied;
+            mySuperBall.push_back(b);
+        }
+        
+        for (int i =0; i<myCity.nat_ba_no; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
+            b.setVelocity(0, 0);
+            b.color = umImpolie;
+            mySuperBall.push_back(b);
+        }
+        for (int i =0; i<myCity.nat_ba_yes; i++) {
+            superBall b;
+            b.setPhysics(3.0, 0, 0.1);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(ofGetHeight()/3), 44);
+            b.setVelocity(0, 0);
+            b.color = impolied;
+            mySuperBall.push_back(b);
+        }
+        
         
         preCityName = cityName;
         preCityYear = cityYear;
+
     }
 }
 //-------------------------------

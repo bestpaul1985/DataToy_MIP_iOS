@@ -30,9 +30,23 @@ public:
     string                          imm_pct_job;
     string                          imm_change;
     int                             preYear;
-    int                             no_num;
-    int                             hs_num;
-    int                             ba_num;
+    
+    int                             imm_no_no;
+    int                             imm_hs_no;
+    int                             imm_ba_no;
+    
+    int                             imm_no_yes;
+    int                             imm_hs_yes;
+    int                             imm_ba_yes;
+    
+    int                             nat_no_no;
+    int                             nat_hs_no;
+    int                             nat_ba_no;
+    
+    int                             nat_no_yes;
+    int                             nat_hs_yes;
+    int                             nat_ba_yes;
+    
     int                             ball_size;
     float                           alpha;
     float                           size;

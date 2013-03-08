@@ -65,6 +65,7 @@ enum mpiPctValue{
     MPI_PCT_DEGREE_IMMIGRANTS_NO,           //  (pop. 25+)
     MPI_PCT_DEGREE_IMMIGRANTS_HIGHSCHOOL,   //  (pop. 25+)
     MPI_PCT_DEGREE_IMMIGRANTS_BA,           //  (pop. 25+)
+    
     MPI_PCT_DEGREE_NATIVE_NO,               //  (pop. 25+)
     MPI_PCT_DEGREE_NATIVE_HIGHSCHOOL,       //  (pop. 25+)
     MPI_PCT_DEGREE_NATIVE_BA,               //  (pop. 25+)

@@ -16,10 +16,11 @@
 #include "cityData.h"
 #include "superBall.h"
 
+
 class scene02{
 public:
     scene02();
-    void    setup(int &level);
+    void    setup(int &level, ofPoint &grav);
     void    update();
     void    draw();
     void    touchDown(int id, int number, float x, float y);
@@ -55,7 +56,7 @@ public:
     cityData                myCity;
     vector<superBall>       mySuperBall;
     ofxBox2d                box2d;
-    
+    ofPoint                 *gravity;
     
     
 };

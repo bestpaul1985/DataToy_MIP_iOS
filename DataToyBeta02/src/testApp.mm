@@ -11,11 +11,11 @@ void testApp::setup(){
     ofxAccelerometer.setup();
     
     reset =                     false;
-    level =                     0;
+    level =                     1;
     eductionID =                0;
     //sences
-    myScene02.setup(level);
-    myScene03.setup(level);
+    myScene02.setup(level,ofxAccelerometer.getForce());
+    myScene03.setup(level,ofxAccelerometer.getForce());
     
 	// initialize the accelerometer
 	balls.assign(10, Ball());
