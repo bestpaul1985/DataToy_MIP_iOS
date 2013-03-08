@@ -10,6 +10,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		4C00B3E916EA40A70098F3AB /* small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C00B3E816EA40A70098F3AB /* small.png */; };
 		4C0F620416E8F0C7004B3DB0 /* superBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F620216E8F0C7004B3DB0 /* superBall.cpp */; };
 		4C0F630216E92BA8004B3DB0 /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4C0F629A16E92BA8004B3DB0 /* install.xml */; };
 		4C0F630316E92BA8004B3DB0 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F629F16E92BA8004B3DB0 /* b2BroadPhase.cpp */; };
@@ -105,6 +106,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
+		4C00B3E816EA40A70098F3AB /* small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small.png; sourceTree = "<group>"; };
 		4C0F620216E8F0C7004B3DB0 /* superBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = superBall.cpp; sourceTree = "<group>"; };
 		4C0F620316E8F0C7004B3DB0 /* superBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superBall.h; sourceTree = "<group>"; };
 		4C0F629A16E92BA8004B3DB0 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4C00B3E816EA40A70098F3AB /* small.png */,
 				4CDB009216E2177F00193C1E /* Default-Landscape@2x~ipad.png */,
 				4CDBFE5016E1E15000193C1E /* Default-Landscape~ipad.png */,
 				4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */,
@@ -664,6 +667,7 @@
 				4CE8591E16DC217B00FE31E6 /* logo.png in Resources */,
 				4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */,
 				4C0F630216E92BA8004B3DB0 /* install.xml in Resources */,
+				4C00B3E916EA40A70098F3AB /* small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
