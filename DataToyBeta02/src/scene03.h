@@ -58,6 +58,7 @@ public:
     ofxBox2d                box2d;
     ofPoint                 *gravity;
     float                   yearTouch;
+    float                   preYearTouch;
     
 };
 

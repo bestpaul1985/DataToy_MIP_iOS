@@ -43,6 +43,7 @@ void scene02::setup(int &level,ofPoint &grav){
     preCityName = cityName;
     cityYear = 2005;
     preCityYear = cityYear;
+    yearTouch = 0;
     
     selectRect.set(228, 443, 190, 97);
     selectRect2.set(632, 443, 170, 97);

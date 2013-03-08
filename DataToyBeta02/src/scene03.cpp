@@ -53,7 +53,7 @@ void scene03::setup(int &level,ofPoint &grav){
 	box2d.setFPS(30.0);
     box2d.registerGrabbing();
     box2d.setIterations(1, 1);
-
+    yearTouch = 0;
     
 }
 //-------------------------------
@@ -276,6 +276,7 @@ void scene03::draw(){
     }
     
     
+    
 }
 //-------------------------------
 void scene03::touchDown(int id, int number, float x, float y){
@@ -287,6 +288,7 @@ void scene03::touchDown(int id, int number, float x, float y){
         bCitySeclect = true;
         
     }
+    
     if (cityName != "0") {
         if (id == 0) {
             if (selectRect2.inside(x, y) && bYear == false) {
