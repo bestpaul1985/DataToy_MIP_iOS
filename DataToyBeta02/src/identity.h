@@ -16,7 +16,7 @@ class identity{
 
 public:
     identity();
-    void setup(int &level, int &educationID);
+    void setup(int &level, int &educationID, bool &reset);
     void update();
     void draw();
     void touchDown(int id, int number, float x, float y);
@@ -27,7 +27,7 @@ public:
     bool                bDelay;
     bool                bFail;
     bool                bSound;
-    
+    bool                *myReset;
     float               dis;
     float               preDis;
     float               startTime;

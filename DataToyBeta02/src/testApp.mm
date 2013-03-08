@@ -10,10 +10,12 @@ void testApp::setup(){
     ofEnableSmoothing();
     ofxAccelerometer.setup();
     
-    level =                     1;
+    reset =                     false;
+    level =                     0;
     eductionID =                0;
     //sences
     myScene02.setup(level);
+    myScene03.setup(level);
     
 	// initialize the accelerometer
 	balls.assign(10, Ball());
@@ -28,7 +30,7 @@ void testApp::setup(){
     bg.loadImage("image/bg01.png");
     bg1.loadImage("image/bg02.png");
     
-    myidentity.setup(level, eductionID);
+    myidentity.setup(level, eductionID, reset);
 }
 
 
@@ -50,10 +52,25 @@ void testApp::update() {
             
         case 1:
         {
-            
+            if (reset) {
+                myScene02.reset();
+                reset = false;
+            }
             myScene02.update();
             myidentity.update();
            
+        }
+            break;
+            
+        case 2:
+        {
+            if (reset) {
+                myScene03.reset();
+                reset = false;
+            }
+            myScene03.update();
+            myidentity.update();
+            
         }
             break;
             
@@ -86,6 +103,7 @@ void testApp::draw() {
         case 2:{
             ofSetColor(255, 255, 255,255);
             bg.draw(0, 0);
+            myScene03.draw();
             myidentity.draw();
         }
             break;
@@ -112,6 +130,7 @@ void testApp::touchDown(ofTouchEventArgs & touch){
 	balls[touch.id].bDragged = true;
   
     myScene02.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
+    myScene03.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
     myidentity.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
     
    
@@ -125,6 +144,7 @@ void testApp::touchMoved(ofTouchEventArgs & touch){
     
 
     myScene02.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
+    myScene03.touchMove(touch.id, touch.numTouches, touch.x, touch.y);
     myidentity.touchDown(touch.id, touch.numTouches, touch.x, touch.y);
    
 }
@@ -135,6 +155,7 @@ void testApp::touchUp(ofTouchEventArgs & touch){
 	balls[touch.id].bDragged = false;
   
     myScene02.touchUp(touch.id, touch.numTouches, touch.x, touch.y);
+    myScene03.touchUp(touch.id, touch.numTouches, touch.x, touch.y);
     myidentity.touchUp(touch.id, touch.numTouches, touch.x, touch.y);
     
     

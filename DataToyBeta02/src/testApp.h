@@ -8,6 +8,7 @@
 #include "vectorField.h"
 #include "ofxBox2d.h"
 #include "scene02.h"
+#include "scene03.h"
 #include "identity.h"
 class testApp : public ofxiPhoneApp{
 	
@@ -27,6 +28,7 @@ class testApp : public ofxiPhoneApp{
         void deviceOrientationChanged(int newOrientation);
         void gotMessage(ofMessage msg);
     
+        bool                    reset;
         int                     level;
         int                     eductionID;// 0 = NO, 1 = HS, 2 = BA
         ofImage                 arrow;
@@ -34,7 +36,7 @@ class testApp : public ofxiPhoneApp{
         ofImage                 bg1;
         vector<Ball>            balls;
         scene02                 myScene02;
+        scene03                 myScene03;
         identity                myidentity;
-    
-        
+            
 };

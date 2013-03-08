@@ -15,9 +15,10 @@ identity::identity(){
 }
 
 //-------------------------------------------
-void identity::setup(int &level, int &educationID){
+void identity::setup(int &level, int &educationID, bool &reset){
     myLevel =                  &level;
     myEducation=               &educationID;
+    myReset=                   &reset;
     dis =                       0;
     touchId =                   0;
     startTime =                 ofGetElapsedTimeMillis();
@@ -57,12 +58,15 @@ void identity::update(){
                 
                 if (i!=j) {
                     dis = touches[i].distance(touches[j]);
-                    
-                    if (dis>250&&dis<280) {
+                    cout<<dis<<endl;
+                    if (dis>88&&dis<102) {
                         bDelay = true;
                         startTime = ofGetElapsedTimeMillis();
-//                        cout<<dis<<endl;
+                    }else if (dis>75&&dis<83) {
+                        bDelay = true;
+                        startTime = ofGetElapsedTimeMillis();
                     }
+                    
                 }
             }
         }
@@ -83,19 +87,24 @@ void identity::update(){
                     
                     if (i!=j) {
                         dis = touches[i].distance(touches[j]);
-//                        cout<<dis<<endl;
-                        if (dis>250 &&dis<280) { //declear charaters
-                            
+                        cout<<dis<<endl;
+                        if (dis>88 &&dis<102) { //declear charaters
                             *myLevel = 1;
                             *myEducation = 0;
+                            *myReset= true;
                             if (bSound) {
                                 sound1.play();
                                 bSound = false;
                             }
-                           
-                            return;
+                        }else if (dis>75 &&dis<83) { //declear charaters
+                            *myLevel = 2;
+                            *myEducation = 0;
+                            *myReset = true;
+                            if (bSound) {
+                                sound1.play();
+                                bSound = false;
+                            }
                         }else{
-                            
                             if (bSound) {
                                 sound2.play();
                                 bSound = false;
@@ -140,7 +149,7 @@ void identity::draw(){
         ofTranslate(100*sin(ofGetElapsedTimef()*3)-200, 0);
         ofRotateZ(RAD_TO_DEG*ofGetElapsedTimef()*2);
         ofSetColor(255, 255, 255);
-        circle[2].draw(0,0);
+        circle[2].draw(0,0,size.x,size.y);
         ofPopMatrix();
     }
 

@@ -55,6 +55,7 @@
 		4C0F632B16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62FB16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp */; };
 		4C0F632C16E92BA8004B3DB0 /* ofxBox2dRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F62FE16E92BA8004B3DB0 /* ofxBox2dRect.cpp */; };
 		4C97690A16E7D2590074E810 /* citySelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97690816E7D2590074E810 /* citySelect.cpp */; };
+		4CB10EE516E95FEC00D08618 /* scene03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CB10EE316E95FEC00D08618 /* scene03.cpp */; };
 		4CD0D93516E8599C00A134CB /* cityData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0D93316E8599C00A134CB /* cityData.cpp */; };
 		4CDB009416E2179400193C1E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8591F16DC223000FE31E6 /* Default-Portrait~ipad.png */; };
 		4CDBFE5B16E1FA8200193C1E /* MpiData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBFE5816E1FA8100193C1E /* MpiData.cpp */; };
@@ -202,6 +203,8 @@
 		4C0F630116E92BA8004B3DB0 /* ofxBox2dUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dUtils.h; sourceTree = "<group>"; };
 		4C97690816E7D2590074E810 /* citySelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = citySelect.cpp; sourceTree = "<group>"; };
 		4C97690916E7D2590074E810 /* citySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = citySelect.h; sourceTree = "<group>"; };
+		4CB10EE316E95FEC00D08618 /* scene03.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene03.cpp; sourceTree = "<group>"; };
+		4CB10EE416E95FEC00D08618 /* scene03.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene03.h; sourceTree = "<group>"; };
 		4CD0D93316E8599C00A134CB /* cityData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cityData.cpp; sourceTree = "<group>"; };
 		4CD0D93416E8599C00A134CB /* cityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cityData.h; sourceTree = "<group>"; };
 		4CDB009216E2177F00193C1E /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
@@ -490,11 +493,13 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		4CCD814416E2F251005B6B62 /* scene02 */ = {
+		4CCD814416E2F251005B6B62 /* NO High School */ = {
 			isa = PBXGroup;
 			children = (
 				4CE8A54016E295160007FADE /* scene02.cpp */,
 				4CE8A54116E295160007FADE /* scene02.h */,
+				4CB10EE316E95FEC00D08618 /* scene03.cpp */,
+				4CB10EE416E95FEC00D08618 /* scene03.h */,
 				4C97690816E7D2590074E810 /* citySelect.cpp */,
 				4C97690916E7D2590074E810 /* citySelect.h */,
 				4CD0D93316E8599C00A134CB /* cityData.cpp */,
@@ -502,7 +507,7 @@
 				4C0F620216E8F0C7004B3DB0 /* superBall.cpp */,
 				4C0F620316E8F0C7004B3DB0 /* superBall.h */,
 			);
-			name = scene02;
+			name = "NO High School";
 			sourceTree = "<group>";
 		};
 		4CCD815116E45211005B6B62 /* algo */ = {
@@ -579,7 +584,7 @@
 				4CE8A53B16E27ABB0007FADE /* identity.cpp */,
 				4CE8A53C16E27ABB0007FADE /* identity.h */,
 				9b3cb4a2c4079beea4da443dac96ccb5 /* Ball.h */,
-				4CCD814416E2F251005B6B62 /* scene02 */,
+				4CCD814416E2F251005B6B62 /* NO High School */,
 				4CDB008D16E20DA700193C1E /* MPI */,
 				4CCD815116E45211005B6B62 /* algo */,
 			);
@@ -737,6 +742,7 @@
 				4C0F632A16E92BA8004B3DB0 /* ofxBox2dJoint.cpp in Sources */,
 				4C0F632B16E92BA8004B3DB0 /* ofxBox2dPolygon.cpp in Sources */,
 				4C0F632C16E92BA8004B3DB0 /* ofxBox2dRect.cpp in Sources */,
+				4CB10EE516E95FEC00D08618 /* scene03.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

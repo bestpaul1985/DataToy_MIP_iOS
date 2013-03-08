@@ -1,24 +1,23 @@
 //
-//  scene02.h
+//  scene03.h
 //  DataToyPrototype002
 //
 //  Created by PengCheng on 3/2/13.
 //
 //
 
-#ifndef __DataToyPrototype002__scene02__
-#define __DataToyPrototype002__scene02__
+#ifndef __DataToyPrototype002__scene03__
+#define __DataToyPrototype002__scene03__
 
 #include "ofMain.h"
-
 #include "Box2D.h"
 #include "citySelect.h"
 #include "cityData.h"
 #include "superBall.h"
 
-class scene02{
+class scene03{
 public:
-    scene02();
+    scene03();
     void    setup(int &level);
     void    update();
     void    draw();
@@ -31,11 +30,11 @@ public:
     bool                    bPressed;
     bool                    bCitySeclect;
     bool                    bBalls;
-        
+    
     float                   startTime;
     float                   ButtonSize;
-        
-   
+    
+    
     string                  cityName;
     string                  preCityName;
     int                     cityYear;
@@ -60,4 +59,4 @@ public:
     
 };
 
-#endif /* defined(__DataToyPrototype002__scene02__) */
+#endif /* defined(scene03) */
