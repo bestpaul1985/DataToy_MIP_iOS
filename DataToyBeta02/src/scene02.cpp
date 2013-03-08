@@ -237,6 +237,12 @@ void scene02::draw(){
     character.draw(430, 337);
     ofSetColor(255, 255, 255,255);
     info01.draw(406, 211);
+    if (mySuperBall.size()>0) {
+        for (int i=0; i<mySuperBall.size(); i++) {
+            mySuperBall[i].draw();
+        }
+    }
+    ofSetColor(255, 255, 255,255);
     selectLayout01.draw(236, 439);
     selectLayout02.draw(660, 439);
 
@@ -264,12 +270,7 @@ void scene02::draw(){
 
   
     
-    if (mySuperBall.size()>0) {
-        for (int i=0; i<mySuperBall.size(); i++) {
-            mySuperBall[i].draw();
-        }
-    }
-    
+   
     
     if (bCitySeclect) {
         select.draw();
