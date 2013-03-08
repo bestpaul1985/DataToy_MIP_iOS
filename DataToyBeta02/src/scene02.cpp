@@ -286,12 +286,13 @@ void scene02::touchDown(int id, int number, float x, float y){
         bCitySeclect = true;
       
     }
-    
-    if (id == 0) {
-        if (selectRect2.inside(x, y) && bYear == false) {
-            yearTouch = y;
-            bYear = true;
-            cout<<bYear<<endl;
+    if (cityName != "0"){
+        if (id == 0) {
+            if (selectRect2.inside(x, y) && bYear == false) {
+                yearTouch = y;
+                bYear = true;
+                cout<<bYear<<endl;
+            }
         }
     }
     
