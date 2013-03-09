@@ -19,10 +19,6 @@ public:
     ofColor color;
     int cs;
     void draw();
-    float startTime;
-    float duration;
-    bool bDead;
-    bool bTimer;
     float alpha;
 };
 

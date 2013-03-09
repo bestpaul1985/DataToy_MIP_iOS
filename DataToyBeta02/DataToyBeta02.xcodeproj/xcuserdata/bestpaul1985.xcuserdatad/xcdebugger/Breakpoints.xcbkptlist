@@ -69,11 +69,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/scene02.cpp"
-         timestampString = "384455393.129948"
+         timestampString = "384542601.784242"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "342"
-         endingLineNumber = "342"
+         startingLineNumber = "337"
+         endingLineNumber = "337"
          landmarkName = "scene02::touchUp(int id, int number, float x, float y)"
          landmarkType = "5">
       </FileBreakpoint>

@@ -35,6 +35,7 @@ void scene02::setup(int &level,ofPoint &grav){
     bPressed = false;
     bCitySeclect = false;
     bBalls = false;
+    bYear = false;
     gravity = &grav;
     ButtonSize = 70;
     lastSize = 0;
@@ -78,12 +79,7 @@ void scene02::update(){
         
         if (box2d.getBodyCount()>0) {
             for (int i=0; i<mySuperBall.size(); i++) {
-                if (mySuperBall[i].bDead ==false) {
-                    mySuperBall[i].bTimer = true;
-                    mySuperBall[i].startTime = ofGetElapsedTimeMillis();
-                }else{
                     mySuperBall[i].destroy();
-                }
             }
         }
         
@@ -94,7 +90,7 @@ void scene02::update(){
         
         superBall b;
         b.setPhysics(3.0, 0, 0.1);
-        b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
+        b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 44);
         b.setVelocity(0, 0);
         b.color.set(237, 0, 140);
         b.alpha = 255;
@@ -110,7 +106,7 @@ void scene02::update(){
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
             b.setVelocity(0, 10);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 10);
             b.color = umImpolie;
             mySuperBall.push_back(b);
         }
@@ -118,7 +114,7 @@ void scene02::update(){
         for (int i =0; i<myCity.imm_no_yes; i++) {
             superBall b;
             b.setPhysics(3.0, 0, 0.1);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 10);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
@@ -127,7 +123,7 @@ void scene02::update(){
             superBall b;
             b.setPhysics(3.0, 0.3, 0.1);
             b.setVelocity(0, 10);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 10);
             b.color = umImpolie;
             mySuperBall.push_back(b);
         }
@@ -136,7 +132,7 @@ void scene02::update(){
             superBall b;
             b.setPhysics(3.0, 0.3, 0.1);
             b.setVelocity(0, 10);
-            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 20);
+            b.setup(box2d.getWorld(), ofRandom(ofGetWidth()), ofRandom(0,ofGetHeight()/3), 10);
             b.color = impolied;
             mySuperBall.push_back(b);
         }
@@ -234,16 +230,15 @@ void scene02::draw(){
     platForm[2].draw(573,270);
     ofSetColor(255, 255, 255,179);
     platForm[0].draw(376,166);
-    ofSetColor(255, 255, 255,255);
-    character.draw(430, 337);
-    ofSetColor(255, 255, 255,255);
-    info01.draw(406, 211);
     if (mySuperBall.size()>0) {
         for (int i=0; i<mySuperBall.size(); i++) {
             mySuperBall[i].draw();
         }
     }
     ofSetColor(255, 255, 255,255);
+    info01.draw(406, 211);
+    ofSetColor(255, 255, 255,255);
+    character.draw(430, 337);
     selectLayout01.draw(236, 439);
     selectLayout02.draw(660, 439);
 
