@@ -22,7 +22,7 @@ void cityData::setup(string &name, int &year){
     pop ="0";
     imm_pct = "0";
     imm_pct_job = "0";
-    popPreBall = 20000;
+    popPreBall = 30000;
 }
 
 
